@@ -11,12 +11,25 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <nav id="navbar" class="p-8 absolute bg-dark-navy">
+    <nav class="p-8 absolute bg-dark-navy">
         <h3 class="text-3xl">logo</h3>
         <ul class="text-sm font-medium">
             <li><a href="#home">home</a></li>
             <li><a href="#about">about me</a></li>
-            <li><a href="#">portofolio</a></li>
+            <li><a href="#portofolio">portofolio</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#experience">experience</a></li>
+            <a href="#" class="blue-btn">contact</a>
+        </ul>
+    </nav>
+
+    <!-- stick navbar -->
+    <nav id="navbar" class="px-8 py-4 fixed" style=" margin-top: -200px;">
+        <h3 class="text-3xl">logo</h3>
+        <ul class="text-sm font-medium">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about me</a></li>
+            <li><a href="#portofolio">portofolio</a></li>
             <li><a href="#">services</a></li>
             <li><a href="#experience">experience</a></li>
             <a href="#" class="blue-btn">contact</a>
@@ -37,8 +50,8 @@
 
     <div id="about" class="flex items-center px-10 bg-dark-navy text-white">
         <div class="w-1/2 py-5">
-            <!-- <img src="assets/images/my-photo.jpg" alt="My Photo" class="rounded-2xl w-96"> -->
-            <img loading="lazy" src="assets/images/freelance.jpg" alt="My Photo" class="rounded-2xl w-96">
+            <div class="rounded-2xl about-img" style="background-image: url(assets/images/my-photo.jpg)"></div>
+            <div class="rounded-2xl about-shape"></div>
         </div>
         <div class="w-1/2 px-4 pr-16">
             <h2 class="text-2xl font-bold mb-4">About Me</h2>
@@ -50,7 +63,44 @@
         </div>
     </div>
 
-    <div id="experience" class="bg-dark-navy py-5 text-white flex flex-col justify-center items-center">
+    <div id="portofolio" class="bg-dark-navy text-white flex flex-col gap-10 pb-16">
+        <h1 class="text-xl font-semibold uppercase tracking-wider flex justify-center pt-20 pb-10">Portofolio</h1>
+        
+        <div class="flex items-center px-10 bg-dark-navy text-white">
+            <div class="w-1/2 px-4 pr-16">
+                <h2 class="text-2xl font-bold mb-4">Project 1</h2>
+                <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at tortor a risus fringilla gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis auctor venenatis dui, vel egestas elit consequat in. Vivamus cursus vestibulum lorem, vel bibendum odio ultricies eget. Aenean ultricies risus lectus, eu bibendum enim tincidunt id.</p>
+            </div>
+            <div class="w-1/2 py-5 flex justify-end">
+                <div class="rounded-2xl porto-img" style="background-image: url(assets/images/freelance.jpg)"></div>
+                <div class="rounded-2xl porto-shape"></div>
+            </div>
+        </div>
+
+        <div class="flex items-center px-10 bg-dark-navy text-white">
+            <div class="w-1/2 py-5 flex justify-start">
+                <div class="rounded-2xl porto-img" style="background-image: url(assets/images/freelance.jpg)"></div>
+                <div class="rounded-2xl porto-shape-2"></div>
+            </div>
+            <div class="w-1/2 px-4 pr-16">
+                <h2 class="text-2xl font-bold mb-4">Project 2</h2>
+                <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at tortor a risus fringilla gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis auctor venenatis dui, vel egestas elit consequat in. Vivamus cursus vestibulum lorem, vel bibendum odio ultricies eget. Aenean ultricies risus lectus, eu bibendum enim tincidunt id.</p>
+            </div>
+        </div>
+
+        <div class="flex items-center px-10 bg-dark-navy text-white">
+            <div class="w-1/2 px-4 pr-16">
+                <h2 class="text-2xl font-bold mb-4">Project 3</h2>
+                <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at tortor a risus fringilla gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis auctor venenatis dui, vel egestas elit consequat in. Vivamus cursus vestibulum lorem, vel bibendum odio ultricies eget. Aenean ultricies risus lectus, eu bibendum enim tincidunt id.</p>
+            </div>
+            <div class="w-1/2 py-5 flex justify-end">
+                <div class="rounded-2xl porto-img" style="background-image: url(assets/images/freelance.jpg)"></div>
+                <div class="rounded-2xl porto-shape"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience" class="bg-dark-navy text-white flex flex-col justify-center items-center pb-16">
         <h1 class="text-xl font-semibold uppercase tracking-wider flex justify-center py-10">Experience</h1>
         <div class="flex flex-col gap-10 w-3/5">
             <div class="flex justify-between">
@@ -92,7 +142,6 @@
         </div>
     </div>
 
-      
     
     <script src="js/script.js"></script>
 </body>

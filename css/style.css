@@ -17,6 +17,13 @@ nav {
     align-items: center;
     background-color: transparent;
     color: white;
+    transition: .4s ease-in-out;
+}
+/* stick */
+#navbar {
+    border-radius: 0px 0px 8px 8px;
+    background-color: #090d16;
+    z-index: 100;
 }
 
 nav h3 {
@@ -44,7 +51,7 @@ nav ul {
     cursor: pointer;
     border-radius: 4px;
     letter-spacing: 1px;
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease;
 }
 
 .blue-btn-border {
@@ -59,7 +66,7 @@ nav ul {
 }
 
 .blue-btn:hover{
-    transition: all 0.3s ease-in-out;
+    transition: all .3s ease;
     background: linear-gradient(130deg, var(--smoth-blue), var(--dark-blue-hover));
 }
 
@@ -170,6 +177,53 @@ nav ul li a:after {
     position: absolute;
     z-index: 1;
 }
+
+.about-img {
+    width: 480px;
+    height: 550px;
+    position: relative;
+    z-index: 4;
+    background-size: cover;
+    background-position: center;
+}
+
+.about-shape {
+    background-color: var(--dark-blue);
+    width: 200px;
+    height: 250px;
+    position: absolute;
+    z-index: 3;
+    margin-top: -210px;
+    margin-left: 330px;
+}
+
+.porto-img {
+    width: 530px;
+    height: 400px;
+    position: relative;
+    z-index: 4;
+    background-size: cover;
+    background-position: center;
+}
+.porto-shape {
+    background-color: var(--dark-blue);
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    z-index: 3;
+    margin-top: 250px;
+    margin-right: 320px;
+}
+.porto-shape-2 {
+    background-color: var(--dark-blue);
+    width: 250px;
+    height: 200px;
+    position: absolute;
+    z-index: 3;
+    margin-top: 250px;
+    margin-left: 320px;
+}
+
 .logo-skill{
     width: 80px;
     aspect-ratio: 3/2;

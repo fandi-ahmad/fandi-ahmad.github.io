@@ -4,53 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Parallax</title>
+    <title>Fandi Ahmad</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.6/dist/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="cover">
-        <nav>
-            <ul>
-                <li><a href="">home</a></li>
-                <li><a href="">about</a></li>
-                <li><a href="">portofolio</a></li>
-                <li><a href="">contact</a></li>
-            </ul>
-        </nav>
+    <nav id="navbar" class="p-8 absolute bg-dark-navy">
+        <h3 class="text-3xl">logo</h3>
+        <ul class="text-sm font-medium">
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about me</a></li>
+            <li><a href="#">portofolio</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#experience">experience</a></li>
+            <a href="#" class="blue-btn">contact</a>
+        </ul>
+    </nav>
 
-        <div class="hero">
-            <img src="image/first.jpg" alt="" class="first-img">
-            <img src="image/adventure-text.png" alt="" class="adventure-img">
-            <img src="image/focus.png" alt="" class="focus-img">
-            <img src="image/bird.png" alt="" class="bird-img">
-            <img src="image/leaf.png" alt="" class="leaf-img">
+    <section id="home" class="h-screen bg-cover bg-center flex justify-center items-center m-0 p-0 bg-dark-navy">
+        <div class="container mx-auto pl-4 header-content">
+            <p class="text-xl lg:text-2xl text-white font-bold">Hi, I'm Fandi Ahmad</p>
+            <h1 class="text-4xl lg:text-8xl text-white font-bold mb-10 w-9/12">Front-End Developer</h1>
+            <a href="#" class="blue-btn py-3 px-6">View My Work</a>
         </div>
+        <!-- blue line -->
+        <div class="w-full pl-20">
+            <div class="bg-blue-500 hero-line"></div>
+        </div>
+    </section>
 
-        <button class="btn">let's start</button>
-        <!-- <h1>adventure</h1> -->
+    <div id="about" class="flex items-center px-10 bg-dark-navy text-white">
+        <div class="w-1/2 py-5">
+            <!-- <img src="assets/images/my-photo.jpg" alt="My Photo" class="rounded-2xl w-96"> -->
+            <img loading="lazy" src="assets/images/freelance.jpg" alt="My Photo" class="rounded-2xl w-96">
+        </div>
+        <div class="w-1/2 px-4 pr-16">
+            <h2 class="text-2xl font-bold mb-4">About Me</h2>
+            <p class="text-lg">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at tortor a risus fringilla gravida. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Duis auctor venenatis dui, vel egestas elit consequat in. Vivamus cursus vestibulum lorem, vel bibendum odio ultricies eget. Aenean ultricies risus lectus, eu bibendum enim tincidunt id.</p>
+            <div class="mt-4 flex gap-4">
+                <button class="blue-btn">Hire Me</button>
+                <button class="blue-btn-border">Resume</button>
+            </div>
+        </div>
     </div>
 
-    <div class="content">
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim libero massa, ut dignissim est volutpat ac.
-            In vestibulum et sem ac suscipit. Maecenas egestas, ante sed varius fermentum, velit sem sollicitudin felis,
-            non fringilla ligula justo ac orci. Donec a lectus faucibus nulla porta faucibus sed sed purus. Nunc rhoncus
-            sagittis varius. Cras tincidunt, tellus sed laoreet cursus, arcu enim luctus sapien, eget mollis velit felis
-            sed nisi. Proin vitae sollicitudin urna. Donec lobortis a magna sed ullamcorper. Fusce ac egestas ante, auctor
-            ultrices justo. Donec neque tortor, fringilla sed est eget, dapibus facilisis urna. Duis maximus massa vehicula,
-            posuere metus non, finibus lorem. Praesent ut tellus bibendum, rhoncus nulla vitae, pulvinar diam.
-        </p>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim libero massa, ut dignissim est volutpat ac.
-            In vestibulum et sem ac suscipit. Maecenas egestas, ante sed varius fermentum, velit sem sollicitudin felis,
-            non fringilla ligula justo ac orci. Donec a lectus faucibus nulla porta faucibus sed sed purus. Nunc rhoncus
-            sagittis varius. Cras tincidunt, tellus sed laoreet cursus, arcu enim luctus sapien, eget mollis velit felis
-            sed nisi. Proin vitae sollicitudin urna. Donec lobortis a magna sed ullamcorper. Fusce ac egestas ante, auctor
-            ultrices justo. Donec neque tortor, fringilla sed est eget, dapibus facilisis urna. Duis maximus massa vehicula,
-            posuere metus non, finibus lorem. Praesent ut tellus bibendum, rhoncus nulla vitae, pulvinar diam.
-        </p>
+    <div id="experience" class="bg-dark-navy py-5 text-white flex flex-col justify-center items-center">
+        <h1 class="text-xl font-semibold uppercase tracking-wider flex justify-center py-10">Experience</h1>
+        <div class="flex flex-col gap-10 w-3/5">
+            <div class="flex justify-between">
+                <div>
+                    <img loading="lazy" src="assets/logo/html.png" alt="" class="logo-skill">
+                    <p class="text-center">HTML</p>
+                </div>
+                <div>
+                    <img loading="lazy" src="assets/logo/css.png" alt="" class="logo-skill">
+                    <p class="text-center">CSS</p>
+                </div>
+                <div>
+                    <img loading="lazy" src="assets/logo/javascript.png" alt="" class="logo-skill">
+                    <p class="text-center">javascript</p>
+                </div>
+                <div>
+                    <img loading="lazy" src="assets/logo/reactjs.png" alt="" class="logo-skill">
+                    <p class="text-center">ReactJS</p>
+                </div>
+            </div>
+            <div class="flex justify-between">
+                <div>
+                    <img loading="lazy" src="assets/logo/vuejs.png" alt="" class="logo-skill">
+                    <p class="text-center">VueJS</p>
+                </div>
+                <div>
+                    <img loading="lazy" src="assets/logo/nodejs.png" alt="" class="logo-skill">
+                    <p class="text-center">NodeJS</p>
+                </div>
+                <div>
+                    <img loading="lazy" src="assets/logo/tailwind.png" alt="" class="logo-skill">
+                    <p class="text-center">Tailwind</p>
+                </div>
+                <div>
+                    <img loading="lazy" src="assets/logo/figma.png" alt="" class="logo-skill">
+                    <p class="text-center">Figma</p>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <script src="script.js"></script>
+      
+    
+    <script src="js/script.js"></script>
 </body>
 </html>

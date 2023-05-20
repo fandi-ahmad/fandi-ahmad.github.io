@@ -1,6 +1,7 @@
 :root{
     --dark-blue: #3369af;
     --dark-blue-hover: #275796;
+    --glow-blue: #4487dfce;
     --navy: #1a1f47;
     /* --dark-navy: #1B262C; */
     --dark-navy: #0E1525;
@@ -188,13 +189,14 @@ nav ul li a:after {
 }
 
 .about-shape {
-    background-color: var(--dark-blue);
+    background-color: var(--glass-blue);
     width: 200px;
     height: 250px;
     position: absolute;
     z-index: 3;
-    margin-top: -210px;
-    margin-left: 330px;
+    margin-top: calc(250px - 550px);
+    margin-left: calc(480px - 200px);
+    box-shadow: 0 50px 80px 5px var(--glow-blue);
 }
 
 .porto-img {
@@ -211,8 +213,9 @@ nav ul li a:after {
     height: 200px;
     position: absolute;
     z-index: 3;
-    margin-top: 250px;
-    margin-right: 320px;
+    margin-top: calc(400px - 200px);
+    margin-right: calc(530px - 250px);
+    box-shadow: 0 0px 80px 5px var(--glow-blue);
 }
 .porto-shape-2 {
     background-color: var(--dark-blue);
@@ -220,8 +223,9 @@ nav ul li a:after {
     height: 200px;
     position: absolute;
     z-index: 3;
-    margin-top: 250px;
-    margin-left: 320px;
+    margin-top: calc(400px - 200px);
+    margin-left: calc(530px - 250px);
+    box-shadow: 0 0px 80px 5px var(--glow-blue);
 }
 
 .logo-skill{

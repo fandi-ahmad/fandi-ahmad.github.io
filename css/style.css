@@ -1,12 +1,11 @@
 :root{
     --dark-blue: #3369af;
-    --dark-blue-hover: #275796;
+    --dark-blue-hover: #477dc4;
     --glow-blue: #4487dfce;
     --navy: #1a1f47;
-    /* --dark-navy: #1B262C; */
     --dark-navy: #0E1525;
-    /* --smoth-blue: #3282B8; */
     --smoth-blue: #4f9ed3;
+    --smoth-black: #090d16;
 }
 *{
     scroll-behavior: smooth;
@@ -23,7 +22,7 @@ nav {
 /* stick */
 #navbar {
     border-radius: 0px 0px 8px 8px;
-    background-color: #090d16;
+    background-color: var(--smoth-black);
     z-index: 100;
 }
 
@@ -46,7 +45,21 @@ nav ul {
 .blue-btn {
     display: inline-block;
     padding: 8px 16px;
+    /* background: linear-gradient(130deg, var(--smoth-blue), var(--dark-blue)); */
+    background-color: var(--dark-blue);
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    transition: all .3s ease;
+}
+
+.blue-btn-glow {
+    display: inline-block;
+    padding: 8px 16px;
     background: linear-gradient(130deg, var(--smoth-blue), var(--dark-blue));
+    box-shadow: 0 0px 30px 1px var(--glow-blue);
     color: white;
     border: none;
     cursor: pointer;
@@ -64,16 +77,19 @@ nav ul {
     cursor: pointer;
     border-radius: 4px;
     letter-spacing: 1px;
+    transition: all .3s ease;
 }
 
 .blue-btn:hover{
-    transition: all .3s ease;
-    background: linear-gradient(130deg, var(--smoth-blue), var(--dark-blue-hover));
+    background-color: var(--dark-blue-hover);
+}
+.blue-btn-glow:hover{
+    box-shadow: 0 0px 35px 3px var(--glow-blue);
 }
 
 .blue-btn-border:hover{
     border: 1px solid transparent;
-    background: linear-gradient(130deg, var(--smoth-blue), var(--dark-blue));
+    background-color: var(--dark-blue);
 }
 
 nav ul li a {
@@ -115,16 +131,64 @@ nav ul li a:after {
     transition-property: width, left;
 }
 
-
-.menu-toggle {
+.nav-menu {
     display: none;
 }
 
-.hamburger {
-    width: 25px;
-    height: 3px;
-    background-color: #333;
-    margin: 5px 0;
+.mini-navbar {
+    position: fixed;
+    width: 100%;
+    height: 80vh;
+    background-color: var(--smoth-black);
+    z-index: 100;
+    text-align: center;
+    padding: 24px;
+    transition: all .5s ease;
+}
+
+.mini-navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+.mini-navbar ul li a {
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: color;
+    letter-spacing: 1px;
+    padding-bottom: 5px;
+
+}
+
+.mini-navbar ul li a:focus,
+.mini-navbar ul li a:hover {
+    color: #fff;
+}
+
+.mini-navbar ul li a:focus:after,
+.mini-navbar ul li a:hover:after {
+    width: 100%;
+    left: 0%;
+}
+
+.mini-navbar ul li a:after {
+    content: "";
+    pointer-events: none;
+    bottom: -2px;
+    left: 50%;
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+    transition-duration: 400ms;
+    transition-property: width, left;
 }
 
 /* Media queries for mobile */
@@ -132,37 +196,11 @@ nav ul li a:after {
     nav ul {
         display: none;
     }
-
-    .menu-toggle {
+    .nav-menu {
         display: block;
     }
 
-    .open {
-        display: block;
-    }
-
-    .hamburger {
-        background-color: #333;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .open .hamburger {
-        transform: rotate(45deg);
-    }
-
-    .open .hamburger:before,
-    .open .hamburger:after {
-        transform: rotate(-45deg);
-        top: 0;
-    }
-
-    .open .hamburger:before {
-        top: -8px;
-    }
-
-    .open .hamburger:after {
-        top: 8px;
-    }
+    
 }
 
 .bg-dark-navy {
@@ -177,6 +215,13 @@ nav ul li a:after {
     height: 20px;
     position: absolute;
     z-index: 1;
+    box-shadow: 0 0px 30px 1px var(--glow-blue);
+    border-radius: 4px;
+}
+@media (max-width: 1280px) {
+    .hero-line {
+        display: none;
+    }
 }
 
 .about-img {

@@ -9,10 +9,13 @@
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <nav class="p-8 absolute bg-dark-navy">
-        <h3 class="text-3xl">logo</h3>
+        <div>
+            <img src="assets/logo/logo-fandi.webp" alt="" style="width: 45px;">
+        </div>
         <ul class="text-sm font-medium">
             <li><a href="#home">home</a></li>
             <li><a href="#about">about me</a></li>
@@ -21,11 +24,16 @@
             <li><a href="#experience">experience</a></li>
             <a href="#" class="blue-btn">contact</a>
         </ul>
+        <div class="nav-menu" onclick="toggleNavbar()">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+        </div>
     </nav>
 
     <!-- stick navbar -->
     <nav id="navbar" class="px-8 py-4 fixed" style=" margin-top: -200px;">
-        <h3 class="text-3xl">logo</h3>
+        <div>
+            <img src="assets/logo/logo-fandi.webp" alt="" style="width: 45px;">
+        </div>
         <ul class="text-sm font-medium">
             <li><a href="#home">home</a></li>
             <li><a href="#about">about me</a></li>
@@ -34,13 +42,31 @@
             <li><a href="#experience">experience</a></li>
             <a href="#" class="blue-btn">contact</a>
         </ul>
+        <div class="nav-menu" onclick="toggleNavbar()">
+            <i class="fa-sharp fa-solid fa-bars"></i>
+        </div>
     </nav>
 
-    <section id="home" class="h-screen bg-cover bg-center flex justify-center items-center m-0 p-0 bg-dark-navy">
-        <div class="container mx-auto pl-4 header-content">
+    <!-- mini navbar (onClick navMenu) -->
+    <div id="miniNavbar" class="mini-navbar text-white" style="margin-top: -1000px;">
+        <ul class="font-medium">
+            <li><a href="#home" onclick="toggleNavbar()">home</a></li>
+            <li><a href="#about" onclick="toggleNavbar()">about me</a></li>
+            <li><a href="#portofolio" onclick="toggleNavbar()">portofolio</a></li>
+            <li><a href="#">services</a></li>
+            <li><a href="#experience" onclick="toggleNavbar()">experience</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+        <div class="mt-10 text-2xl" onclick="toggleNavbar()">
+            <i class="fa-solid fa-xmark"></i>
+        </div>
+    </div>
+
+    <section id="home" class="h-screen bg-cover bg-center flex justify-start items-center m-0 px-8 bg-dark-navy">
+        <div class="container header-content">
             <p class="text-xl lg:text-2xl text-white font-bold">Hi, I'm Fandi Ahmad</p>
             <h1 class="text-4xl lg:text-8xl text-white font-bold mb-10 w-9/12">Front-End Developer</h1>
-            <a href="#" class="blue-btn py-3 px-6">View My Work</a>
+            <a href="#portofolio" class="blue-btn-glow font-semibold py-3 px-6">View My Work</a>
         </div>
         <!-- blue line -->
         <div class="w-full pl-20">
@@ -50,7 +76,7 @@
 
     <div id="about" class="flex items-center px-10 bg-dark-navy text-white">
         <div class="w-1/2 py-5">
-            <div class="rounded-2xl about-img" style="background-image: url(assets/images/my-photo.jpg)"></div>
+            <div class="rounded-2xl about-img" style="background-image: url(assets/images/my-photo.webp)"></div>
             <div class="rounded-2xl about-shape"></div>
         </div>
         <div class="w-1/2 px-4 pr-16">

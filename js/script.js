@@ -6,6 +6,8 @@ const getId = (selector) => {
 
 // selector
 const navbar = getId('navbar')
+const navMenu = getId('navMenu')
+const miniNavbar = getId('miniNavbar')
 
 // ===== SHOW NAVBAR IN SCROLL UP =====
 const navbarScroll = () => {
@@ -23,6 +25,12 @@ const navbarScroll = () => {
         }
         lastScrollY = window.scrollY;
     })
+}
+
+
+const toggleNavbar = () => {
+    const marginTop = miniNavbar.style.marginTop;
+    miniNavbar.style.marginTop = marginTop === '-1000px' ? '0px' : '-1000px';
 }
 
 

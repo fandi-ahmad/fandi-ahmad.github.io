@@ -238,7 +238,6 @@ nav ul li a:after {
     height: 250px;
     position: absolute;
     z-index: 3;
-    background-color: tomato;
     margin-top: calc(550px - 250px);
     margin-left: calc(480px - 200px);
     box-shadow: 0 0px 80px 5px var(--glow-blue);

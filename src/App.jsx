@@ -2,7 +2,9 @@ import RoutesTemplate from './routes/Routes'
 
 function App() {
   return (
-    <RoutesTemplate/>
+    <>
+      <h1>testing dashboard</h1>
+    </>
   )
 }
 

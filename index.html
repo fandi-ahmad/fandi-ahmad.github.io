@@ -11,6 +11,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="icon" href="assets/logo/logo-fandi.webp">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <nav class="p-8 absolute bg-dark-navy">
@@ -65,9 +66,9 @@
 
     <section id="home" class="h-screen bg-cover bg-center flex justify-start items-center m-0 bg-dark-navy">
         <div class="home-text">
-            <p class="text-xl lg:text-2xl text-white font-bold pl-8">Hi, I'm Fandi Ahmad</p>
-            <h1 class="text-5xl lg:text-8xl text-white font-bold mb-10 pl-8">Front-End Developer</h1>
-            <a href="#portofolio" class="blue-btn-glow font-semibold py-3 px-6 ml-8">View My Work</a>
+            <p class="text-xl lg:text-2xl text-white font-bold pl-8" data-aos="fade-up" data-aos-duration="600">Hi, I'm Fandi Ahmad</p>
+            <h1 class="text-5xl lg:text-8xl text-white font-bold mb-10 pl-8" data-aos="fade-up" data-aos-duration="800">Front-End Developer</h1>
+            <a href="#portofolio" class="blue-btn-glow font-semibold py-3 px-6 ml-8" data-aos="fade-up" data-aos-duration="1000">View My Work</a>
             <div class="bubble-blur-field">
                 <div class="bubble-blur"></div>
             </div>
@@ -79,7 +80,7 @@
             <div class="rounded-2xl about-img" style="background-image: url(assets/images/my-photo.webp)"></div>
             <div class="rounded-full about-shape"></div>
         </div>
-        <div class="px-4 about-text">
+        <div class="px-4 about-text" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="text-2xl font-bold mb-4">About Me</h2>
             <p class="sm:text-sm lg:text-lg text-justify">
                 Halo, saya Fandi, seorang Front-End Developer yang baru saja memulai karir di dunia programming. Saya memiliki pengetahuan dalam HTML, CSS, dan JavaScript, serta pengalaman dengan kerangka kerja seperti React dan Vue. Saya bersemangat dalam menciptakan pengalaman web yang menarik dan interaktif, dan selalu terbuka untuk belajar dan berkembang lebih jauh dalam bidang ini.
@@ -95,7 +96,7 @@
         <h1 class="text-xl font-semibold text-white uppercase tracking-wider flex justify-center pt-20 pb-10">Portofolio</h1>
         
         <div class="px-10 pb-10 bg-dark-navy text-white porto">
-            <div class="px-4 porto-text">
+            <div class="px-4 porto-text" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-3xl font-bold mb-4">Project 1</h2>
                 <h2 class="text-xl font-bold mb-4 capitalize">Landing page PENA</h2>
                 <p class="lg:text-lg text-justify">
@@ -105,14 +106,14 @@
                     <button class="blue-btn mt-4 mb-4">more</button>
                 </a>
             </div>
-            <div class="py-5 porto-field">
+            <div class="py-5 porto-field" >
                 <div class="rounded-2xl porto-img" style="background-image: url(assets/images/web-pena.png)"></div>
                 <div class="rounded-full porto-shape"></div>
             </div>
         </div>
 
         <div class="px-10 pb-10 bg-dark-navy text-white porto-2">
-            <div class="px-4 porto-text">
+            <div class="px-4 porto-text" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-3xl font-bold mb-4">Project 2</h2>
                 <h2 class="text-xl font-bold mb-4 capitalize">To Do List App</h2>
                 <p class="lg:text-lg text-justify">
@@ -129,7 +130,7 @@
         </div>
 
         <div class="px-10 pb-10 bg-dark-navy text-white porto">
-            <div class="px-4 porto-text">
+            <div class="px-4 porto-text" data-aos="fade-up" data-aos-duration="1000">
                 <h2 class="text-3xl font-bold mb-4">Project 3</h2>
                 <h2 class="text-xl font-bold mb-4 capitalize">Whack a Mole</h2>
                 <p class="lg:text-lg text-justify">
@@ -190,5 +191,9 @@
 
     
     <script src="js/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

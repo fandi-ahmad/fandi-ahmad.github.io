@@ -290,11 +290,13 @@ nav ul li a:after {
     display: flex;
     align-items: center;
     flex-direction: row;
+    gap: 20px;
 }
 .porto-2 {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
+    gap: 20px;
 }
 .porto-text {
     width: 50%;

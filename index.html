@@ -74,7 +74,7 @@
     </section>
 
     <div id="about" class="about px-10 text-white bg-dark-navy">
-        <div class="my-5 about-field">
+        <div class="my-5 about-field mr-10">
             <div class="rounded-2xl about-img" style="background-image: url(assets/images/my-photo.webp)"></div>
             <div class="rounded-full about-shape"></div>
         </div>
@@ -187,36 +187,40 @@
         </div>
     </div>
 
-    <footer id="contact" class="bg-dark text-white flex justify-between px-10 pt-10" style="min-height: 250px;">
-        <div class="w-full">
+    <footer id="contact" class="bg-gray-800 text-white flex justify-between flex-col sm:flex-row p-10 gap-10">
+        <div class="w-full flex justify-center sm:justify-start sm:items-start">
             <img src="assets/logo/logo-fandi.webp" alt="" class="w-12">
         </div>
 
-        <div class="w-full">
-            <h3 class="text-lg">Social Media</h3>
-            <div class="mt-2">
-                <a href="" class="mr-2">
-                    <i class="fa-brands fa-instagram fa-2xl"></i>
-                </a>
-                <a href="" class="mr-2">
-                    <i class="fa-brands fa-square-facebook fa-2xl"></i>
-                </a>
-                <a href="" class="mr-2">
-                    <i class="fa-brands fa-linkedin fa-2xl"></i>
-                </a>
-                <a href="" class="mr-2">
-                    <i class="fa-brands fa-github fa-2xl"></i>
-                </a>
+        <div class="w-full flex justify-center">
+            <div>
+                <h3 class="text-lg text-center">Social Media</h3>
+                <div class="mt-2 grid grid-cols-4 gap-4">
+                    <a href="https://instagram.com/fandi.jsx" target="_blank">
+                        <i class="fa-brands fa-instagram fa-2xl"></i>
+                    </a>
+                    <a href="https://facebook.com/FandiAhmad.1111/" target="_blank">
+                        <i class="fa-brands fa-square-facebook fa-2xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/fandijsx/" target="_blank">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a href="https://github.com/fandi-ahmad" target="_blank">
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <div class="w-72">
-            <h3 class="text-lg mb-2">Navigation</h3>
-            <a href="#home">home</a> <br>
-            <a href="#about">about me</a> <br>
-            <a href="#portofolio">portofolio</a> <br>
-            <a href="#experience">experience</a> <br>
-            <a href="#contact">contact</a>
+        <div class="w-full flex justify-center sm:justify-end">
+            <div class="text-center sm:text-left">
+                <h3 class="text-lg mb-2">Navigation</h3>
+                <a href="#home">home</a> <br>
+                <a href="#about">about me</a> <br>
+                <a href="#portofolio">portofolio</a> <br>
+                <a href="#experience">experience</a> <br>
+                <a href="#contact">contact</a>
+            </div>
         </div>
     </footer>
     

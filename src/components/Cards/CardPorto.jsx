@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 
 const CardPorto = (props) => {
   const [isHovered, setIsHovered] = useState(false);
-  const classImage = `${isHovered ? 'opacity-75 scale-105' : ''} relative z-10 h-48 w-full object-cover transition-transform duration-300 ease-in-out`;
+  const classImage = `${isHovered ? 'opacity-75 scale-105' : ''} relative z-10 h-48 w-full object-cover object-top transition-transform duration-300 ease-in-out`;
   const overlayClass = `${isHovered ? 'opacity-100' : 'opacity-0'} absolute top-0 left-0 z-20 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50 transition-opacity duration-300`;
 
   return (

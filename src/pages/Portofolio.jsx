@@ -6,6 +6,8 @@ import webPena from '../assets/images/portofolio/web-pena.png'
 import honeyProduction from '../assets/images/portofolio/honey-production.png'
 import whackamole from '../assets/images/portofolio/whackamole.png'
 import todolist from '../assets/images/portofolio/todolist-app.png'
+import sipsApp from '../assets/images/portofolio/SIPS-app.png'
+import weatherApp from '../assets/images/portofolio/weather-app.png'
 
 const Portofolio = () => {
   const [portofolioPage, setPortofolioPage] = useGlobalState('portofolioPage')
@@ -16,6 +18,8 @@ const Portofolio = () => {
       <>
         <CardPorto src={webPena} title='PENA Website 2022-2023' detail='Company Profile' />
         <CardPorto src={honeyProduction} title='Honey Production' detail='Landing Page' />
+        <CardPorto src={weatherApp} title='Weather App' detail='weather forecast' />
+        <CardPorto src={sipsApp} title='SIPS App' detail='Application for managing Balaroa sub-district letters' />
         <CardPorto src={whackamole} title='Whack a Mole' detail='mini game app' />
         <CardPorto src={todolist} title='to do list' detail='tools app' />
       </> :

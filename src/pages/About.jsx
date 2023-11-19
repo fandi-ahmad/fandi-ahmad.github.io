@@ -20,14 +20,14 @@ const About = () => {
       <div className="px-8 mt-8">
         <h2 className="text-2xl font-bold mb-4">My Skills</h2>
         <div className="grid grid-cols-8 gap-4">
-          <img src={htmlImg} alt="" className="w-12 h-12 object-contain" />
-          <img src={cssImg} alt="" className="w-12 h-12 object-contain" />
-          <img src={jsmg} alt="" className="w-12 h-12 object-contain" />
-          <img src={tailwindImg} alt="" className="w-12 h-12 object-contain" />
-          <img src={reactImg} alt="" className="w-12 h-12 object-contain" />
-          <img src={vueImg} alt="" className="w-12 h-12 object-contain" />
-          <img src={nodeImg} alt="" className="w-12 h-12 object-contain" />
-          <img src={figmaImg} alt="" className="w-12 h-12 object-contain" />
+          <img src={htmlImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
+          <img src={cssImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
+          <img src={jsmg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
+          <img src={tailwindImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
+          <img src={reactImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
+          <img src={vueImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
+          <img src={nodeImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
+          <img src={figmaImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
         </div>
       </div>
     </div>

@@ -11,7 +11,7 @@ const CardPorto = (props) => {
         <div className='bg-gray-800 relative'>
 
           {/* image */}
-          <img src={props.src} alt="" className={classImage} />
+          <img src={props.src} alt="" loading='lazy' className={classImage} />
 
           {/* overlay hover */}
           <div className={overlayClass}>

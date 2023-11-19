@@ -39,7 +39,7 @@ const Portofolio = () => {
     <div className='px-8 mt-8'>
 
       {/* navbar portofolio */}
-      <ul className='flex flex-row gap-8'>
+      <ul className='hidden md:flex flex-row gap-8'>
         <SubMenu text='all' onClick={() => setPortofolioPage('all')} />
         <SubMenu text='html | css | js' onClick={() => setPortofolioPage('html | css | js')} />
         <SubMenu text='react & express' onClick={() => setPortofolioPage('react & express')} />
@@ -48,7 +48,7 @@ const Portofolio = () => {
       </ul>
 
       {/* content portofolio */}
-      <div className='grid grid-cols-2 gap-4 mt-8'>
+      <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8'>
         <Canvas/>
       </div>
       

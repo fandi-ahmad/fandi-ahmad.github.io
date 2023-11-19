@@ -29,7 +29,7 @@ const Navbar = () => {
         
         {/* list menu */}
         <div className='bg-gray-600 bg-opacity-50 rounded-tl-none rounded-br-none rounded-xl py-5 px-8 border-l border-b border-gray-500'>
-          <ul className='flex flex-row gap-8 font-semibold'>
+          <ul className='flex flex-row gap-8 font-medium'>
             <SubMenu title='about' onClick={() => setContent('about')} />
             {/* <SubMenu title='resume' onClick={() => setContent('resume')} /> */}
             <SubMenu title='portofolio' onClick={() => setContent('portofolio')} />

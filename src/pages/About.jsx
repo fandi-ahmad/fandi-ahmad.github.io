@@ -10,7 +10,7 @@ import vueImg from '../assets/logo/vuejs.png'
 import tailwindImg from '../assets/logo/tailwind.png'
 import nodeImg from '../assets/logo/nodejs.png'
 
-export const AboutContent = () => {
+const About = () => {
   return (
     <div>
       <div className="px-8 mt-8">
@@ -34,18 +34,4 @@ export const AboutContent = () => {
   )
 }
 
-export const PortofolioContent = () => {
-  return (
-    <div>
-      <h1>portofolio</h1>
-    </div>
-  )
-}
-
-export const ContactContent = () => {
-  return (
-    <div>
-      <h1>contact</h1>
-    </div>
-  )
-}
+export default About

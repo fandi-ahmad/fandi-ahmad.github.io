@@ -1,7 +1,7 @@
 // components
-import { CardProfile, CardContent } from "./components/Cards"
+import { CardContent, CardProfile } from "./components/Cards"
 import Navbar from "./components/Navbar"
-import { AboutContent, PortofolioContent, ContactContent } from "./components/Content"
+import { About, Portofolio, Contact } from "./pages"
 
 
 import { useGlobalState } from "./state/state"
@@ -9,21 +9,21 @@ import { useGlobalState } from "./state/state"
 const App = () => {
   const [content, setContent] = useGlobalState('content')
 
-  const Canvas = () => {
+  const Content = () => {
     return (
-      content === 'about' ? <AboutContent /> :
-      content === 'portofolio' ? <PortofolioContent /> :
-      content === 'contact' ? <ContactContent /> :
+      content === 'about' ? <About/> :
+      content === 'portofolio' ? <Portofolio/> :
+      content === 'contact' ? <Contact/> :
       null
     );
   }
 
   return (
-    <div className="bg-gray-800 text-white h-screen p-16 grid grid-cols-4 gap-4">
+    <div className="text-white h-screen p-16 grid grid-cols-4 gap-4 max-w-screen-2xl mx-auto">
       <CardProfile/>
       <CardContent className='col-span-3'>
         <Navbar/>
-        <Canvas/>
+        <Content/>
       </CardContent>
     </div>
   )

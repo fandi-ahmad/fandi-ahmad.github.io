@@ -20,7 +20,7 @@ const CardNavbar = () => {
         <div className='bg-gray-600 bg-opacity-50 rounded-tl-none rounded-br-none rounded-xl py-5 px-8 border-l border-b border-gray-500 hidden sm:block'>
           <ul className='flex flex-row gap-8 font-medium'>
             <SubMenu title='about' onClick={() => setContent('about')} />
-            <SubMenu title='portofolio' onClick={() => setContent('portofolio')} />
+            <SubMenu title='portfolio' onClick={() => setContent('portfolio')} />
             <SubMenu title='contact' onClick={() => setContent('contact')} />
           </ul>
         </div>

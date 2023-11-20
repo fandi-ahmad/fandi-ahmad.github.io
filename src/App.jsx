@@ -11,7 +11,7 @@ const App = () => {
   const Content = () => {
     return (
       content === 'about' ? <About/> :
-      content === 'portofolio' ? <Portofolio/> :
+      content === 'portfolio' ? <Portofolio/> :
       content === 'contact' ? <Contact/> :
       null
     );

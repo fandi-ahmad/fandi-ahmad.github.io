@@ -1,66 +1,71 @@
-import React from 'react'
-
-const ContactForm = () => {
-  return (
-    <div className="max-w-md mx-auto my-8 p-6 bg-white rounded-md shadow-md">
-      <h2 className="text-2xl font-semibold mb-4">Formulir Kontak</h2>
-      <form>
-        <div className="mb-4">
-          <label htmlFor="name" className="block text-sm font-medium text-gray-600">
-            Nama
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            className="mt-1 p-2 w-full border rounded-md"
-            placeholder="Masukkan nama Anda"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="email" className="block text-sm font-medium text-gray-600">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            className="mt-1 p-2 w-full border rounded-md"
-            placeholder="Masukkan alamat email Anda"
-            required
-          />
-        </div>
-        <div className="mb-4">
-          <label htmlFor="message" className="block text-sm font-medium text-gray-600">
-            Pesan
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            className="mt-1 p-2 w-full border rounded-md"
-            placeholder="Tulis pesan Anda di sini"
-            required
-          ></textarea>
-        </div>
-        <div className="flex items-center">
-          <button
-            type="submit"
-            className="bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-          >
-            Kirim
-          </button>
-        </div>
-      </form>
-    </div>
-  );
-};
-
+import React, { useState } from 'react'
 
 const Contact = () => {
   const uniqueAutoCompleteValue = `off-${new Date().getTime()}`;
   const classInput = 'mt-1 p-2 w-full border border-gray-500 focus:border-blue-400 text-sm outline-none rounded-md bg-transparent active:outline-none'
+
+  const [alertEmailText, setAlertEmailText] = useState('Email is required')
+  const getId = id => document.getElementById(id)
+
+  const checkInput = (idInput, idText) => {
+    const inputValue = getId(idInput).value
+    inputValue !== '' ? getId(idInput).classList.remove('border-red-400') : null
+    inputValue !== '' ? getId(idText).classList.add('hidden') : null
+  }
+
+  const dangerStyle = (idInput, idText) => {
+    getId(idInput).classList.add('border-red-400')
+    getId(idText).classList.remove('hidden')
+  }
+
+  const sendMail = async () => {
+
+    const fullname = getId('fullname').value
+    const email = getId('email').value
+    const message = getId('message').value
+
+    fullname === '' ? dangerStyle('fullname', 'alertName') : null
+    message === '' ? dangerStyle('message', 'alertMessage') : null
+
+    email === '' || !email.includes("@gmail.com") ? dangerStyle('email', 'alertEmail') : null
+    email === '' ? setAlertEmailText('Email is required') :
+    !email.includes("@gmail.com") ? setAlertEmailText('Invalid email') : null
+
+    if (fullname !== '' && email !== '' && email.includes('@gmail.com') && message !== '') {
+      getId('loader').classList.remove('hidden')
+      try {
+        (function(){
+          emailjs.init(import.meta.env.VITE_EMAIL_PUBLIC_KEY); // Account Public Key
+        })();
+
+        const params = {
+          fullname: fullname,
+          email: email,
+          message: message,
+        };
+    
+        const serviceID = import.meta.env.VITE_EMAIL_SERVICE_ID; // Email Service ID
+        const templateID = import.meta.env.VITE_EMAIL_TEMPLATE_ID; // Email Template ID
+    
+        await emailjs.send(serviceID, templateID, params)
+        getId('fullname').value = ''
+        getId('email').value = ''
+        getId('message').value = ''
+        getId('loader').classList.add('hidden')
+        getId('successSend').classList.remove('hidden')
+        setTimeout(() => {
+          getId('successSend').classList.add('hidden')
+        }, 10000);
+      } catch (error) {
+        getId('failedSend').classList.remove('hidden')
+        setTimeout(() => {
+          getId('failedSend').classList.add('hidden')
+        }, 10000);
+      }
+    }
+
+    
+  }
 
   return (
     <div className='mx-4 md:mx-8 mt-8'>
@@ -73,14 +78,26 @@ const Contact = () => {
 
         <div>
           <div className="mb-4 flex flex-col lg:flex-row gap-4">
-            <input type="text" id="name" name="name" className={classInput} autoComplete={uniqueAutoCompleteValue} placeholder="Full Name" required />
-            <input type="email" id="name" name="name" className={classInput} autoComplete={uniqueAutoCompleteValue} placeholder="Email Address" required />
+            <div className='w-full'>
+              <input type="text" id="fullname" name="fullname" onKeyUp={() => checkInput('fullname', 'alertName')} className={classInput} autoComplete={uniqueAutoCompleteValue} placeholder="Full Name" required />
+              <small id='alertName' className='text-xs text-red-400 hidden'>Name is required</small>
+            </div>
+            <div className='w-full'>
+              <input type="email" id="email" name="email" onKeyUp={() => checkInput('email', 'alertEmail')} className={classInput} autoComplete={uniqueAutoCompleteValue} placeholder="Email Address" required />
+              <small id='alertEmail' className='text-xs text-red-400 hidden'>{alertEmailText}</small>
+            </div>
           </div>
-          <textarea name="" id="" cols="30" rows="8" placeholder='Your Message' className={classInput + ' resize-none'} required></textarea>
+          <div className='w-full'>
+            <textarea id="message" onKeyUp={() => checkInput('message', 'alertMessage')} cols="30" rows="8" placeholder='Your Message' className={classInput + ' resize-none'} required></textarea>
+            <small id='alertMessage' className='text-xs text-red-400 hidden'>Message is required</small>
+          </div>
 
-          <div className='flex justify-end mt-4'>
-            <button className='bg-gray-600 px-4 py-2 rounded-lg hover:bg-gray-500 duration-200 transition-all'>
-              Send Message
+          <div className='flex justify-end items-center mt-4'>
+            <div className='mr-8 text-sm text-red-400 hidden' id='failedSend'>Failed to send, something wrong!!</div>
+            <div className='mr-8 text-sm text-green-400 hidden' id='successSend'>Email sent successfully!!</div>
+            <button onClick={sendMail} className='bg-gray-600 px-4 py-2 rounded-lg hover:bg-gray-500 duration-200 transition-all flex flex-row items-center'>
+              <div className='loader mr-2 hidden' id='loader'></div>
+              <div>Send Message</div>
               <i className="fa-solid fa-paper-plane pl-2"></i>
             </button>
           </div>

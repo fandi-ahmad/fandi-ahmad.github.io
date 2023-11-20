@@ -29,15 +29,15 @@ const About = () => {
         </p>
       </div>
 
-      <div className='px-4 md:px-8 mt-8 w-3/6'>
+      <div className='px-4 md:px-8 mt-8 w-full sm:w-4/6 md:w-3/6 '>
         <h2 className="text-2xl font-bold mb-4">What I'm Doing</h2>
 
         {/* card */}
-        <div className='bg-gray-600 bg-opacity-50 border border-gray-500 rounded-lg p-8 flex flex-row items-center'>
+        <div className='bg-gray-600 bg-opacity-50 border border-gray-500 rounded-lg p-8 flex flex-col sm:flex-row items-center'>
           <div className='text-4xl text-blue-300'>
             <i className="fa-solid fa-laptop-code"></i>
           </div>
-          <div className='pl-4'>
+          <div className='sm:pl-4 text-center sm:text-start'>
             <h3 className='text-lg font-semibold pb-2'>Web Development</h3>
             <div className='text-sm'>
               I offer stunning website design and development services, powered by modern technology.

@@ -26,7 +26,6 @@ const Portofolio = () => {
       portofolioPage === 'html | css | js' ? <div>html css js</div> :
       portofolioPage === 'react & express' ? <div>react express</div> :
       portofolioPage === 'vue' ? <div>vue</div> :
-      portofolioPage === 'other' ? <div>other</div> :
       null
     );
   }
@@ -40,7 +39,7 @@ const Portofolio = () => {
   }
 
   return (
-    <div className='px-8 mt-8'>
+    <div className='px-4 md:px-8 mt-8'>
 
       {/* navbar portofolio */}
       <ul className='hidden md:flex flex-row gap-8'>
@@ -48,7 +47,6 @@ const Portofolio = () => {
         <SubMenu text='html | css | js' onClick={() => setPortofolioPage('html | css | js')} />
         <SubMenu text='react & express' onClick={() => setPortofolioPage('react & express')} />
         <SubMenu text='vue' onClick={() => setPortofolioPage('vue')} />
-        <SubMenu text='other' onClick={() => setPortofolioPage('other')} />
       </ul>
 
       {/* content portofolio */}

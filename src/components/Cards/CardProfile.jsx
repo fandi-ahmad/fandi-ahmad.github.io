@@ -4,8 +4,8 @@ import imageProfile from '../../assets/images/img-profile.jpg'
 
 const BioDetail = (props) => {
   return (
-    <div className='flex flex-row gap-2 items-center mb-2'>
-      <div className='text-4xl text-center px-2  rounded-md bg-gray-600 border-gray-500 border'>
+    <div className='flex flex-row gap-2 items-center mb-4'>
+      <div className='text-4xl text-center px-2 text-blue-300 rounded-md bg-gray-600 border-gray-500 border'>
         <span className="material-symbols-outlined p-0 m-0">{props.icon}</span>
       </div>
       <div>
@@ -31,15 +31,15 @@ const CardProfile = (props) => {
 
   return (
     <div className=''>
-      <div className={`bg-gray-700 rounded-xl border border-gray-500 mt-10 mb-4 overflow-hidden transition-all ease-in-out duration-300 lg:ml-10 ${isActive ? 'max-h-full' : 'max-h-28'} ${props.className}`}>
+      <div className={`bg-gray-700 rounded-xl border border-gray-500 mt-10 mb-4 lg:mb-10 overflow-hidden transition-all ease-in-out duration-300 lg:ml-10 ${isActive ? 'max-h-full' : 'max-h-28'} ${props.className}`}>
         
         <div className='flex flex-row lg:flex-col justify-between items-start lg:items-center'>
           
-          <img src={imageProfile} alt="image" loading='lazy' className='w-20 h-20 ml-8 lg:ml-0 mt-4 lg:w-44 lg:h-44 object-cover rounded-full' />
+          <img src={imageProfile} alt="image" loading='lazy' className='w-20 h-20 ml-4 md:ml-8 lg:ml-0 mt-4 lg:w-44 lg:h-44 object-cover rounded-full' />
           
-          <div className='w-full pl-4 lg:pl-0 lg:pt-4 lg:text-center my-auto'>
-            <div className='text-2xl font-semibold'>Fandi Ahmad</div>
-            <div className='text-xs mt-2'>
+          <div className='w-full pl-2 2xs:pl-4 lg:pl-0 pt-4 lg:text-center my-auto'>
+            <div className='text-xl 2xs:text-2xl font-semibold'>Fandi Ahmad</div>
+            <div className='text-2xs 2xs:text-xs mt-2'>
               <span className='bg-gray-600 px-4 py-1 rounded-md'>Full Stack Developer</span>
             </div>
           </div>
@@ -52,16 +52,17 @@ const CardProfile = (props) => {
         </div>
 
 
-        <div className='p-8 opacity-25'>
+        <div className='py-8 px-4 md:px-8 opacity-25'>
           <hr />
         </div>
 
-        <div className='mx-8'>
+        <div className='mx-4 md:mx-8'>
           <BioDetail icon='mail' title='Email' detail='fandi4160@gmail.com' />
           <BioDetail icon='location_on' title='Location' detail='Palu, Indonesia' />
+          <BioDetail icon='calendar_month' title='Birthday' detail='December, 2002' />
         </div>
 
-        <div className='p-8 opacity-25'>
+        <div className='px-4 md:px-8 pb-8 pt-4 opacity-25'>
           <hr />
         </div>
 

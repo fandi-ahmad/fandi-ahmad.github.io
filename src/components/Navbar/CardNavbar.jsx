@@ -10,7 +10,7 @@ const CardNavbar = () => {
       <div className='flex flex-row w-full justify-between'>
 
         {/* title */}
-        <div className='px-8 flex items-end pt-5'>
+        <div className='px-4 md:px-8 flex items-end pt-5'>
           <div className='text-3xl font-bold capitalize'>
             { content === 'about' ? content + ' me' : content }
           </div>
@@ -27,7 +27,7 @@ const CardNavbar = () => {
 
       </div>
 
-      <div className='relative group pb-2 w-12 mx-8 mt-4'>
+      <div className='relative group pb-2 w-12 mx-4 md:mx-8 mt-4'>
         <span className='absolute inset-x-0 bottom-0 h-1.5 rounded-full bg-blue-400 origin-left transform scale-x-100 transition-transform duration-500'></span>
       </div>
     </>

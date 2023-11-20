@@ -1,6 +1,6 @@
 // components
 import { CardContent, CardProfile } from "./components/Cards"
-import { About, Portofolio, Contact } from "./pages"
+import { About, Portofolio, Contact, Resume } from "./pages"
 import { CardNavbar, BottomNavbar } from "./components/Navbar"
 
 import { useGlobalState } from "./state/state"
@@ -11,6 +11,7 @@ const App = () => {
   const Content = () => {
     return (
       content === 'about' ? <About/> :
+      content === 'resume' ? <Resume/> :
       content === 'portfolio' ? <Portofolio/> :
       content === 'contact' ? <Contact/> :
       null

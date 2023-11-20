@@ -1,17 +1,5 @@
 import React from 'react'
 
-// images
-import cssImg from '../assets/logo/css.png'
-import htmlImg from '../assets/logo/html.png'
-import figmaImg from '../assets/logo/figma.png'
-import jsmg from '../assets/logo/javascript.png'
-import reactImg from '../assets/logo/reactjs.png'
-import vueImg from '../assets/logo/vuejs.png'
-import tailwindImg from '../assets/logo/tailwind.png'
-import bootstrap from '../assets/logo/bootstrap.png'
-import nodeImg from '../assets/logo/nodejs.png'
-import expressJs from '../assets/logo/express.png'
-
 const About = () => {
   return (
     <div>
@@ -47,21 +35,6 @@ const About = () => {
 
       </div>
 
-      <div className="px-4 md:px-8 mt-8">
-        <h2 className="text-2xl font-bold mb-4">My Skills</h2>
-        <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-10 gap-4">
-          <img src={htmlImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
-          <img src={cssImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
-          <img src={jsmg} alt="" loading='lazy' className="w-12 h-12 object-contain rounded-md" />
-          <img src={bootstrap} alt="" loading='lazy' className="w-12 h-12 object-contain" />
-          <img src={tailwindImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
-          <img src={reactImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
-          <img src={vueImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
-          <img src={nodeImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
-          <img src={expressJs} alt="" loading='lazy' className="w-12 h-12 object-contain rounded-md" />
-          <img src={figmaImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
-        </div>
-      </div>
     </div>
   )
 }

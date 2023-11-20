@@ -23,9 +23,21 @@ const Portofolio = () => {
         <CardPorto src={whackamole} title='Whack a Mole' detail='mini game app' />
         <CardPorto src={todolist} title='to do list' detail='tools app' />
       </> :
-      portofolioPage === 'html | css | js' ? <div>html css js</div> :
-      portofolioPage === 'react & express' ? <div>react express</div> :
-      portofolioPage === 'vue' ? <div>vue</div> :
+      portofolioPage === 'html | css | js' ? 
+      <>
+        <CardPorto src={webPena} title='PENA Website 2022-2023' detail='Company Profile' />
+        <CardPorto src={honeyProduction} title='Honey Production' detail='Landing Page' />
+        <CardPorto src={whackamole} title='Whack a Mole' detail='mini game app' />
+        <CardPorto src={todolist} title='to do list' detail='tools app' />
+      </> :
+      portofolioPage === 'react & express' ? 
+      <>
+        <CardPorto src={sipsApp} title='SIPS App' detail='Application for managing Balaroa sub-district letters' />
+      </> :
+      portofolioPage === 'vue' ? 
+      <>
+        <CardPorto src={weatherApp} title='Weather App' detail='weather forecast' />
+      </> :
       null
     );
   }

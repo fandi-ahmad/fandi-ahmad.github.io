@@ -2,12 +2,12 @@ import React from 'react'
 import { useGlobalState } from '../state/state'
 import { CardPorto } from '../components/Cards'
 
-import webPena from '../assets/images/portofolio/web-pena.png'
-import honeyProduction from '../assets/images/portofolio/honey-production.png'
-import whackamole from '../assets/images/portofolio/whackamole.png'
-import todolist from '../assets/images/portofolio/todolist-app.png'
-import sipsApp from '../assets/images/portofolio/SIPS-app.png'
-import weatherApp from '../assets/images/portofolio/weather-app.png'
+import webPena from '../assets/images/portofolio/web-pena.webp'
+import honeyProduction from '../assets/images/portofolio/honey-production.webp'
+import whackamole from '../assets/images/portofolio/whackamole.webp'
+import todolist from '../assets/images/portofolio/todolist-app.webp'
+import sipsApp from '../assets/images/portofolio/SIPS-app.webp'
+import weatherApp from '../assets/images/portofolio/weather-app.webp'
 
 const Portofolio = () => {
   const [portofolioPage, setPortofolioPage] = useGlobalState('portofolioPage')

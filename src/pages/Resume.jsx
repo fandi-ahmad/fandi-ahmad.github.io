@@ -2,16 +2,16 @@ import React from 'react'
 import { BaseTimeline, HeadListTimeline, ListTimeline } from '../components/Timeline'
 
 // images
-import cssImg from '../assets/logo/css.png'
-import htmlImg from '../assets/logo/html.png'
-import figmaImg from '../assets/logo/figma.png'
-import jsmg from '../assets/logo/javascript.png'
-import reactImg from '../assets/logo/reactjs.png'
-import vueImg from '../assets/logo/vuejs.png'
-import tailwindImg from '../assets/logo/tailwind.png'
-import bootstrap from '../assets/logo/bootstrap.png'
-import nodeImg from '../assets/logo/nodejs.png'
-import expressJs from '../assets/logo/express.png'
+import cssImg from '../assets/logo/css.webp'
+import htmlImg from '../assets/logo/html.webp'
+import figmaImg from '../assets/logo/figma.webp'
+import jsmg from '../assets/logo/javascript.webp'
+import reactImg from '../assets/logo/reactjs.webp'
+import vueImg from '../assets/logo/vuejs.webp'
+import tailwindImg from '../assets/logo/tailwind.webp'
+import bootstrap from '../assets/logo/bootstrap.webp'
+import nodeImg from '../assets/logo/nodejs.webp'
+import expressJs from '../assets/logo/express.webp'
 
 const Resume = () => {
   return (

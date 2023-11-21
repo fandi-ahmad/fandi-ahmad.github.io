@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
-import imageProfile from '../../assets/images/img-profile.jpg'
+import imageProfile from '../../assets/images/img-profile.webp'
 
 const BioDetail = (props) => {
   return (

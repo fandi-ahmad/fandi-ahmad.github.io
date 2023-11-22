@@ -6,7 +6,11 @@ const CardPorto = (props) => {
   const overlayClass = `${isHovered ? 'opacity-100' : 'opacity-0'} absolute top-0 left-0 z-20 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50 transition-opacity duration-300`;
 
   return (
-    <div className='bg-gray-600 border border-gray-500 rounded-lg cursor-pointer' onMouseOver={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}>
+    <div className='bg-gray-600 border border-gray-500 rounded-lg cursor-pointer' 
+      onClick={props.onClick}
+      onMouseOver={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className='overflow-hidden rounded-tl-lg rounded-tr-lg relative'>
         <div className='bg-gray-800 relative'>
 

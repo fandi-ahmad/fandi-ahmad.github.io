@@ -11,6 +11,9 @@ export default {
       },
       fontSize: {
         '2xs': '0.60rem'
+      },
+      backgroundImage: {
+        webPenaCover: "url('./src/assets/images/portofolio/web-pena-cover.webp')"
       }
     }
   },

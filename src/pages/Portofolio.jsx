@@ -16,7 +16,7 @@ const Portofolio = () => {
 
   const [portfolioList, setPortfolioList] = useState([
     {
-      name: 'webPena',
+      name: 'penaWeb',
       category: 'html css js',
       imageSrc: webPena,
       title: 'PENA Website 2022-2023',
@@ -103,7 +103,7 @@ const Portofolio = () => {
     )
   }
 
- 
+
   return (
     <div className='px-4 md:px-8 mt-8'>
 

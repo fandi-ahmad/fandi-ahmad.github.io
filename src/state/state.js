@@ -1,7 +1,8 @@
 import { createGlobalState } from 'react-hooks-global-state'
 
 const initialState = {
-  content: 'about'
+  content: 'about',
+  portofolioPage: 'all'
 };
 const { useGlobalState } = createGlobalState(initialState);
 

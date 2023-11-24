@@ -1,48 +1,37 @@
 // components
-import { CardProfile, CardContent } from "./components/Cards"
-import Navbar from "./components/Navbar"
-
-// images
-import cssImg from './assets/logo/css.png'
-import htmlImg from './assets/logo/html.png'
-import figmaImg from './assets/logo/figma.png'
-import jsmg from './assets/logo/javascript.png'
-import reactImg from './assets/logo/reactjs.png'
-import vueImg from './assets/logo/vuejs.png'
-import tailwindImg from './assets/logo/tailwind.png'
-import nodeImg from './assets/logo/nodejs.png'
+import { CardContent, CardProfile } from "./components/Cards"
+import { About, Portofolio, Contact, Resume } from "./pages"
+import { CardNavbar, BottomNavbar } from "./components/Navbar"
 
 import { useGlobalState } from "./state/state"
 
 const App = () => {
   const [content, setContent] = useGlobalState('content')
 
+  const Content = () => {
+    return (
+      content === 'about' ? <About/> :
+      content === 'resume' ? <Resume/> :
+      content === 'portfolio' ? <Portofolio/> :
+      content === 'contact' ? <Contact/> :
+      null
+    );
+  }
 
   return (
-    <div className="bg-gray-800 text-white h-screen p-16 grid grid-cols-4 gap-4">
-      <CardProfile/>
-      <CardContent className='col-span-3'>
-        <Navbar/>
-        <div className="px-8 mt-8">
-          Hello, I'm Fandi, a Front-End Developer who has just started a career in the world of programming. I have knowledge in HTML, CSS, and JavaScript, as well as experience with frameworks such as React and Vue. I am passionate about creating engaging and interactive web experiences, and am always open to learning and developing further in this area.
+    <>
+      <div className="text-white h-screen max-h-fit gap-4 max-w-screen-2xl mx-auto px-4 lg:px-0 lg:grid lg:grid-cols-4">
+        <CardProfile/>
+        <div className="col-span-3 overflow-y-auto">
+          <CardContent className=''>
+            <CardNavbar/>
+            <Content/>
+          </CardContent>
         </div>
 
-        <div className="px-8 mt-8">
-          <h2 className="text-2xl font-bold mb-4">My Skills</h2>
-
-          <div className="grid grid-cols-8 gap-4">
-            <img src={htmlImg} alt="" className="w-12 h-12 object-contain" />
-            <img src={cssImg} alt="" className="w-12 h-12 object-contain" />
-            <img src={jsmg} alt="" className="w-12 h-12 object-contain" />
-            <img src={tailwindImg} alt="" className="w-12 h-12 object-contain" />
-            <img src={reactImg} alt="" className="w-12 h-12 object-contain" />
-            <img src={vueImg} alt="" className="w-12 h-12 object-contain" />
-            <img src={nodeImg} alt="" className="w-12 h-12 object-contain" />
-            <img src={figmaImg} alt="" className="w-12 h-12 object-contain" />
-          </div>
-        </div>
-      </CardContent>
-    </div>
+      </div>
+      <BottomNavbar/>
+    </>
   )
 }
 

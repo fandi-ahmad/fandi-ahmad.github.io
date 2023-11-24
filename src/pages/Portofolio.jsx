@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useGlobalState } from '../state/state'
 import { CardPorto } from '../components/Cards'
-import { PenaWeb } from './PortfolioContent'
+import { PenaWeb, HoneyProduction } from './PortfolioContent'
 
 import webPena from '../assets/images/portofolio/web-pena.webp'
 import honeyProduction from '../assets/images/portofolio/honey-production.webp'
@@ -99,7 +99,8 @@ const Portofolio = () => {
 
   const Content = () => {
     return (
-      portfolioContent === 'penaWeb' ? <PenaWeb/> : null
+      portfolioContent === 'penaWeb' ? <PenaWeb/> :
+      portfolioContent === 'honeyProduction' ? <HoneyProduction/> : null
     )
   }
 
@@ -110,8 +111,8 @@ const Portofolio = () => {
       {/* navbar portofolio */}
       <ul className='hidden md:flex flex-row gap-8'>
         <SubMenu text='all' onClick={() => setPortofolioPage('all')} />
-        <SubMenu text='html | css | js' onClick={() => setPortofolioPage('html css js')} />
-        <SubMenu text='react & express' onClick={() => setPortofolioPage('react express')} />
+        <SubMenu text='html css js' onClick={() => setPortofolioPage('html css js')} />
+        <SubMenu text='react express' onClick={() => setPortofolioPage('react express')} />
         <SubMenu text='vue' onClick={() => setPortofolioPage('vue')} />
       </ul>
 
@@ -123,7 +124,7 @@ const Portofolio = () => {
       {/* modal */}
       <dialog id="modalPortfolio" className="modal">
         <div className='h-screen w-screen'>
-          <button className='text-xl sm:text-3xl md:text-4xl fixed z-30 top-4 right-0.5 sm:right-2 md:right-4 lg:right-6 cursor-pointer hover:text-gray-300' onClick={() => document.getElementById('closeModal').click()}>
+          <button className='text-xl outline-none sm:text-3xl md:text-4xl fixed z-30 top-4 right-0.5 sm:right-2 md:right-4 lg:right-6 cursor-pointer hover:text-gray-300' onClick={() => document.getElementById('closeModal').click()}>
             <i className="fa-solid fa-circle-xmark"></i>
           </button>
           <div className="modal-box rounded-none bg-black bg-opacity-70 min-h-full min-w-full">

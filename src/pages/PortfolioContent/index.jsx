@@ -1,3 +1,4 @@
 import PenaWeb from "./PenaWeb";
+import HoneyProduction from "./HoneyProduction";
 
-export { PenaWeb }
+export { PenaWeb, HoneyProduction }

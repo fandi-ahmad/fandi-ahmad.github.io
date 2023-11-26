@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 const CardNavbar = () => {
   const [content, setContent] = useGlobalState('content')
+  const [portofolioPage, setPortofolioPage] = useGlobalState('portofolioPage')
   const [t, i18n] = useTranslation('global')
 
   const switchLang = (lang) => {
@@ -16,11 +17,13 @@ const CardNavbar = () => {
       content === 'resume' ? setContent(t('navbar.resume')) : 
       content === 'portfolio' ? setContent(t('navbar.portfolio')) : 
       content === 'contact' ? setContent(t('navbar.contact')) : null
+      portofolioPage === 'all' ? setPortofolioPage('semua') : null
     } else if (lang === 'en') {
       content === 'tentang' ? setContent(t('navbar.about')) : 
       content === 'resume' ? setContent(t('navbar.resume')) : 
       content === 'portofolio' ? setContent(t('navbar.portfolio')) : 
       content === 'kontak' ? setContent(t('navbar.contact')) : null
+      portofolioPage === 'semua' ? setPortofolioPage('all') : null
     }
   }
 

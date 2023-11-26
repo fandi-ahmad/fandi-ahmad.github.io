@@ -46,7 +46,7 @@ const CardProfile = (props) => {
             </div>
           </div>
 
-          <div onClick={() => setIsActive(!isActive)} className='bg-gray-600 cursor-pointer px-2 text-4xl bg-opacity-50 top-0 rounded-tl-none rounded-br-none rounded-xl border-l border-b border-gray-500 lg:hidden'>
+          <div onClick={() => setIsActive(!isActive)} className={`${isActive ? 'bg-blue-400 bg-opacity-20' : 'bg-gray-600 bg-opacity-50'} cursor-pointer px-2 text-4xl top-0 rounded-tl-none rounded-br-none rounded-xl border-l border-b border-gray-500 lg:hidden`}>
             <span className="material-symbols-outlined">
               {isActive ? 'expand_less' : 'expand_more'}
             </span>

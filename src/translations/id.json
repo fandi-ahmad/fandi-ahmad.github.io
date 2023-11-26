@@ -33,6 +33,52 @@
     "now": "sekarang",
     "tools": "Alat & Keterampilan Saya"
   },
+  "portfolio": {
+    "all": "semua",
+    "programming_use": "Bahasa Pemrograman yang Saya Gunakan:",
+    "my_role": "peran saya:",
+    "frontend": "Frontend developer",
+    "about": "Tentang Proyek",
+    "pena": {
+      "title": "Website PENA 2022-2023",
+      "detail": "Profil Perusahaan",
+      "data": {
+        "title": "Website Responsif dan Profil Perusahaan",
+        "detail": "Website ini memuat berbagai konten seperti penjelasan singkat tentang organisasi, nama dan jabatan pengurus inti, visi dan misi serta formulir pendaftaran calon anggota baru.",
+        "about_p1": "PENA (Programming, Engineering dan Networking Adhi Guna) PENA merupakan organisasi kemahasiswaan internal kampus yang bergerak di bidang teknologi, website ini dibuat pada bulan September 2022.",
+        "about_p2": "Pengembangan website ini dilakukan bersama tim, saya berperan sebagai frontend developer yang tugasnya membuat user interface. sedangkan backendnya dilakukan dengan menggunakan Laravel. Contoh tampilan user interface pada website ini dapat dilihat ",
+        "link": "melalui tautan ini."
+      }
+    },
+    "honey": {
+      "title": "Website Produksi Madu",
+      "detail": "Halaman arahan",
+      "data": {
+        "title": "Website Responsif dan Profil Perusahaan",
+        "detail": "Website ini bukanlah proyek asli, namun dibuat sebagai portofolio dan mengambil dari referensi yang ada.",
+        "about_p1": "Honey Production merupakan website yang bertemakan produksi madu. Cocok untuk usaha yang bergerak di bidang produksi dan penjualan khususnya madu. untuk desainnya saya ambil referensinya dari ",
+        "about_p2": " Contoh tampilan user interface pada website ini dapat dilihat ",
+        "link1": "sumber ini.",
+        "link2": "melalui tautan ini."
+      }
+    },
+    "whackamole": {
+      "title": "Whack A Mole",
+      "detail": "Aplikasi Permainan Mini"
+    },
+    "todolist": {
+      "title": "to do list",
+      "detail": "Aplikasi Alat"
+    },
+    "weather_app": {
+      "title": "aplikasi cuaca",
+      "detail": "Perkiraan Cuaca"
+    },
+    "sips_app": {
+      "title": "SIPS App",
+      "detail": "Aplikasi untuk membuat surat otomatis di kelurahan balaroa"
+    }
+  },
   "contact": {
     "head": "Hubungi Saya",
     "name": "Nama Lengkap",

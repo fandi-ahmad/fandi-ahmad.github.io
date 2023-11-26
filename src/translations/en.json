@@ -40,43 +40,43 @@
     "frontend": "Frontend developer",
     "about": "About Project",
     "pena": {
-      "title": "Pena Website 2022-2023",
-      "subtitle": "Company Profile",
+      "title": "PENA Website 2022-2023",
+      "detail": "Company Profile",
       "data": {
         "title": "Responsive Website And Company Profile",
-        "detail": "This website creates various content such as a brief explanation of the organization, names and positions of core management, vision and mission as well as a registration form for prospective new members.",
+        "detail": "This website contains various content such as a brief explanation of the organization, names and positions of core management, vision and mission as well as a registration form for prospective new members.",
         "about_p1": "PENA (Programming, Engineering and Networking Adhi Guna) PENA is an internal campus student organization that operates in the technology sector, this website was created in September 2022.",
-        "about_p2": "The development of this website was carried out with the team, I acted as a frontend developer whose job was to create the user interface. while the backend is done using Laravel. An example of the user interface display on this website can be seen",
+        "about_p2": "The development of this website was carried out with the team, I acted as a frontend developer whose job was to create the user interface. while the backend is done using Laravel. An example of the user interface display on this website can be seen ",
         "link": "via this link."
       }
     },
     "honey": {
-      "title": "Honey Production",
-      "subtitle": "Landing Page",
+      "title": "Honey Production website",
+      "detail": "Landing Page",
       "data": {
         "title": "Responsive Website And Company Profile",
         "detail": "This website is not an original project, but was created as a portfolio and takes from existing references.",
-        "about_p1": "Honey Production is a website with the theme of honey production. Suitable for businesses engaged in production and sales, especially honey. for the design I took reference from",
-        "about_p2": " An example of the user interface display on this website can be seen",
+        "about_p1": "Honey Production is a website with the theme of honey production. Suitable for businesses engaged in production and sales, especially honey. for the design I took reference from ",
+        "about_p2": " An example of the user interface display on this website can be seen ",
         "link1": "this source.",
         "link2": "via this link."
       }
     },
     "whackamole": {
       "title": "Whack A Mole",
-      "subtitle": "Mini Game App"
+      "detail": "Mini Game App"
     },
     "todolist": {
       "title": "to do list",
-      "subtitle": "Tools App"
+      "detail": "Tools App"
     },
     "weather_app": {
       "title": "Weather App",
-      "subtitle": "Weather Forecast"
+      "detail": "Weather Forecast"
     },
     "sips_app": {
       "title": "SIPS App",
-      "subtitle": "Application For Managing Balaroa Sub-District Letters"
+      "detail": "Application to create automatic letters in Balaroa sub-district"
     }
   },
   "contact": {

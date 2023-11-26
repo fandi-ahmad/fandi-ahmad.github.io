@@ -27,10 +27,10 @@ const BottomNavbar = () => {
   return (
     <div className='fixed sm:hidden z-30 bottom-0 w-full bg-gray-600 bg-opacity-95 rounded-xl rounded-bl-none rounded-br-none py-4 px-8 text-white border-gray-500 border-t flex justify-center'>
       <ul className='flex flex-row gap-6 sm:gap-8 font-medium text-xs'>
-        <SubMenu title='about' onClick={() => setContent('about')} />
-        <SubMenu title='resume' onClick={() => setContent('resume')} />
-        <SubMenu title='portfolio' onClick={() => setContent('portfolio')} />
-        <SubMenu title='contact' onClick={() => setContent('contact')} />
+        <SubMenu title={t('navbar.about')} onClick={() => setContent(t('navbar.about'))} />
+        <SubMenu title={t('navbar.resume')} onClick={() => setContent(t('navbar.resume'))} />
+        <SubMenu title={t('navbar.portfolio')} onClick={() => setContent(t('navbar.portfolio'))} />
+        <SubMenu title={t('navbar.contact')} onClick={() => setContent(t('navbar.contact'))} />
         <div className="dropdown dropdown-top dropdown-end cursor-pointer" style={{marginTop: '-2px'}}>
           <label tabIndex={2} className="cursor-pointer capitalize flex flex-row items-center">
             <i className="fa-solid fa-globe text-lg"></i> 

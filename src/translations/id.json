@@ -1,0 +1,51 @@
+{
+  "self": {
+    "location": "lokasi",
+    "birthday": "hari ulang tahun"
+  },
+  "navbar": {
+    "about": "tentang",
+    "resume": "resume",
+    "portfolio": "portofolio",
+    "contact": "kontak",
+    "language": "bahasa"
+  },
+  "about": {
+    "p1": "Halo, saya Fandi, Pengembang Web Full Stack dengan hasrat untuk menciptakan pengalaman web yang tidak hanya fungsional, tetapi juga menakjubkan. Di dunia front-end, saya memiliki keahlian dalam mengimplementasikan desain menggunakan HTML, CSS, dan JavaScript, dan saya percaya bahwa penggunaan kerangka kerja modern seperti React dan Vue membawa dimensi baru pada interaktivitas dan daya tarik visual.",
+    "p2": "Dalam pengembangan back-end, saya mengandalkan Express untuk memastikan kinerja dan keamanan yang optimal. Saya tidak hanya melihat pengembangan web sebagai pekerjaan, namun sebagai peluang untuk menerima tantangan dan terus belajar. Saya percaya bahwa inovasi muncul melalui keinginan untuk terus berkembang, dan saya selalu terbuka untuk menggali lebih dalam dunia pengembangan web.",
+    "p3": "Dengan kombinasi keahlian teknis dan semangat eksplorasi, saya siap membawa proyek web Anda ke tingkat berikutnya. Mari kita bersama-sama menciptakan pengalaman web yang tak terlupakan!",
+    "service": "Apa yang saya lakukan",
+    "service_head1": "Pengembangan web",
+    "service_body1": "Saya menawarkan layanan desain dan pengembangan situs web yang menakjubkan, didukung oleh teknologi modern."
+  },
+  "resume": {
+    "edu": {
+      "head": "pendidikan",
+      "stmik": "Teknik Informatika",
+      "smkn": "Teknik Komputer dan Jaringan"
+    },
+    "exp": {
+      "head": "pengalaman",
+      "paerte_code": "Sebagai UI/UX Designer yang berfokus pada pembuatan desain prototipe aplikasi untuk pengembangan lebih lanjut. Dengan memahami kebutuhan pengguna, saya berusaha untuk membuat desain yang sederhana dan efektif. Alat yang saya gunakan adalah Figma.",
+      "balaroa_head": "Kelurahan Balaroa",
+      "balaroa": "Membuat aplikasi untuk membuat surat otomatis, sehingga pegawai hanya perlu memasukkan data yang dibutuhkan dan surat dapat segera dibuat untuk keperluan pelayanan masyarakat. menggunakan React dan Express."
+    },
+    "now": "sekarang",
+    "tools": "Alat & Keterampilan Saya"
+  },
+  "contact": {
+    "head": "Hubungi Saya",
+    "name": "Nama Lengkap",
+    "email": "Alamat Email",
+    "message": "Pesan Anda",
+    "button": "Kirim Pesan",
+    "success": "Email berhasil dikirim!!",
+    "failed": "Gagal mengirim, ada yang salah!!",
+    "alert": {
+      "invalid": "Email tidak valid",
+      "name": "Nama wajib diisi",
+      "email": "Email wajib diisi",
+      "message": "Pesan wajib diisi"
+    }
+  }
+}

@@ -1,24 +1,27 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 
 const About = () => {
+  const [t, i18n] = useTranslation('global')
+
   return (
     <div>
       <div className="px-4 md:px-8 mt-8 font-light text-justify text-sm">
         <p className='mb-4'>
-          Hello, I'm Fandi, a Full Stack Web Developer with a passion for creating web experiences that are not only functional, but also stunning. In the front-end world, I have expertise in implementing designs using HTML, CSS, and JavaScript, and I believe that the use of modern frameworks such as React and Vue brings a new dimension to interactivity and visual appeal.
+          {t('about.p1')}
         </p>
 
         <p className='mb-4'>
-          In back-end development, I rely on Express to ensure optimal performance and security. I don't just see web development as a job, but as an opportunity to embrace challenges and continue learning. I believe that innovation comes through the desire to continually grow, and I'm always open to digging deeper into the world of web development.
+          {t('about.p2')}
         </p>
 
         <p className='mb-4'>
-          With my combination of technical expertise and spirit of exploration, I'm ready to take your web projects to the next level. Let's create unforgettable and stimulating web experiences together!
+          {t('about.p3')}
         </p>
       </div>
 
       <div className='px-4 md:px-8 mt-8 w-full sm:w-4/6 md:w-3/6 '>
-        <h2 className="text-2xl font-bold mb-4">What I'm Doing</h2>
+        <h2 className="text-2xl font-bold mb-4">{t('about.service')}</h2>
 
         {/* card */}
         <div className='bg-gray-600 bg-opacity-50 border border-gray-500 rounded-lg p-8 flex flex-col sm:flex-row items-center'>
@@ -26,10 +29,8 @@ const About = () => {
             <i className="fa-solid fa-laptop-code"></i>
           </div>
           <div className='sm:pl-4 text-center sm:text-start'>
-            <h3 className='text-lg font-semibold pb-2'>Web Development</h3>
-            <div className='text-sm'>
-              I offer stunning website design and development services, powered by modern technology.
-            </div>
+            <h3 className='text-lg font-semibold pb-2'>{t('about.service_head1')}</h3>
+            <div className='text-sm'>{t('about.service_body1')}</div>
           </div>
         </div>
 

@@ -9,7 +9,7 @@ const HeadListTimeline = (props) => {
         </div>
       </div>
       <div className="timeline-end pt-2 ml-4">
-        <h2 className="text-2xl font-bold mb-4">{props.title}</h2>
+        <h2 className="text-2xl font-bold mb-4 capitalize">{props.title}</h2>
       </div>
       <hr className='bg-gray-500' />
     </li>

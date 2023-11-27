@@ -15,7 +15,7 @@ const HoneyProduction = () => {
   return (
     <Template title={t('portfolio.honey.title')}  subtitle={t('portfolio.honey.detail')}  >
       <div style={{ backgroundImage: `url(${honeyProductionCover})` }} className='p-8 bg-yellow-600 bg-contain bg-no-repeat bg-right-bottom'>
-        <div className='flex flex-row items-center'>
+        <div className='flex flex-row items-center mb-12'>
           <img src={honeyLogo} alt="honey" loading='lazy' className='h-12' />
         </div>
         <TextHead>{t('portfolio.honey.data.title')}</TextHead>

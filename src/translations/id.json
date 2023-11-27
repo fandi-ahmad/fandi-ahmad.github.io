@@ -1,7 +1,8 @@
 {
   "self": {
     "location": "lokasi",
-    "birthday": "hari ulang tahun"
+    "birthday": "hari ulang tahun",
+    "dec": "Desember"
   },
   "navbar": {
     "about": "tentang",
@@ -39,6 +40,10 @@
     "my_role": "peran saya:",
     "frontend": "Frontend developer",
     "about": "Tentang Proyek",
+    "tech": "Teknologi",
+    "feature": "Fitur Utama",
+    "asset_from": "Beberapa aset dari: ",
+    "demo_link": "Tautan demo: ",
     "pena": {
       "title": "Website PENA 2022-2023",
       "detail": "Profil Perusahaan",
@@ -63,12 +68,42 @@
       }
     },
     "whackamole": {
-      "title": "Whack A Mole",
-      "detail": "Aplikasi Permainan Mini"
+      "title": "Pukul Tikus Tanah",
+      "detail": "Permainan Mini",
+      "data": {
+        "title": "Game Web Pukul Tikus Tanah",
+        "detail": "Whack-a-Mole merupakan game arcade yang menguji refleks dan ketangkasan pemainnya.",
+        "about_p1": "Dalam proyek ini, saya merancang dan mengimplementasikan game klasik berbasis web 'Whack-a-Mole'. Whack-a-Mole merupakan game arcade yang menguji refleks dan ketangkasan pemainnya. Dalam versi web ini, saya menggabungkan elemen permainan menyenangkan dengan desain responsif untuk pengalaman pengguna yang optimal di seluruh perangkat.",
+        "tech_head1": "HTML, CSS, dan JavaScript:",
+        "tech_head2": "Animasi CSS:",
+        "tech_head3": "Penyimpanan lokal:",
+        "tech_body1": "Menerapkan logika permainan dan interaksi pengguna menggunakan kombinasi teknologi web dasar.",
+        "tech_body2": "Memanfaatkan animasi CSS untuk membuat gerakan karakter yang halus.",
+        "tech_body3": "Simpan dan muat skor tinggi menggunakan Penyimpanan Lokal di browser."
+      }
     },
     "todolist": {
       "title": "to do list",
-      "detail": "Aplikasi Alat"
+      "detail": "Aplikasi Alat",
+      "data": {
+        "title": "Aplikasi To-Do List Sederhana dengan Local Storage",
+        "detail": "Aplikasi ini memungkinkan pengguna untuk membuat, menandai sebagai selesai, dan menghapus daftar tugas dengan cepat dan mudah.",
+        "about_p1": "Dalam proyek ini, saya menciptakan sebuah aplikasi To-Do List berbasis web yang simpel namun efektif. Aplikasi ini memungkinkan pengguna untuk membuat, menandai sebagai selesai, dan menghapus daftar tugas dengan cepat dan mudah. Salah satu fitur utama yang saya terapkan adalah penggunaan Local Storage untuk menyimpan data tugas secara lokal pada perangkat pengguna, memungkinkan pengguna untuk menyimpan daftar tugas mereka bahkan setelah menutup atau menyegarkan halaman.",
+        "feature_head1": "Pembuatan Daftar Tugas:",
+        "feature_head2": "Penandaan Selesai:",
+        "feature_head3": "Penghapusan Tugas:",
+        "feature_head4": "Local Storage:",
+        "feature_body1": " Pengguna dapat dengan mudah menambahkan tugas baru dengan judul dan deskripsi yang relevan.",
+        "feature_body2": "Setiap tugas dapat ditandai sebagai selesai.",
+        "feature_body3": "Fasilitas untuk menghapus tugas yang sudah selesai atau tidak lagi relevan.",
+        "feature_body4": "Implementasi penyimpanan lokal memastikan data tugas tetap tersedia bahkan setelah penutupan halaman atau refresh browser.",
+        "tech_head1" : "HTML, CSS, dan JavaScript:",
+        "tech_head2" : "Local Storage:",
+        "tech_head3" : "Desain Responsif:",
+        "tech_body1" : "Menerapkan antarmuka pengguna yang bersih dan responsif dengan logika interaksi menggunakan JavaScript.",
+        "tech_body2" : "Memanfaatkan Local Storage pada browser untuk menyimpan dan memuat daftar tugas pengguna.",
+        "tech_body3" : "Desain yang responsif agar dapat digunakan dengan nyaman di berbagai perangkat."
+      }
     },
     "weather_app": {
       "title": "aplikasi cuaca",

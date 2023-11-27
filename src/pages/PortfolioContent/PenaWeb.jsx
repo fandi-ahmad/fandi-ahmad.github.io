@@ -18,7 +18,7 @@ const PenaWeb = () => {
   return (
     <Template title={t('portfolio.pena.title')} subtitle={t('portfolio.pena.detail')}  >
       <div style={{ backgroundImage: `url(${webPenaCover})` }} className='p-8 bg-blue-950 bg-contain bg-no-repeat bg-right-bottom'>
-        <div className='flex flex-row items-center'>
+        <div className='flex flex-row items-center mb-12'>
           <img src={logoPena} alt="PENA logo" loading='lazy' className='w-16 h-16 ' />
           <h3 className='text-5xl font-semibold ml-2'>PENA</h3>
         </div>

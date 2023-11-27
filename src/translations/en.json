@@ -1,7 +1,8 @@
 {
   "self": {
     "location": "location",
-    "birthday": "birthday"
+    "birthday": "birthday",
+    "dec": "December"
   },
   "navbar": {
     "about": "about",
@@ -39,6 +40,10 @@
     "my_role": "my role:",
     "frontend": "Frontend developer",
     "about": "About Project",
+    "tech": "Technology",
+    "feature": "Main Feature",
+    "asset_from": "Some assets from: ",
+    "demo_link": "Demo link: ",
     "pena": {
       "title": "PENA Website 2022-2023",
       "detail": "Company Profile",
@@ -64,11 +69,39 @@
     },
     "whackamole": {
       "title": "Whack A Mole",
-      "detail": "Mini Game App"
+      "detail": "Mini Game",
+      "data": {
+        "title": "Whack A Mole Web Game",
+        "detail": "Whack-a-Mole is an arcade game that tests the player's reflexes and dexterity.",
+        "about_p1": "In this project, I designed and implemented the classic web-based game 'Whack-a-Mole'. Whack-a-Mole is an arcade game that tests the player's reflexes and dexterity. In this web version, I combined fun game elements with responsive design for an optimal user experience across devices.",
+        "tech_head1": "HTML, CSS, and JavaScript:",
+        "tech_head2": "CSS Animations:",
+        "tech_body1": "Implement game logic and user interactions using a combination of basic web technologies.",
+        "tech_body2": "Leverages CSS animations to create smooth character movements."
+      }
     },
     "todolist": {
       "title": "to do list",
-      "detail": "Tools App"
+      "detail": "Tools App",
+      "data": {
+        "title": "Simple To-Do List Application with Local Storage",
+        "detail": "The app allows users to create, mark as complete, and delete to-do lists quickly and easily.",
+        "about_p1": "In this project, I created a simple yet effective web-based To-Do List application. The app allows users to create, mark as complete, and delete to-do lists quickly and easily. One of the key features I implemented was the use of Local Storage to store task data locally on the user's device, allowing users to save their task list even after closing or refreshing the page.",
+        "feature_head1": "To-Do List Creation:",
+        "feature_head2": "Marking Completed:",
+        "feature_head3": "Task Deletion:",
+        "feature_head4": "Local Storage:",
+        "feature_body1": "Users can easily add new tasks with relevant titles and descriptions.",
+        "feature_body2": "Any task can be marked as complete.",
+        "feature_body3": "Facility to delete completed or no longer relevant tasks.",
+        "feature_body4": "Local storage implementation ensures task data remains available even after page closure or browser refresh.",
+        "tech_head1" : "HTML, CSS, and JavaScript:",
+        "tech_head2" : "Local Storage:",
+        "tech_head3" : "Responsive Design:",
+        "tech_body1" : "Implemented a clean, responsive user interface with interaction logic using JavaScript.",
+        "tech_body2" : "Utilize Local Storage in the browser to save and load the user's to-do list.",
+        "tech_body3" : "Responsive design to be used comfortably on various devices."
+      }
     },
     "weather_app": {
       "title": "Weather App",

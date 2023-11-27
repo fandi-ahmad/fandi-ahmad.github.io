@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useGlobalState } from '../state/state'
 import { CardPorto } from '../components/Cards'
-import { PenaWeb, HoneyProduction } from './PortfolioContent'
+import { PenaWeb, HoneyProduction, WhackaMole, Todolist } from './PortfolioContent'
 
 import webPena from '../assets/images/portofolio/web-pena.webp'
 import honeyProduction from '../assets/images/portofolio/honey-production.webp'
@@ -71,9 +71,9 @@ const Portofolio = () => {
       portofolioPage === 'html css js' ? 
       <>
         <CardPorto src={webPena} title={t('portfolio.pena.title')} detail={t('portfolio.pena.detail')} onClick={() => openModal('penaWeb')} />
-        <CardPorto src={honeyProduction} title={t('portfolio.honey.title')} detail={t('portfolio.pena.detail')} onClick={() => openModal('honeyProduction')} />
-        <CardPorto src={whackamole} title={t('portfolio.whackamole.title')} detail={t('portfolio.whackamole.detail')} />
-        <CardPorto src={todolist} title={t('portfolio.todolist.title')} detail={t('portfolio.todolist.detail')} />
+        <CardPorto src={honeyProduction} title={t('portfolio.honey.title')} detail={t('portfolio.honey.detail')} onClick={() => openModal('honeyProduction')} />
+        <CardPorto src={whackamole} title={t('portfolio.whackamole.title')} detail={t('portfolio.whackamole.detail')} onClick={() => openModal('whackAMole')} />
+        <CardPorto src={todolist} title={t('portfolio.todolist.title')} detail={t('portfolio.todolist.detail')} onClick={() => openModal('toDoList')} />
       </> :
       portofolioPage === 'react express' ? 
       <>
@@ -102,7 +102,9 @@ const Portofolio = () => {
   const Content = () => {
     return (
       portfolioContent === 'penaWeb' ? <PenaWeb/> :
-      portfolioContent === 'honeyProduction' ? <HoneyProduction/> : null
+      portfolioContent === 'honeyProduction' ? <HoneyProduction/> :
+      portfolioContent === 'whackAMole' ? <WhackaMole/> : 
+      portfolioContent === 'toDoList' ? <Todolist/> : null
     )
   }
 

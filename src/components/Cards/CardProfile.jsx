@@ -61,7 +61,7 @@ const CardProfile = (props) => {
         <div className='mx-4 md:mx-8'>
           <BioDetail icon='mail' title='Email' detail='fandi4160@gmail.com' />
           <BioDetail icon='location_on' title={t('self.location')} detail='Palu, Indonesia' />
-          <BioDetail icon='calendar_month' title={t('self.birthday')} detail='December, 2002' />
+          <BioDetail icon='calendar_month' title={t('self.birthday')} detail={`${t('self.dec')}, 2002`} />
         </div>
 
         <div className='px-4 md:px-8 pb-8 pt-4 opacity-25'>

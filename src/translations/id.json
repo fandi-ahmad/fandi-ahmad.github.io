@@ -44,6 +44,8 @@
     "feature": "Fitur Utama",
     "asset_from": "Beberapa aset dari: ",
     "demo_link": "Tautan demo: ",
+    "open_weather": "Integrasi API Open Weather Map",
+    "ux": "Pengalaman Pengguna",
     "pena": {
       "title": "Website PENA 2022-2023",
       "detail": "Profil Perusahaan",
@@ -107,7 +109,29 @@
     },
     "weather_app": {
       "title": "aplikasi cuaca",
-      "detail": "Perkiraan Cuaca"
+      "detail": "Perkiraan Cuaca",
+      "data": {
+        "title": "Aplikasi Cuaca Berbasis Web",
+        "detail": "Aplikasi cuaca berbasis web yang sederhana dan efisien, memungkinkan pengguna untuk dengan cepat mendapatkan informasi cuaca terkini berdasarkan kota atau negara.",
+        "about_p1": "Dalam proyek ini, saya membuat sebuah aplikasi cuaca berbasis web yang sederhana dan efisien, memungkinkan pengguna untuk dengan cepat mendapatkan informasi cuaca terkini berdasarkan kota atau negara yang mereka ketikkan dalam pencarian. Saya memanfaatkan layanan OpenWeatherMap API untuk mendapatkan data cuaca real-time yang akurat.",
+        "feature_head1": "Pencarian Lokasi:",
+        "feature_head2": "Tampilan Detail Cuaca:",
+        "feature_head3": "Desain Responsif:",
+        "feature_body1": "Pengguna dapat memasukkan nama kota atau negara untuk mendapatkan informasi cuaca terkini.",
+        "feature_body2": "Menampilkan detail cuaca seperti suhu, kelembaban, kecepatan angin, dan kondisi cuaca secara visual dan informatif.",
+        "feature_body3": "Memastikan antarmuka pengguna dapat diakses dengan nyaman di berbagai perangkat, mulai dari desktop hingga perangkat seluler.",
+        "tech_head1": "ViteJS + VueJS:",
+        "tech_head2": "Axios:",
+        "tech_head3": "Bootstrap:",
+        "tech_body1": "Menggunakan ViteJS sebagai kerangka pengembangan web yang cepat, bersama dengan VueJS untuk mengelola komponen dan state aplikasi.",
+        "tech_body2": "Menggunakan Axios untuk melakukan permintaan HTTP ke OpenWeatherMap API dan mendapatkan data cuaca.",
+        "tech_body3": "Menerapkan Bootstrap untuk desain responsif dan komponen antarmuka pengguna yang bersih..",
+        "open_weather_head1": "Data Cuaca Real-Time:",
+        "open_weather_head2": "Perkiraan Jangka Pendek:",
+        "open_weather_body1": "Mengintegrasikan OpenWeatherMap API untuk mendapatkan data cuaca terkini berdasarkan lokasi yang dimasukkan pengguna.",
+        "open_weather_body2": "Memberikan perkiraan cuaca jangka pendek untuk membantu pengguna mempersiapkan aktivitas harian mereka.",
+        "ux_p1": "Aplikasi Cuaca dirancang dengan fokus pada kemudahan penggunaan dan aksesibilitas informasi cuaca terkini. Dengan tampilan yang intuitif dan fitur pencarian yang efisien, pengguna dapat dengan cepat mendapatkan informasi cuaca yang mereka butuhkan."
+      }
     },
     "sips_app": {
       "title": "SIPS App",

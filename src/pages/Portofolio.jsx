@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useGlobalState } from '../state/state'
 import { CardPorto } from '../components/Cards'
-import { PenaWeb, HoneyProduction, WhackaMole, Todolist } from './PortfolioContent'
+import { PenaWeb, HoneyProduction, WhackaMole, Todolist, WeatherApp } from './PortfolioContent'
 
 import webPena from '../assets/images/portofolio/web-pena.webp'
 import honeyProduction from '../assets/images/portofolio/honey-production.webp'
@@ -104,7 +104,8 @@ const Portofolio = () => {
       portfolioContent === 'penaWeb' ? <PenaWeb/> :
       portfolioContent === 'honeyProduction' ? <HoneyProduction/> :
       portfolioContent === 'whackAMole' ? <WhackaMole/> : 
-      portfolioContent === 'toDoList' ? <Todolist/> : null
+      portfolioContent === 'toDoList' ? <Todolist/> :
+      portfolioContent === 'weatherApp' ? <WeatherApp/> : null
     )
   }
 

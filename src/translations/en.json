@@ -44,6 +44,8 @@
     "feature": "Main Feature",
     "asset_from": "Some assets from: ",
     "demo_link": "Demo link: ",
+    "open_weather": "Open Weather Map API Integration",
+    "ux": "User Experience",
     "pena": {
       "title": "PENA Website 2022-2023",
       "detail": "Company Profile",
@@ -105,7 +107,29 @@
     },
     "weather_app": {
       "title": "Weather App",
-      "detail": "Weather Forecast"
+      "detail": "Weather Forecast",
+      "data": {
+        "title": "Web Based Weather Application",
+        "detail": "A simple and efficient web-based weather application, allowing users to quickly get up-to-date weather information by city or country.",
+        "about_p1": "In this project, I created a simple and efficient web-based weather application, allowing users to quickly get up-to-date weather information based on the city or country they type in a search. I utilize the OpenWeatherMap API service to get accurate real-time weather data.",
+        "feature_head1": "Location Search:",
+        "feature_head2": "Weather Details View:",
+        "feature_head3": "Responsive Design:",
+        "feature_body1": "Users can enter the city or country name to get the latest weather information.",
+        "feature_body2": "Displays weather details such as temperature, humidity, wind speed and weather conditions in a visual and informative manner.",
+        "feature_body3": "Ensures the user interface can be conveniently accessed across devices, from desktop to mobile devices.",
+        "tech_head1": "ViteJS + VueJS:",
+        "tech_head2": "Axios:",
+        "tech_head3": "Bootstrap:",
+        "tech_body1": "Uses ViteJS as a rapid web development framework, along with VueJS to manage application components and state.",
+        "tech_body2": "Use Axios to make HTTP requests to the OpenWeatherMap API and get weather data.",
+        "tech_body3": "Implemented Bootstrap for responsive design and clean user interface components.",
+        "open_weather_head1": "Real-Time Weather Data:",
+        "open_weather_head2": "Short-Term Forecast:",
+        "open_weather_body1": "Integrates OpenWeatherMap API to get up-to-date weather data based on user-entered location.",
+        "open_weather_body2": "Provides short-term weather forecasts to help users prepare for their daily activities.",
+        "ux_p1": "The Weather App was designed with a focus on ease of use and accessibility of up-to-date weather information. With an intuitive display and efficient search features, users can quickly get the weather information they need."
+      }
     },
     "sips_app": {
       "title": "SIPS App",

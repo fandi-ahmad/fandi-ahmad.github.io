@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useGlobalState } from '../state/state'
 import { CardPorto } from '../components/Cards'
-import { PenaWeb, HoneyProduction, WhackaMole, Todolist, WeatherApp } from './PortfolioContent'
+import { PenaWeb, HoneyProduction, WhackaMole, Todolist, WeatherApp, SipsApp } from './PortfolioContent'
 
 import webPena from '../assets/images/portofolio/web-pena.webp'
 import honeyProduction from '../assets/images/portofolio/honey-production.webp'
@@ -77,11 +77,11 @@ const Portofolio = () => {
       </> :
       portofolioPage === 'react express' ? 
       <>
-        <CardPorto src={sipsApp} title={t('portfolio.sips_app.title')} detail={t('portfolio.sips_app.detail')} />
+        <CardPorto src={sipsApp} title={t('portfolio.sips_app.title')} detail={t('portfolio.sips_app.detail')} onClick={() => openModal('sipsApp')} />
       </> :
       portofolioPage === 'vue' ? 
       <>
-        <CardPorto src={weatherApp} title={t('portfolio.weather_app.title')} detail={t('portfolio.weather_app.detail')} />
+        <CardPorto src={weatherApp} title={t('portfolio.weather_app.title')} detail={t('portfolio.weather_app.detail')} onClick={() => openModal('weatherApp')} />
       </> :
       null
     );
@@ -105,7 +105,8 @@ const Portofolio = () => {
       portfolioContent === 'honeyProduction' ? <HoneyProduction/> :
       portfolioContent === 'whackAMole' ? <WhackaMole/> : 
       portfolioContent === 'toDoList' ? <Todolist/> :
-      portfolioContent === 'weatherApp' ? <WeatherApp/> : null
+      portfolioContent === 'weatherApp' ? <WeatherApp/> :
+      portfolioContent === 'sipsApp' ? <SipsApp/> : null
     )
   }
 

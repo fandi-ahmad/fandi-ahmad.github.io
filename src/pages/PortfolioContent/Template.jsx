@@ -25,7 +25,7 @@ export const TextSubHead = (props) => {
 }
 
 export const ImageTool = (props) => {
-  return <img src={props.src} alt="tool" loading='lazy' className={`w-12 h-12 mr-4 mb-4 object-contain ${props.className}`} />
+  return <img src={props.src} alt="tool" loading='lazy' className={`w-full h-12 mr-4 mb-4 object-contain ${props.className}`} />
 }
 
 export const Text = (props) => {

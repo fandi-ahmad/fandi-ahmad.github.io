@@ -17,7 +17,9 @@
     "p3": "With a combination of technical expertise and a spirit of exploration, I'm ready to take your web project to the next level. Let's create an unforgettable web experience together!",
     "service": "What I'm Doing",
     "service_head1": "Web Development",
-    "service_body1": "I offer stunning website design and development services, powered by modern technology."
+    "service_head2": "Web Based Application",
+    "service_body1": "I offer stunning website design and development services, powered by modern technology.",
+    "service_body2": "I offer website-based application design and development."
   },
   "resume": {
     "edu": {
@@ -133,7 +135,40 @@
     },
     "sips_app": {
       "title": "SIPS App",
-      "detail": "Application to create automatic letters in Balaroa sub-district"
+      "detail": "Application to create automatic letters in Balaroa sub-district",
+      "data": {
+        "title": "SIPS App (Letter Creation Information System)",
+        "detail": "A system that facilitates the process of making certificates for community services.",
+        "about_p1": "In this project I designed the SIPS (Letter Creation Information System) application, which is a system that makes the process of creating community service certificates easier. This application is specifically designed for sub-district offices, allowing employees to create documents needed by residents quickly and efficiently.",
+        "about_p2": "This application was created as a technical activity for me when I was a KKLP Internship Student in Balaroa Village.",
+        "about_p3": "The SIPS application is designed to increase the efficiency of community services at sub-district offices so that it has a positive impact on administrative processes and community services.",
+        "feature_head1": "Employee and Resident Registration:",
+        "feature_head2": "Letter Type Selection:",
+        "feature_head3": "Citizen Data Storage",
+        "feature_head4": "Modern Technology:",
+        "feature_head5": "Data Security:",
+        "feature_head6": "Modern UI with Tailwind CSS:",
+        "feature_body1": "Record the name of the employee who signed the letter and record the demographic information to make it easier to make the deed at a later date.",
+        "feature_body2": "Employees can select the desired certificate type, and the application automatically generates a letter with previously entered data.",
+        "feature_body3": "Citizen data is stored securely, enabling faster certificate generation for previously registered citizens.",
+        "feature_body4": "Uses Vite, React, Express, and MySQL technologies to build applications.",
+        "feature_body5": "Implement JSON Web Token (JWT) to secure citizen access and data.",
+        "feature_body6": "Implement Tailwind CSS for a clean and modern interface design, speeding up the development process and improving design consistency.",
+        "tech_head1": "Vite and React:",
+        "tech_head2": "Express and MySQL:",
+        "tech_head3": "Axios:",
+        "tech_head4": "DaisyUI and SweetAlert:",
+        "tech_head5": "Sequelize:",
+        "tech_head6": "JSON Web Token (JWT):",
+        "tech_head7": "Tailwind CSS:",
+        "tech_body1": "These are frontend technologies that provide dynamic user interfaces.",
+        "tech_body2": "Used as backend technologies for data and server management.",
+        "tech_body3": "Makes communication between frontend and backend easier.",
+        "tech_body4": "Enhance the user interface with elegant UI components and engaging notifications.",
+        "tech_body5": "Helps in managing MySQL databases with a structured model.",
+        "tech_body6": "Used to implement security and authentication.",
+        "tech_body7": "A CSS framework used to build user interface designs quickly and consistently."
+      }
     }
   },
   "contact": {

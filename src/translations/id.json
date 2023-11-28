@@ -16,8 +16,10 @@
     "p2": "Dalam pengembangan back-end, saya mengandalkan Express untuk memastikan kinerja dan keamanan yang optimal. Saya tidak hanya melihat pengembangan web sebagai pekerjaan, namun sebagai peluang untuk menerima tantangan dan terus belajar. Saya percaya bahwa inovasi muncul melalui keinginan untuk terus berkembang, dan saya selalu terbuka untuk menggali lebih dalam dunia pengembangan web.",
     "p3": "Dengan kombinasi keahlian teknis dan semangat eksplorasi, saya siap membawa proyek web Anda ke tingkat berikutnya. Mari kita bersama-sama menciptakan pengalaman web yang tak terlupakan!",
     "service": "Apa yang saya lakukan",
-    "service_head1": "Pengembangan web",
-    "service_body1": "Saya menawarkan layanan desain dan pengembangan situs web yang menakjubkan, didukung oleh teknologi modern."
+    "service_head1": "Pengembangan Web",
+    "service_head2": "Aplikasi Berbasis Web",
+    "service_body1": "Saya menawarkan layanan desain dan pengembangan situs web yang menakjubkan, didukung oleh teknologi modern.",
+    "service_body2": "Saya menawarkan perancangan dan pengembangan aplikasi yang berbasis website."
   },
   "resume": {
     "edu": {
@@ -135,7 +137,40 @@
     },
     "sips_app": {
       "title": "SIPS App",
-      "detail": "Aplikasi untuk membuat surat otomatis di kelurahan balaroa"
+      "detail": "Aplikasi untuk membuat surat otomatis di kelurahan balaroa",
+      "data": {
+        "title": "SIPS App (Sistem Informasi Pembuat Surat)",
+        "detail": "Sebuah sistem yang memudahkan proses pembuatan surat keterangan untuk pelayanan masyarakat.",
+        "about_p1": "Dalam proyek ini saya merancang SIPS App (Sistem Informasi Pembuat Surat), sebuah sistem yang memudahkan proses pembuatan surat keterangan untuk pelayanan masyarakat. Aplikasi ini dirancang khusus untuk kantor kelurahan, memungkinkan pegawai dengan cepat dan efisien membuat surat-surat yang dibutuhkan warga.",
+        "about_p2": "Aplikasi ini dibuat sebagai kegiatan teknis saya saat saya menjadi Mahasiswa Magang KKLP di Kelurahan Balaroa.",
+        "about_p3": "SIPS App dirancang untuk meningkatkan efisiensi layanan masyarakat di kantor kelurahan, membawa dampak positif bagi proses administrasi dan pelayanan masyarakat.",
+        "feature_head1": "Pendaftaran Pegawai dan Warga:",
+        "feature_head2": "Pemilihan Jenis Surat:",
+        "feature_head3": "Penyimpanan Data Warga:",
+        "feature_head4": "Teknologi Modern:",
+        "feature_head5": "Keamanan Data:",
+        "feature_head6": "UI Modern dengan Tailwind CSS:",
+        "feature_body1": "Mendata nama pegawai yang menandatangani surat dan mencatat informasi warga untuk memudahkan pembuatan surat keterangan di kemudian hari.",
+        "feature_body2": "Pegawai dapat memilih jenis surat keterangan yang diinginkan, dan aplikasi secara otomatis menghasilkan surat dengan data yang telah dimasukkan sebelumnya.",
+        "feature_body3": "Data warga disimpan secara aman, memungkinkan pembuatan surat keterangan lebih cepat untuk warga yang telah terdaftar sebelumnya.",
+        "feature_body4": "Menggunakan teknologi Vite, React, Express, dan MySQL untuk membangun aplikasi.",
+        "feature_body5": "Mengimplementasikan JSON Web Token (JWT) untuk mengamankan akses dan data warga.",
+        "feature_body6": "Menerapkan Tailwind CSS untuk desain antarmuka yang bersih dan modern, mempercepat proses pengembangan dan meningkatkan kekonsistenan desain.",
+        "tech_head1": "Vite dan React:",
+        "tech_head2": "Express dan MySQL:",
+        "tech_head3": "Axios:",
+        "tech_head4": "DaisyUI dan SweetAlert:",
+        "tech_head5": "Sequelize:",
+        "tech_head6": "JSON Web Token (JWT):",
+        "tech_head7": "Tailwind CSS:",
+        "tech_body1": "Merupakan teknologi frontend yang memberikan antarmuka pengguna yang dinamis.",
+        "tech_body2": "Digunakan sebagai teknologi backend untuk manajemen data dan server.",
+        "tech_body3": "Mempermudah komunikasi antara frontend dan backend.",
+        "tech_body4": "Meningkatkan antarmuka pengguna dengan komponen UI yang elegan dan notifikasi yang menarik.",
+        "tech_body5": "Membantu dalam mengelola database MySQL dengan model yang terstruktur.",
+        "tech_body6": "Digunakan untuk mengimplementasikan keamanan dan otentikasi.",
+        "tech_body7": "Framework CSS yang digunakan untuk membangun desain antarmuka pengguna dengan cepat dan konsisten."
+      }
     }
   },
   "contact": {

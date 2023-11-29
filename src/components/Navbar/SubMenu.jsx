@@ -5,8 +5,9 @@ const SubMenu = (props) => {
   const [content, setContent] = useGlobalState('content')
 
   return (
-    <li className='cursor-pointer relative group pb-1 capitalize' onClick={props.onClick}>
+    <li className={`cursor-pointer relative group pb-1 capitalize ${props.className}`} onClick={props.onClick} tabIndex={props.tabIndex}>
       {props.title}
+      {props.children}
       {
         content == props.title 
         ? <span className='absolute inset-x-0 bottom-0 h-1 rounded-full bg-blue-400 origin-left transform scale-x-100 transition-transform duration-500'></span>

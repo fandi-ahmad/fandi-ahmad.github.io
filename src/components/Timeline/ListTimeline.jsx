@@ -11,7 +11,7 @@ const ListTimeline = (props) => {
       <div className="timeline-end ml-8 pb-4">
         <div className="text-lg font-semibold">{props.title}</div>
         <div className='text-blue-300'>{props.subtitle}</div>
-        <div className='text-blue-300'>{props.time}</div>
+        <div className='text-blue-300 capitalize'>{props.time}</div>
         <div className='text-sm'>{props.text}</div>
       </div>
       { !bottomLine ? <hr className='bg-gray-500' /> : null }

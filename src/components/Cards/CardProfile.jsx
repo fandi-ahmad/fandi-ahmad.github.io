@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 import imageProfile from '../../assets/images/img-profile.webp'
+import { useTranslation } from 'react-i18next'
 
 const BioDetail = (props) => {
   return (
@@ -9,7 +10,7 @@ const BioDetail = (props) => {
         <span className="material-symbols-outlined p-0 m-0">{props.icon}</span>
       </div>
       <div>
-        <div className='font-light opacity-75 text-sm'>{props.title}</div>
+        <div className='font-light opacity-75 text-sm capitalize'>{props.title}</div>
         <div className='text-sm'>{props.detail}</div>
       </div>
     </div>
@@ -17,6 +18,7 @@ const BioDetail = (props) => {
 }
 
 const CardProfile = (props) => {
+  const [t, i18n] = useTranslation('global')
   const [isActive, setIsActive] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -44,7 +46,7 @@ const CardProfile = (props) => {
             </div>
           </div>
 
-          <div onClick={() => setIsActive(!isActive)} className='bg-gray-600 cursor-pointer px-2 text-4xl bg-opacity-50 top-0 rounded-tl-none rounded-br-none rounded-xl border-l border-b border-gray-500 lg:hidden'>
+          <div onClick={() => setIsActive(!isActive)} className={`${isActive ? 'bg-blue-400 bg-opacity-20' : 'bg-gray-600 bg-opacity-50'} cursor-pointer px-2 text-4xl top-0 rounded-tl-none rounded-br-none rounded-xl border-l border-b border-gray-500 lg:hidden`}>
             <span className="material-symbols-outlined">
               {isActive ? 'expand_less' : 'expand_more'}
             </span>
@@ -58,8 +60,8 @@ const CardProfile = (props) => {
 
         <div className='mx-4 md:mx-8'>
           <BioDetail icon='mail' title='Email' detail='fandi4160@gmail.com' />
-          <BioDetail icon='location_on' title='Location' detail='Palu, Indonesia' />
-          <BioDetail icon='calendar_month' title='Birthday' detail='December, 2002' />
+          <BioDetail icon='location_on' title={t('self.location')} detail='Palu, Indonesia' />
+          <BioDetail icon='calendar_month' title={t('self.birthday')} detail={`${t('self.dec')}, 2002`} />
         </div>
 
         <div className='px-4 md:px-8 pb-8 pt-4 opacity-25'>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useGlobalState } from '../state/state'
 import { CardPorto } from '../components/Cards'
-import { PenaWeb, HoneyProduction } from './PortfolioContent'
+import { PenaWeb, HoneyProduction, WhackaMole, Todolist, WeatherApp, SipsApp } from './PortfolioContent'
 
 import webPena from '../assets/images/portofolio/web-pena.webp'
 import honeyProduction from '../assets/images/portofolio/honey-production.webp'
@@ -9,77 +9,79 @@ import whackamole from '../assets/images/portofolio/whackamole.webp'
 import todolist from '../assets/images/portofolio/todolist-app.webp'
 import sipsApp from '../assets/images/portofolio/SIPS-app.webp'
 import weatherApp from '../assets/images/portofolio/weather-app.webp'
+import { useTranslation } from 'react-i18next'
 
 const Portofolio = () => {
   const [portofolioPage, setPortofolioPage] = useGlobalState('portofolioPage')
   const [portfolioContent, setPortfolioContent] = useState('')
+  const [t, i18n] = useTranslation('global')
 
   const [portfolioList, setPortfolioList] = useState([
     {
       name: 'penaWeb',
       category: 'html css js',
       imageSrc: webPena,
-      title: 'PENA Website 2022-2023',
-      detail: 'Company Profile',
+      title: t('portfolio.pena.title'),
+      detail: t('portfolio.pena.detail'),
     },
     {
       name: 'honeyProduction',
       category: 'html css js',
       imageSrc: honeyProduction,
-      title: 'Honey Production',
-      detail: 'Landing Page',
+      title: t('portfolio.honey.title'),
+      detail: t('portfolio.honey.detail'),
     },
     {
       name: 'whackAMole',
       category: 'html css js',
       imageSrc: whackamole,
-      title: 'Whack a Mole',
-      detail: 'mini game app',
+      title: t('portfolio.whackamole.title'),
+      detail: t('portfolio.whackamole.detail'),
     },
     {
       name: 'toDoList',
       category: 'html css js',
       imageSrc: todolist,
-      title: 'to do list',
-      detail: 'tools app',
+      title: t('portfolio.todolist.title'),
+      detail: t('portfolio.todolist.detail'),
     },
     {
       name: 'weatherApp',
       category: 'vue',
       imageSrc: weatherApp,
-      title: 'Weather App',
-      detail: 'weather forecast',
+      title: t('portfolio.weather_app.title'),
+      detail: t('portfolio.weather_app.detail'),
     },
     {
       name: 'sipsApp',
       category: 'react express',
       imageSrc: sipsApp,
-      title: 'SIPS App',
-      detail: 'Application for managing Balaroa sub-district letters',
+      title: t('portfolio.sips_app.title'),
+      detail: t('portfolio.sips_app.detail'),
     }
   ])
 
   const Canvas = () => {
     return (
-      portofolioPage === 'all' ? 
+      portofolioPage === 'all' || portofolioPage === 'semua'  ? 
         portfolioList.map((project, index) => (
           <CardPorto key={index} src={project.imageSrc} title={project.title} detail={project.detail} onClick={() => openModal(project.name)} />
         ))
       :
       portofolioPage === 'html css js' ? 
       <>
-        <CardPorto src={webPena} title='PENA Website 2022-2023' detail='Company Profile' />
-        <CardPorto src={honeyProduction} title='Honey Production' detail='Landing Page' />
-        <CardPorto src={whackamole} title='Whack a Mole' detail='mini game app' />
-        <CardPorto src={todolist} title='to do list' detail='tools app' />
+        <CardPorto src={webPena} title={t('portfolio.pena.title')} detail={t('portfolio.pena.detail')} onClick={() => openModal('penaWeb')} />
+        <CardPorto src={honeyProduction} title={t('portfolio.honey.title')} detail={t('portfolio.honey.detail')} onClick={() => openModal('honeyProduction')} />
+        <CardPorto src={whackamole} title={t('portfolio.whackamole.title')} detail={t('portfolio.whackamole.detail')} onClick={() => openModal('whackAMole')} />
+        <CardPorto src={todolist} title={t('portfolio.todolist.title')} detail={t('portfolio.todolist.detail')} onClick={() => openModal('toDoList')} />
       </> :
       portofolioPage === 'react express' ? 
       <>
-        <CardPorto src={sipsApp} title='SIPS App' detail='Application for managing Balaroa sub-district letters' />
+        <CardPorto src={sipsApp} title={t('portfolio.sips_app.title')} detail={t('portfolio.sips_app.detail')} onClick={() => openModal('sipsApp')} />
       </> :
       portofolioPage === 'vue' ? 
       <>
-        <CardPorto src={weatherApp} title='Weather App' detail='weather forecast' />
+        <CardPorto src={weatherApp} title={t('portfolio.weather_app.title')} detail={t('portfolio.weather_app.detail')} onClick={() => openModal('weatherApp')} />
       </> :
       null
     );
@@ -93,14 +95,18 @@ const Portofolio = () => {
   const classNav = 'cursor-pointer hover:text-blue-400 duration-200 capitalize'
   const SubMenu = (props) => {
     return (
-      <li onClick={props.onClick} className={portofolioPage === props.text ? classNav+' text-blue-400' : classNav}>{props.text}</li>
+      <li onClick={props.onClick} className={portofolioPage ===  props.text ? classNav+' text-blue-400' : classNav}>{props.text}</li>
     )
   }
 
   const Content = () => {
     return (
       portfolioContent === 'penaWeb' ? <PenaWeb/> :
-      portfolioContent === 'honeyProduction' ? <HoneyProduction/> : null
+      portfolioContent === 'honeyProduction' ? <HoneyProduction/> :
+      portfolioContent === 'whackAMole' ? <WhackaMole/> : 
+      portfolioContent === 'toDoList' ? <Todolist/> :
+      portfolioContent === 'weatherApp' ? <WeatherApp/> :
+      portfolioContent === 'sipsApp' ? <SipsApp/> : null
     )
   }
 
@@ -110,7 +116,7 @@ const Portofolio = () => {
 
       {/* navbar portofolio */}
       <ul className='hidden md:flex flex-row gap-8'>
-        <SubMenu text='all' onClick={() => setPortofolioPage('all')} />
+        <SubMenu text={t('portfolio.all')}  onClick={() => setPortofolioPage(t('portfolio.all'))} />
         <SubMenu text='html css js' onClick={() => setPortofolioPage('html css js')} />
         <SubMenu text='react express' onClick={() => setPortofolioPage('react express')} />
         <SubMenu text='vue' onClick={() => setPortofolioPage('vue')} />

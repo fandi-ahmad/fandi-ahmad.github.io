@@ -17,17 +17,17 @@ export const Template = (props) => {
 }
 
 export const TextHead = (props) => {
-  return <h1 className={`capitalize mt-12 text-3xl md:text-4xl w-full md:w-2/3 lg:w-2/5 ${props.className}`}>{props.children}</h1>
+  return <h1 className={`capitalize text-3xl md:text-4xl w-full md:w-2/3 lg:w-2/5 ${props.className}`}>{props.children}</h1>
 }
 
 export const TextSubHead = (props) => {
-  return <h3 className={`text-lg font-medium ${props.className ?? 'bg-blue-950'} text-white w-fit px-8 py-2 rounded-md`}>{props.children}</h3>
+  return <h3 className={`text-lg font-medium mb-4 ${props.className ?? 'bg-blue-950'} text-white w-fit px-8 py-2 rounded-md`}>{props.children}</h3>
 }
 
 export const ImageTool = (props) => {
-  return <img src={props.src} alt="tool" loading='lazy' className={`w-12 h-12 mr-4 mb-4 object-contain ${props.className}`} />
+  return <img src={props.src} alt="tool" loading='lazy' className={`w-full h-12 mr-4 mb-4 object-contain ${props.className}`} />
 }
 
 export const Text = (props) => {
-  return <p className={`mt-4 text-justify ${props.className}`}>{props.children}</p>
+  return <p className={`mt-2 text-justify ${props.className}`}>{props.children}</p>
 }

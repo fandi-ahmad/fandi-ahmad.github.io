@@ -21,13 +21,13 @@ export const TextHead = (props) => {
 }
 
 export const TextSubHead = (props) => {
-  return <h3 className={`text-lg font-medium mb-4 ${props.className ?? 'bg-blue-950'} text-white w-fit px-8 py-2 rounded-md`}>{props.children}</h3>
+  return <h3 className={`sm:text-lg font-medium mb-4 ${props.className ?? 'bg-blue-950'} text-white w-fit px-8 py-2 rounded-md`}>{props.children}</h3>
 }
 
 export const ImageTool = (props) => {
-  return <img src={props.src} alt="tool" loading='lazy' className={`w-full h-12 mr-4 mb-4 object-contain ${props.className}`} />
+  return <img src={props.src} alt="tool" loading='lazy' className={`w-full h-8 sm:h-10 md:h-12 mr-4 mb-4 object-contain ${props.className}`} />
 }
 
 export const Text = (props) => {
-  return <p className={`mt-2 text-justify ${props.className}`}>{props.children}</p>
+  return <p className={`mt-2 text-justify text-sm sm:text-base ${props.className}`}>{props.children}</p>
 }

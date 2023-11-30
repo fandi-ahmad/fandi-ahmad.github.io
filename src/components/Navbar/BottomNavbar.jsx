@@ -14,12 +14,12 @@ const BottomNavbar = () => {
     if (lang === 'id') {
       content === 'about' ? setContent(t('navbar.about')) : 
       content === 'resume' ? setContent(t('navbar.resume')) : 
-      content === 'portfolio' ? setContent(t('navbar.portfolio')) : 
+      content === 'portfolio' ? setContent(t('navbar.project')) : 
       content === 'contact' ? setContent(t('navbar.contact')) : null
     } else if (lang === 'en') {
       content === 'tentang' ? setContent(t('navbar.about')) : 
       content === 'resume' ? setContent(t('navbar.resume')) : 
-      content === 'portofolio' ? setContent(t('navbar.portfolio')) : 
+      content === 'portofolio' ? setContent(t('navbar.project')) : 
       content === 'kontak' ? setContent(t('navbar.contact')) : null
     }
   }
@@ -29,7 +29,7 @@ const BottomNavbar = () => {
       <ul className='flex flex-row gap-6 sm:gap-8 font-medium text-xs'>
         <SubMenu title={t('navbar.about')} onClick={() => setContent(t('navbar.about'))} />
         <SubMenu title={t('navbar.resume')} onClick={() => setContent(t('navbar.resume'))} />
-        <SubMenu title={t('navbar.portfolio')} onClick={() => setContent(t('navbar.portfolio'))} />
+        <SubMenu title={t('navbar.project')} onClick={() => setContent(t('navbar.project'))} />
         <SubMenu title={t('navbar.contact')} onClick={() => setContent(t('navbar.contact'))} />
         <div className="dropdown dropdown-top dropdown-end cursor-pointer" style={{marginTop: '-2px'}}>
           <label tabIndex={2} className="cursor-pointer capitalize flex flex-row items-center">

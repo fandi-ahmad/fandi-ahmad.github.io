@@ -15,13 +15,13 @@ const CardNavbar = () => {
     if (lang === 'id') {
       content === 'about' ? setContent(t('navbar.about')) : 
       content === 'resume' ? setContent(t('navbar.resume')) : 
-      content === 'portfolio' ? setContent(t('navbar.portfolio')) : 
+      content === 'project' ? setContent(t('navbar.project')) : 
       content === 'contact' ? setContent(t('navbar.contact')) : null
       portofolioPage === 'all' ? setPortofolioPage('semua') : null
     } else if (lang === 'en') {
       content === 'tentang' ? setContent(t('navbar.about')) : 
       content === 'resume' ? setContent(t('navbar.resume')) : 
-      content === 'portofolio' ? setContent(t('navbar.portfolio')) : 
+      content === 'proyek' ? setContent(t('navbar.project')) : 
       content === 'kontak' ? setContent(t('navbar.contact')) : null
       portofolioPage === 'semua' ? setPortofolioPage('all') : null
     }
@@ -43,7 +43,7 @@ const CardNavbar = () => {
           <ul className='flex flex-row gap-8 font-medium'>
             <SubMenu title={t('navbar.about')} onClick={() => setContent(t('navbar.about'))} />
             <SubMenu title={t('navbar.resume')} onClick={() => setContent(t('navbar.resume'))} />
-            <SubMenu title={t('navbar.portfolio')} onClick={() => setContent(t('navbar.portfolio'))} />
+            <SubMenu title={t('navbar.project')} onClick={() => setContent(t('navbar.project'))} />
             <SubMenu title={t('navbar.contact')} onClick={() => setContent(t('navbar.contact'))} />
             <div className="dropdown dropdown-bottom dropdown-end cursor-pointer mt-0.5">
               <label tabIndex={1} className="cursor-pointer capitalize flex flex-row items-center">

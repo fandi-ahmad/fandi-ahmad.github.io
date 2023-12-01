@@ -20,8 +20,7 @@ const About = () => {
         </p>
       </div>
 
-      {/* <div className='px-4 md:px-8 mt-8 w-full sm:w-4/6 md:w-3/6 '> */}
-      <div className='px-4 '>
+      <div className='px-4 md:px-8 mt-8'>
         <h2 className="text-2xl font-bold mb-4">{t('about.service')}</h2>
 
         {/* card */}

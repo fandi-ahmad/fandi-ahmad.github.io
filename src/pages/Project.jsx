@@ -120,6 +120,10 @@ const Project = () => {
     )
   }
 
+  const closeModal = () => {
+    document.getElementById('closeModal').click()
+    document.getElementById('templateModal').scrollTop = 0
+  }
 
   return (
     <div className='px-4 md:px-8 mt-8'>
@@ -140,10 +144,10 @@ const Project = () => {
       {/* modal */}
       <dialog id="modalPortfolio" className="modal">
         <div className='h-screen w-screen'>
-          <button className='text-xl outline-none sm:text-3xl md:text-4xl fixed z-30 top-4 right-0.5 sm:right-2 md:right-4 lg:right-6 cursor-pointer hover:text-gray-300' onClick={() => document.getElementById('closeModal').click()}>
+          <button onClick={closeModal} className='text-xl outline-none sm:text-3xl md:text-4xl fixed z-30 top-4 right-0.5 sm:right-2 md:right-4 lg:right-6 cursor-pointer hover:text-gray-300'>
             <i className="fa-solid fa-circle-xmark"></i>
           </button>
-          <div className="modal-box rounded-none bg-black bg-opacity-70 min-h-full min-w-full">
+          <div id='templateModal' className="modal-box rounded-none bg-black bg-opacity-70 min-h-full min-w-full">
             <Content/>
           </div>
           <form method="dialog" className="modal-backdrop">

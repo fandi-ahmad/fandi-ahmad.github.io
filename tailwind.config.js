@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+import ViteCompressionPlugin from 'vite-plugin-compress';
+
 export default {
+  assetsInclude: /\.(png|jpe?g|gif|svg|webp)$/i,
   content: [
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
@@ -17,5 +20,17 @@ export default {
       }
     }
   },
-  plugins: [require("daisyui")],
+  plugins: [
+    require("daisyui"),
+    ViteCompressionPlugin({
+      verbose: true,
+      disable: false,
+      threshold: 10240,
+      algorithm: 'gzip',
+      ext: '.gz',
+    }),
+  ],
+  daisyui: {
+    themes: ["dark"],
+  },
 }

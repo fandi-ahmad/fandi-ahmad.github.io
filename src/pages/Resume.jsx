@@ -28,7 +28,7 @@ const Resume = () => {
         </BaseTimeline>
 
         <BaseTimeline className='mt-4'>
-          <HeadListTimeline title={t('resume.exp.head')} icon='business_center' />
+          <HeadListTimeline title={t('resume.exp.head')} icon='fa-solid fa-briefcase' />
           <ListTimeline title='UI/UX Designer' subtitle='Paerte Code' time={`Sep 2023 - ${t('resume.now')}`} 
             text={t('resume.exp.paerte_code')}
           />

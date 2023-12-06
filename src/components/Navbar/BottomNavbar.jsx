@@ -40,7 +40,7 @@ const BottomNavbar = () => {
             <ul tabIndex={0} style={{marginRight: '-20px'}} className="dropdown-content shadow mb-1 rounded-md w-32 text-xs font-normal bg-gray-700 border border-gray-500">
               <li className='hover:bg-gray-600 hover:bg-opacity-50 py-1.5 px-2.5' onClick={() => switchLang('id')}>
                 <div className='flex flex-row items-center'>
-                  <img src={indonesia} className='rounded-sm w-5 mr-2' alt="" />
+                  <img src={indonesia} width={1} height={1} className='rounded-sm w-5 mr-2' alt="indonesia flag" />
                   <span>Indonesia</span>
                   <span className={t('navbar.language') == 'bahasa' ? '' : 'hidden'}>
                     <i className='fa-solid fa-check text-green-500 text-sm ml-2'></i>
@@ -49,7 +49,7 @@ const BottomNavbar = () => {
               </li>
               <li className='hover:bg-gray-600 hover:bg-opacity-50 py-1.5 px-2.5' onClick={() => switchLang('en')}>
                 <div className='flex flex-row items-center'>
-                  <img src={english} className='rounded-sm w-5 mr-2' alt="" />
+                  <img src={english} width={1} height={1} className='rounded-sm w-5 mr-2' alt="english flag" />
                   <span>English</span>
                   <span className={t('navbar.language') == 'language' ? '' : 'hidden'}>
                     <i className='fa-solid fa-check text-green-500 text-sm ml-7'></i>

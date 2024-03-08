@@ -15,13 +15,13 @@ const CardNavbar = () => {
     if (lang === 'id') {
       content === 'about' ? setContent(t('navbar.about')) : 
       content === 'resume' ? setContent(t('navbar.resume')) : 
-      content === 'portfolio' ? setContent(t('navbar.portfolio')) : 
+      content === 'project' ? setContent(t('navbar.project')) : 
       content === 'contact' ? setContent(t('navbar.contact')) : null
       portofolioPage === 'all' ? setPortofolioPage('semua') : null
     } else if (lang === 'en') {
       content === 'tentang' ? setContent(t('navbar.about')) : 
       content === 'resume' ? setContent(t('navbar.resume')) : 
-      content === 'portofolio' ? setContent(t('navbar.portfolio')) : 
+      content === 'proyek' ? setContent(t('navbar.project')) : 
       content === 'kontak' ? setContent(t('navbar.contact')) : null
       portofolioPage === 'semua' ? setPortofolioPage('all') : null
     }
@@ -40,37 +40,40 @@ const CardNavbar = () => {
         
         {/* list menu */}
         <div className='bg-gray-600 bg-opacity-50 rounded-tl-none rounded-br-none rounded-xl py-5 px-8 border-l border-b border-gray-500 hidden sm:block'>
-          <ul className='flex flex-row gap-8 font-medium'>
-            <SubMenu title={t('navbar.about')} onClick={() => setContent(t('navbar.about'))} />
-            <SubMenu title={t('navbar.resume')} onClick={() => setContent(t('navbar.resume'))} />
-            <SubMenu title={t('navbar.portfolio')} onClick={() => setContent(t('navbar.portfolio'))} />
-            <SubMenu title={t('navbar.contact')} onClick={() => setContent(t('navbar.contact'))} />
-            <div className="dropdown dropdown-bottom dropdown-end cursor-pointer mt-0.5">
-              <label tabIndex={1} className="cursor-pointer capitalize flex flex-row items-center">
-                <i className="fa-solid text-sm fa-globe pr-1.5"></i> 
-                <span className='text-xs font-normal'>{t('navbar.language')}</span>
-              </label>
-              <ul tabIndex={1} style={{marginRight: '-30px'}} className="dropdown-content shadow mt-1 rounded-md w-32 text-xs font-normal bg-gray-700 border border-gray-500">
-                <li className='hover:bg-gray-600 hover:bg-opacity-50 py-1.5 px-2.5' onClick={() => switchLang('id')}>
-                  <div className='flex flex-row items-center'>
-                    <img src={indonesia} className='rounded-sm w-5 mr-2' alt="" />
-                    <span>Indonesia</span>
-                    <span className={t('navbar.language') == 'bahasa' ? '' : 'hidden'}>
-                      <i className='fa-solid fa-check text-green-500 text-sm ml-2'></i>
-                    </span>
-                  </div>
-                </li>
-                <li className='hover:bg-gray-600 hover:bg-opacity-50 py-1.5 px-2.5' onClick={() => switchLang('en')}>
-                  <div className='flex flex-row items-center'>
-                    <img src={english} className='rounded-sm w-5 mr-2' alt="" />
-                    <span>English</span>
-                    <span className={t('navbar.language') == 'language' ? '' : 'hidden'}>
-                      <i className='fa-solid fa-check text-green-500 text-sm ml-7'></i>
-                    </span>
-                  </div>
-                </li>
-              </ul>
-            </div>
+          <ul className='flex flex-row font-medium'>
+            <SubMenu title={t('navbar.about')} onClick={() => setContent(t('navbar.about'))} className='mr-8' />
+            <SubMenu title={t('navbar.resume')} onClick={() => setContent(t('navbar.resume'))} className='mr-8' />
+            <SubMenu title={t('navbar.project')} onClick={() => setContent(t('navbar.project'))} className='mr-8' />
+            <SubMenu title={t('navbar.contact')} onClick={() => setContent(t('navbar.contact'))} className='mr-8' />
+            <li>
+              <div className="dropdown dropdown-bottom dropdown-end cursor-pointer mt-0.5">
+                <label tabIndex={0} className="cursor-pointer capitalize flex flex-row items-center">
+                  <i className="fa-solid text-sm fa-globe pr-1.5"></i> 
+                  <span className='text-xs font-normal'>{t('navbar.language')}</span>
+                </label>
+                <ul tabIndex={0} style={{marginRight: '-30px'}} className="dropdown-content shadow mt-1 rounded-md w-32 text-xs font-normal bg-gray-700 border border-gray-500">
+                  <li className='hover:bg-gray-600 hover:bg-opacity-50 py-1.5 px-2.5' onClick={() => switchLang('id')}>
+                    <div className='flex flex-row items-center'>
+                      <img src={indonesia} width={1} height={1} className='rounded-sm w-5 h-fit object-cover mr-2' alt="indonesia flag" />
+                      <span>Indonesia</span>
+                      <span className={t('navbar.language') == 'bahasa' ? '' : 'hidden'}>
+                        <i className='fa-solid fa-check text-green-500 text-sm ml-2'></i>
+                      </span>
+                    </div>
+                  </li>
+                  <li className='hover:bg-gray-600 hover:bg-opacity-50 py-1.5 px-2.5' onClick={() => switchLang('en')}>
+                    <div className='flex flex-row items-center'>
+                      <img src={english} width={1} height={1} className='rounded-sm w-5 h-fit object-cover mr-2' alt="english flag" />
+                      <span>English</span>
+                      <span className={t('navbar.language') == 'language' ? '' : 'hidden'}>
+                        <i className='fa-solid fa-check text-green-500 text-sm ml-7'></i>
+                      </span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+            </li>
 
           </ul>
         </div>

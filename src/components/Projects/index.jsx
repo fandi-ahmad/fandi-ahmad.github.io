@@ -4,5 +4,6 @@ import WhackaMole from "./WhackaMole";
 import Todolist from "./Todolist";
 import WeatherApp from "./WeatherApp";
 import SipsApp from "./SipsApp";
+import PersonalWeb from "./PersonalWeb";
 
-export { PenaWeb, HoneyProduction, WhackaMole, Todolist, WeatherApp, SipsApp }
+export { PenaWeb, HoneyProduction, WhackaMole, Todolist, WeatherApp, SipsApp, PersonalWeb }

@@ -12,17 +12,21 @@ import { useTranslation } from 'react-i18next'
 
 const HoneyProduction = () => {
   const [t, i18n] = useTranslation('global')
+  const names = 'project.honey.'
+  const text = string => t(names+string)
+  
+
   return (
-    <Template title={t('portfolio.honey.title')}  subtitle={t('portfolio.honey.detail')}  >
+    <Template title={text('title')}  subtitle={text('detail')}  >
       <div style={{ backgroundImage: `url(${honeyProductionCover})` }} className='p-8 bg-yellow-600 bg-contain bg-no-repeat bg-right-bottom'>
         <div className='flex flex-row items-center mb-12'>
           <img src={honeyLogo} alt="honey" loading='lazy' className='h-12' />
         </div>
-        <TextHead>{t('portfolio.honey.data.title')}</TextHead>
+        <TextHead>{text('data.title')}</TextHead>
 
-        <p className='text-sm font-light w-full md:w-2/3 lg:w-1/3 mt-8'>{t('portfolio.honey.data.detail')}</p>
+        <p className='text-sm font-light w-full md:w-2/3 lg:w-1/3 mt-8'>{text('data.detail')}</p>
 
-        <p className='text-orange-900 text-lg mt-8 font-medium capitalize'>{t('portfolio.programming_use')}</p>
+        <p className='text-orange-900 text-lg mt-8 font-medium capitalize'>{t('project.programming_use')}</p>
         <div className="grid grid-cols-2 md:grid-cols-4 w-fit mt-4">
           <ImageTool src={htmlImg} />
           <ImageTool src={cssImg} />
@@ -33,15 +37,15 @@ const HoneyProduction = () => {
       </div>
 
       <div className='text-gray-800 bg-white p-8'>
-        <TextSubHead className='bg-orange-900'>{t('portfolio.about')}</TextSubHead>
+        <TextSubHead className='bg-orange-900'>{t('project.about')}</TextSubHead>
         <Text>
-          {t('portfolio.honey.data.about_p1')}
+          {text('data.about_p1')}
           <a href="https://www.behance.net/gallery/120429709/Honey-Landing-page" target='_blank' className='text-blue-600 hover:underline'>
-            {t('portfolio.honey.data.link1')}
+            {text('data.link1')}
           </a> 
-          {t('portfolio.honey.data.about_p2')}
+          {text('data.about_p2')}
           <a href="https://honey-production.fandijsx.repl.co/" target='_blank' className='text-blue-600 hover:underline'>
-            {t('portfolio.honey.data.link2')}
+            {text('data.link2')}
           </a>
         </Text>
       </div>

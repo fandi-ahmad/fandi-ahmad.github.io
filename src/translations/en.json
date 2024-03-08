@@ -7,7 +7,7 @@
   "navbar": {
     "about": "about",
     "resume": "resume",
-    "portfolio": "portfolio",
+    "project": "project",
     "contact": "contact",
     "language": "language"
   },
@@ -31,12 +31,12 @@
       "head": "experience",
       "paerte_code": "As a UI/UX Designer who focuses on creating application prototype designs for further development. By understanding user needs, I strive to create simple and effective designs. The tool I use is Figma.",
       "balaroa_head": "Balaroa Sub-District",
-      "balaroa": "Create an application to create automatic letters, so that employees only need to enter the required data and letters can be immediately created for community service purposes. using React and Express."
+      "balaroa": "During my internship (KKLP) at the Balaroa District Office, I created a product, namely an application for creating automatic letters, so that employees only need to enter the required data and letters can be immediately created for community service purposes."
     },
     "now": "now",
     "tools": "My Tools & Skills"
   },
-  "portfolio": {
+  "project": {
     "all": "all",
     "programming_use": "Programming Language I Used:",
     "my_role": "my role:",
@@ -135,7 +135,7 @@
     },
     "sips_app": {
       "title": "SIPS App",
-      "detail": "Application to create automatic letters in Balaroa sub-district",
+      "detail": "Application automatic letters in Balaroa sub-district",
       "data": {
         "title": "SIPS App (Letter Creation Information System)",
         "detail": "A system that facilitates the process of making certificates for community services.",
@@ -168,6 +168,16 @@
         "tech_body5": "Helps in managing MySQL databases with a structured model.",
         "tech_body6": "Used to implement security and authentication.",
         "tech_body7": "A CSS framework used to build user interface designs quickly and consistently."
+      }
+    },
+    "personal_web": {
+      "title": "Personal Web",
+      "detail": "Landing Page",
+      "data": {
+        "title": "Responsive Website And Personal Web",
+        "detail": "Website landing page containing portfolio content and personal profile",
+        "about_p1": "This website was created as a personal website for a short profile and displays the portfolio that I have created. Apart from that, this is also my first portfolio website (before the current one).",
+        "about_p2": "I made it using the tailwind CSS UI framework with a dark theme and responsive on various devices."
       }
     }
   },

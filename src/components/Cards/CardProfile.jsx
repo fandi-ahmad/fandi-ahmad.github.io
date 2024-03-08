@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next'
 
 const BioDetail = (props) => {
   return (
-    <div className='flex flex-row gap-2 items-center mb-4'>
-      <div className='text-4xl text-center px-2 text-blue-300 rounded-md bg-gray-600 border-gray-500 border'>
-        <span className="material-symbols-outlined p-0 m-0">{props.icon}</span>
+    <div className='flex flex-row items-center mb-4'>
+      <div className='text-4xl text-center p-2 mr-2 w-10 flex justify-center items-center text-blue-300 rounded-md bg-gray-600 border-gray-500 border'>
+        <i className={`text-xl ${props.icon}`}></i>
       </div>
       <div>
         <div className='font-light opacity-75 text-sm capitalize'>{props.title}</div>
@@ -32,7 +32,7 @@ const CardProfile = (props) => {
   }, [windowWidth]);
 
   return (
-    <div className=''>
+    <div>
       <div className={`bg-gray-700 rounded-xl border border-gray-500 mt-10 mb-4 lg:mb-10 overflow-hidden transition-all ease-in-out duration-300 lg:ml-10 ${isActive ? 'max-h-full' : 'max-h-28'} ${props.className}`}>
         
         <div className='flex flex-row lg:flex-col justify-between items-start lg:items-center'>
@@ -46,10 +46,8 @@ const CardProfile = (props) => {
             </div>
           </div>
 
-          <div onClick={() => setIsActive(!isActive)} className={`${isActive ? 'bg-blue-400 bg-opacity-20' : 'bg-gray-600 bg-opacity-50'} cursor-pointer px-2 text-4xl top-0 rounded-tl-none rounded-br-none rounded-xl border-l border-b border-gray-500 lg:hidden`}>
-            <span className="material-symbols-outlined">
-              {isActive ? 'expand_less' : 'expand_more'}
-            </span>
+          <div onClick={() => setIsActive(!isActive)} className={`${isActive ? 'bg-blue-400 bg-opacity-20' : 'bg-gray-600 bg-opacity-50'} cursor-pointer px-3 pt-2 pb-1 text-2xl top-0 rounded-tl-none rounded-br-none rounded-xl border-l border-b border-gray-500 lg:hidden`}>
+            <i className={isActive ? 'fa-solid fa-angle-up' : 'fa-solid fa-angle-down'}></i>
           </div>
         </div>
 
@@ -59,20 +57,20 @@ const CardProfile = (props) => {
         </div>
 
         <div className='mx-4 md:mx-8'>
-          <BioDetail icon='mail' title='Email' detail='fandi4160@gmail.com' />
-          <BioDetail icon='location_on' title={t('self.location')} detail='Palu, Indonesia' />
-          <BioDetail icon='calendar_month' title={t('self.birthday')} detail={`${t('self.dec')}, 2002`} />
+          <BioDetail icon='fa-regular fa-envelope' title='Email' detail='fandi4160@gmail.com' />
+          <BioDetail icon='fa-solid fa-location-dot' title={t('self.location')} detail='Palu, Indonesia' />
+          <BioDetail icon='fa-solid fa-calendar-days' title={t('self.birthday')} detail={`${t('self.dec')}, 2002`} />
         </div>
 
         <div className='px-4 md:px-8 pb-8 pt-4 opacity-25'>
           <hr />
         </div>
 
-        <div className='flex flex-row gap-4 justify-center mb-4'>
-          <a href='https://github.com/fandi-ahmad' target='_blank' className='text-2xl'>
+        <div className='flex flex-row justify-center mb-4'>
+          <a href='https://github.com/fandi-ahmad' target='_blank' className='text-2xl mr-4'>
             <i className="fa-brands fa-github"></i>
           </a>
-          <a href='https://www.linkedin.com/in/fandijsx/' target='_blank' className='text-2xl'>
+          <a href='https://www.linkedin.com/in/fandijsx/' target='_blank' className='text-2xl mr-4'>
             <i className="fa-brands fa-linkedin"></i>
           </a>
           <a href='https://instagram.com/fandi.jsx' target='_blank' className='text-2xl'>

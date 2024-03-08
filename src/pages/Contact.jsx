@@ -71,7 +71,7 @@ const Contact = () => {
   return (
     <div className='mx-4 md:mx-8 mt-8'>
       <figure>
-        <iframe className='w-full h-96 rounded-xl'  loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1410.44152350817!2d119.83975258753327!3d-0.8954569362188187!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2d8beda71769a755%3A0x2823c409c4654061!2sJl.%20Tamako%20I%2C%20Donggala%20Kodi%2C%20Kec.%20Palu%20Bar.%2C%20Kota%20Palu%2C%20Sulawesi%20Tengah!5e0!3m2!1sid!2sid!4v1700373442307!5m2!1sid!2sid"></iframe>
+        <iframe className='w-full h-96 rounded-xl' loading='lazy' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.3400383265457!2d119.85852747408339!3d-0.8871711991042295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x554401014ed6861%3A0xefb9e810bc2e151b!2sSTMIK%20Adhi%20Guna!5e0!3m2!1sid!2sid!4v1709878429469!5m2!1sid!2sid"></iframe>
       </figure>
 
       <div className='mt-8'>

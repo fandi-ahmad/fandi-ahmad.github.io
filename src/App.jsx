@@ -1,7 +1,6 @@
-import { useEffect } from "react"
 // components
 import { CardContent, CardProfile } from "./components/Cards"
-import { About, Portofolio, Contact, Resume } from "./pages"
+import { About, Project, Contact, Resume } from "./pages"
 import { CardNavbar, BottomNavbar } from "./components/Navbar"
 
 import { useGlobalState } from "./state/state"
@@ -15,7 +14,7 @@ const App = () => {
     return (
       content === t('navbar.about') ? <About/> :
       content === t('navbar.resume') ? <Resume/> :
-      content === t('navbar.portfolio') ? <Portofolio/> :
+      content === t('navbar.project') ? <Project/> :
       content === t('navbar.contact') ? <Contact/> :
       null
     );

@@ -28,15 +28,15 @@ const Resume = () => {
         </BaseTimeline>
 
         <BaseTimeline className='mt-4'>
-          <HeadListTimeline title={t('resume.exp.head')} icon='business_center' />
+          <HeadListTimeline title={t('resume.exp.head')} icon='fa-solid fa-briefcase' />
           <ListTimeline title='UI/UX Designer' subtitle='Paerte Code' time={`Sep 2023 - ${t('resume.now')}`} 
             text={t('resume.exp.paerte_code')}
           />
-          <ListTimeline title='Full Stack Developer' subtitle={t('resume.exp.balaroa_head')} time='Jul - Sep 2023' 
-            text={t('resume.exp.balaroa')}
+          <ListTimeline title='Internship - Full Stack Developer' subtitle={t('resume.exp.balaroa_head')} time='Jul - Sep 2023' 
+            text={<>{t('resume.exp.balaroa')}<br/>Skils: React • Tailwind • Express • Sequelize • MYSQL • JWT • RestFull API </>}
           />
           <ListTimeline title='Frontend Developer' subtitle='WoVi' time='Sep 2022 - Jul 2023' 
-            text='Skils: HTML • CSS • Javascript • Bootstrap • Vue • Restfull API'
+            text='Skils: HTML • CSS • Javascript • Bootstrap • Vue • RestFull API'
           />
           <ListTimeline title='Frontend Developer' subtitle='PENA (Programming Engineering & Networking Adhi Guna)' time='Sep 2022' 
             text='Skils: HTML • CSS • Javascript • Bootstrap'

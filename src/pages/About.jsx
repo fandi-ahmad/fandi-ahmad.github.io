@@ -20,13 +20,12 @@ const About = () => {
         </p>
       </div>
 
-      {/* <div className='px-4 md:px-8 mt-8 w-full sm:w-4/6 md:w-3/6 '> */}
-      <div className='px-4 '>
+      <div className='px-4 md:px-8 mt-8'>
         <h2 className="text-2xl font-bold mb-4">{t('about.service')}</h2>
 
         {/* card */}
-        <div className='flex flex-col md:flex-row gap-4'>
-          <div className='bg-gray-600 bg-opacity-50 w-full border border-gray-500 rounded-lg p-8 flex flex-col sm:flex-row items-center'>
+        <div className='flex flex-col md:flex-row'>
+          <div className='bg-gray-600 mb-4 md:mb-0 md:mr-4 bg-opacity-50 w-full border border-gray-500 rounded-lg p-8 flex flex-col sm:flex-row items-center'>
             <div className='text-4xl text-blue-300'>
               <i className="fa-solid fa-laptop-code"></i>
             </div>

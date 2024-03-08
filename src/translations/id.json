@@ -7,7 +7,7 @@
   "navbar": {
     "about": "tentang",
     "resume": "resume",
-    "portfolio": "portofolio",
+    "project": "proyek",
     "contact": "kontak",
     "language": "bahasa"
   },
@@ -31,12 +31,12 @@
       "head": "pengalaman",
       "paerte_code": "Sebagai UI/UX Designer yang berfokus pada pembuatan desain prototipe aplikasi untuk pengembangan lebih lanjut. Dengan memahami kebutuhan pengguna, saya berusaha untuk membuat desain yang sederhana dan efektif. Alat yang saya gunakan adalah Figma.",
       "balaroa_head": "Kelurahan Balaroa",
-      "balaroa": "Membuat aplikasi untuk membuat surat otomatis, sehingga pegawai hanya perlu memasukkan data yang dibutuhkan dan surat dapat segera dibuat untuk keperluan pelayanan masyarakat. menggunakan React dan Express."
+      "balaroa": "Selama magang (KKLP) di Kantor Kelurahan Balaroa, saya membuat suatu product yaitu berupa aplikasi untuk membuat surat otomatis, sehingga pegawai hanya perlu memasukkan data yang dibutuhkan dan surat dapat segera dibuat untuk keperluan pelayanan masyarakat."
     },
     "now": "sekarang",
     "tools": "Alat & Keterampilan Saya"
   },
-  "portfolio": {
+  "project": {
     "all": "semua",
     "programming_use": "Bahasa Pemrograman yang Saya Gunakan:",
     "my_role": "peran saya:",
@@ -80,10 +80,8 @@
         "about_p1": "Dalam proyek ini, saya merancang dan mengimplementasikan game klasik berbasis web 'Whack-a-Mole'. Whack-a-Mole merupakan game arcade yang menguji refleks dan ketangkasan pemainnya. Dalam versi web ini, saya menggabungkan elemen permainan menyenangkan dengan desain responsif untuk pengalaman pengguna yang optimal di seluruh perangkat.",
         "tech_head1": "HTML, CSS, dan JavaScript:",
         "tech_head2": "Animasi CSS:",
-        "tech_head3": "Penyimpanan lokal:",
         "tech_body1": "Menerapkan logika permainan dan interaksi pengguna menggunakan kombinasi teknologi web dasar.",
-        "tech_body2": "Memanfaatkan animasi CSS untuk membuat gerakan karakter yang halus.",
-        "tech_body3": "Simpan dan muat skor tinggi menggunakan Penyimpanan Lokal di browser."
+        "tech_body2": "Memanfaatkan animasi CSS untuk membuat gerakan karakter yang halus."
       }
     },
     "todolist": {
@@ -137,7 +135,7 @@
     },
     "sips_app": {
       "title": "SIPS App",
-      "detail": "Aplikasi untuk membuat surat otomatis di kelurahan balaroa",
+      "detail": "Aplikasi surat otomatis di kelurahan balaroa",
       "data": {
         "title": "SIPS App (Sistem Informasi Pembuat Surat)",
         "detail": "Sebuah sistem yang memudahkan proses pembuatan surat keterangan untuk pelayanan masyarakat.",
@@ -170,6 +168,16 @@
         "tech_body5": "Membantu dalam mengelola database MySQL dengan model yang terstruktur.",
         "tech_body6": "Digunakan untuk mengimplementasikan keamanan dan otentikasi.",
         "tech_body7": "Framework CSS yang digunakan untuk membangun desain antarmuka pengguna dengan cepat dan konsisten."
+      }
+    },
+    "personal_web": {
+      "title": "Web Probadi",
+      "detail": "Halaman Arahan",
+      "data": {
+        "title": "Situs Web Responsif Dan Web Pribadi",
+        "detail": "Sebuah website landing page yang berisi konten portofolio dan profil diri",
+        "about_p1": "Web ini dibuat sebagai website pribadi untuk profil singkat dan menampilkan portofolio yang pernah saya buat. selain itu, ini juga sebagai web portofolioku yang pertama (sebelum yang saat ini).",
+        "about_p2": "Saya membuatnya menggunakan framework UI tailwind CSS dengan tema gelap dan responsif di berrbagai perangkat."
       }
     }
   },

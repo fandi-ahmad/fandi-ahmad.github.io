@@ -1,6 +1,6 @@
 import About from "./About";
-import Portofolio from "./Portofolio";
+import Project from "./Project";
 import Contact from "./Contact";
 import Resume from "./Resume";
 
-export { About, Portofolio, Contact, Resume }
+export { About, Project, Contact, Resume }

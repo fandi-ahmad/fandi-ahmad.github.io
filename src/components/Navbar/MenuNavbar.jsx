@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { useGlobalState } from '../../state/state'
 
-const SubMenu = (props) => {
+const MenuNavbar = (props) => {
   let path = location.pathname
   const [ activeMenu, setActiveMenu] = useGlobalState('activeMenu')
 
@@ -21,4 +21,4 @@ const SubMenu = (props) => {
   )
 }
 
-export default SubMenu
+export default MenuNavbar

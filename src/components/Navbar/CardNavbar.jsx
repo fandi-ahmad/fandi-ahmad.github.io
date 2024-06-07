@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import SubMenu from './SubMenu'
 import { useGlobalState } from '../../state/state'
+import MenuNavbar from './MenuNavbar'
 
 const CardNavbar = () => {
   const [titleHead, setTitleHead] = useState('')
@@ -34,10 +34,10 @@ const CardNavbar = () => {
         {/* list menu */}
         <div className='bg-gray-600 bg-opacity-50 rounded-tl-none rounded-br-none rounded-xl py-5 px-8 border-l border-b border-gray-500 hidden sm:block'>
           <ul className='flex flex-row font-medium'>
-            <SubMenu title={'about'} to='/' className='mr-8' />
-            <SubMenu title={'resume'} to='/resume' className='mr-8' />
-            <SubMenu title={'projects'} to='/projects' className='mr-8' />
-            <SubMenu title={'contact'} to='/contact' />
+            <MenuNavbar title={'about'} to='/' className='mr-8' />
+            <MenuNavbar title={'resume'} to='/resume' className='mr-8' />
+            <MenuNavbar title={'projects'} to='/projects' className='mr-8' />
+            <MenuNavbar title={'contact'} to='/contact' />
           </ul>
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 import { BaseTimeline, HeadListTimeline, ListTimeline } from '../components/Timeline'
 
 // images
@@ -15,8 +14,6 @@ import nodeImg from '../assets/logo/nodejs.webp'
 import expressJs from '../assets/logo/express.webp'
 
 const Resume = () => {
-  const [t, i18n] = useTranslation('global')
-
   return (
     <div>
 

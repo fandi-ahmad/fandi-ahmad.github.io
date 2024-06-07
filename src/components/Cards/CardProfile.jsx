@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
 import imageProfile from '../../assets/images/img-profile.webp'
-import { useTranslation } from 'react-i18next'
 
 const BioDetail = (props) => {
   return (
@@ -18,7 +17,6 @@ const BioDetail = (props) => {
 }
 
 const CardProfile = (props) => {
-  const [t, i18n] = useTranslation('global')
   const [isActive, setIsActive] = useState(false)
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
@@ -33,7 +31,7 @@ const CardProfile = (props) => {
 
   return (
     <div>
-      <div className={`bg-gray-700 rounded-xl border border-gray-500 mt-10 mb-4 lg:mb-10 overflow-hidden transition-all ease-in-out duration-300 lg:ml-10 ${isActive ? 'max-h-full' : 'max-h-28'} ${props.className}`}>
+      <div className={`bg-gray-700 rounded-xl border border-gray-500 mt-10 mb-4 lg:mb-10 overflow-hidden lg:ml-10 ${isActive ? 'max-h-full' : 'max-h-28'} ${props.className}`}>
         
         <div className='flex flex-row lg:flex-col justify-between items-start lg:items-center'>
           
@@ -58,8 +56,8 @@ const CardProfile = (props) => {
 
         <div className='mx-4 md:mx-8'>
           <BioDetail icon='fa-regular fa-envelope' title='Email' detail='fandi4160@gmail.com' />
-          <BioDetail icon='fa-solid fa-location-dot' title={t('self.location')} detail='Palu, Indonesia' />
-          <BioDetail icon='fa-solid fa-calendar-days' title={t('self.birthday')} detail={`${t('self.dec')}, 2002`} />
+          <BioDetail icon='fa-solid fa-location-dot' title='location' detail='Palu, Indonesia' />
+          <BioDetail icon='fa-solid fa-calendar-days' title='birthday' detail='December, 2002' />
         </div>
 
         <div className='px-4 md:px-8 pb-8 pt-4 opacity-25'>

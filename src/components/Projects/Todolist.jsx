@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 import { Template, TextHead, TextSubHead, ImageTool, Text } from './Template'
 
 import cssImg from '../../assets/logo/css.webp'
@@ -9,18 +8,16 @@ import cover from '../../assets/images/portofolio/todolist-app-cover.webp'
 import imgPreview from '../../assets/images/portofolio/todolist-app.webp'
 
 const Todolist = () => {
-  const [t, i18n] = useTranslation('global')
-  const names = 'project.todolist.'
-  const text = string => t(names+string)
-
   return (
-    <Template title={text('title')} subtitle={text('detail')}  >
+    <Template title='To Do List' subtitle='Tools App'>
       <div style={{ backgroundImage: `url(${cover})`, backgroundSize: '75% ' }} className='p-8 bg-blue-500 bg-contain bg-no-repeat bg-right-bottom'>
        
-        <TextHead>{text('data.title')}</TextHead>
-        <p className='text-sm font-light w-full md:w-2/3 lg:w-1/3 mt-8 text-justify'>{text('data.detail')}</p>
+        <TextHead>Simple To-Do List Application With Local Storage</TextHead>
+        <p className='text-sm font-light w-full md:w-2/3 lg:w-1/3 mt-8 text-justify'>
+          The app allows users to create, mark as complete, and delete to-do lists quickly and easily.
+        </p>
 
-        <p className='text-blue-950 text-lg mt-8 font-medium capitalize'>{t('project.programming_use')}</p>
+        <p className='text-blue-950 text-lg mt-8 font-medium capitalize'>Programming Language I Used:</p>
         <div className="grid grid-cols-2 md:grid-cols-4 w-fit mt-4">
           <ImageTool src={htmlImg} />
           <ImageTool src={cssImg} />
@@ -30,23 +27,20 @@ const Todolist = () => {
       </div>
 
       <div className='text-gray-800 bg-white p-8'>
-        <TextSubHead className='bg-blue-500'>{t('project.about')}</TextSubHead>
-        <Text>{text('data.about_p1')}</Text>
+        <TextSubHead className='bg-blue-500'>About Project</TextSubHead>
+        <Text>
+          In this project, I created a simple yet effective web-based To-Do List application. The app allows users to create, mark as complete, and delete to-do lists quickly and easily. One of the key features I implemented was the use of Local Storage to store task data locally on the user's device, allowing users to save their task list even after closing or refreshing the page.
+        </Text>
 
-        <TextSubHead className='bg-blue-500 mt-8'>{t('project.feature')}</TextSubHead>
-        <Text><strong>📌 {text('data.feature_head1')}</strong> {text('data.feature_body1')}</Text>
-        <Text><strong>📌 {text('data.feature_head2')}</strong> {text('data.feature_body2')}</Text>
-        <Text><strong>📌 {text('data.feature_head3')}</strong> {text('data.feature_body3')}</Text>
+        <TextSubHead className='bg-blue-500 mt-8'>Main Feature</TextSubHead>
+        <Text><strong>📌 To-Do List Creation:</strong> Users can easily add new tasks with relevant titles and descriptions.</Text>
+        <Text><strong>📌 Marking Completed:</strong> Any task can be marked as complete.</Text>
+        <Text><strong>📌 Task Deletion:</strong> Facility to delete completed or no longer relevant tasks.</Text>
 
-        <TextSubHead className='bg-blue-500 mt-8'>{t('project.tech')}</TextSubHead>
-        <Text><strong>📌 {text('data.tech_head1')}</strong> {text('data.tech_body1')}</Text>
-        <Text><strong>📌 {text('data.tech_head2')}</strong> {text('data.tech_body2')}</Text>
-        <Text><strong>📌 {text('data.tech_head3')}</strong> {text('data.tech_body3')}</Text>
-        
         <div className='mt-8'>
           <p>
-            {t('project.demo_link')}
-            <a className='text-blue-600 hover:underline' href="https://todolist.fandijsx.repl.co/" target='_blank'>todolist.fandijsx.repl.co</a>
+            Demo link:
+            <a className='text-blue-600 hover:underline' href="https://todolist.fandijsx.repl.co/" target='_blank'> todolist.fandijsx.repl.co</a>
           </p>
         </div>
       </div>

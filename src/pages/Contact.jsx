@@ -1,12 +1,10 @@
 import React, { useState } from 'react'
-import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
-  const [t, i18n] = useTranslation('global')
   const uniqueAutoCompleteValue = `off-${new Date().getTime()}`;
   const classInput = 'mt-1 p-2 w-full border border-gray-500 focus:border-blue-400 text-sm outline-none rounded-md bg-transparent active:outline-none'
 
-  const [alertEmailText, setAlertEmailText] = useState(t('contact.alert.email'))
+  const [alertEmailText, setAlertEmailText] = useState('Email is required')
   const getId = id => document.getElementById(id)
 
   const checkInput = (idInput, idText) => {
@@ -30,8 +28,8 @@ const Contact = () => {
     message === '' ? dangerStyle('message', 'alertMessage') : null
 
     email === '' || !email.includes("@gmail.com") ? dangerStyle('email', 'alertEmail') : null
-    email === '' ? setAlertEmailText(t('contact.alert.email')) :
-    !email.includes("@gmail.com") ? setAlertEmailText(t('contact.alert.invalid')) : null
+    email === '' ? setAlertEmailText('Email is required') :
+    !email.includes("@gmail.com") ? setAlertEmailText('Invalid email') : null
 
     if (fullname !== '' && email !== '' && email.includes('@gmail.com') && message !== '') {
       getId('loader').classList.remove('hidden')
@@ -75,30 +73,30 @@ const Contact = () => {
       </figure>
 
       <div className='mt-8'>
-        <h2 className="text-2xl font-bold mb-4">{t('contact.head')}</h2>
+        <h2 className="text-2xl font-bold mb-4">Contact Me</h2>
 
         <div>
           <div className="mb-4 flex flex-col lg:flex-row gap-4">
             <div className='w-full'>
-              <input type="text" id="fullname" name="fullname" onKeyUp={() => checkInput('fullname', 'alertName')} className={classInput} autoComplete={uniqueAutoCompleteValue} placeholder={t('contact.name')} required />
-              <small id='alertName' className='text-xs text-red-400 hidden'>{t('contact.alert.name')}</small>
+              <input type="text" id="fullname" name="fullname" onKeyUp={() => checkInput('fullname', 'alertName')} className={classInput} autoComplete={uniqueAutoCompleteValue} placeholder='Full Name' required />
+              <small id='alertName' className='text-xs text-red-400 hidden'>Name is required</small>
             </div>
             <div className='w-full'>
-              <input type="email" id="email" name="email" onKeyUp={() => checkInput('email', 'alertEmail')} className={classInput} autoComplete={uniqueAutoCompleteValue} placeholder={t('contact.email')} required />
+              <input type="email" id="email" name="email" onKeyUp={() => checkInput('email', 'alertEmail')} className={classInput} autoComplete={uniqueAutoCompleteValue} placeholder='Email Adress' required />
               <small id='alertEmail' className='text-xs text-red-400 hidden'>{alertEmailText}</small>
             </div>
           </div>
           <div className='w-full'>
-            <textarea id="message" onKeyUp={() => checkInput('message', 'alertMessage')} cols="30" rows="8" placeholder={t('contact.message')} className={classInput + ' resize-none'} required></textarea>
-            <small id='alertMessage' className='text-xs text-red-400 hidden'>{t('contact.alert.message')}</small>
+            <textarea id="message" onKeyUp={() => checkInput('message', 'alertMessage')} cols="30" rows="8" placeholder='Your Message' className={classInput + ' resize-none'} required></textarea>
+            <small id='alertMessage' className='text-xs text-red-400 hidden'>Message is required</small>
           </div>
 
           <div className='flex justify-end items-center mt-4'>
-            <div className='mr-8 text-sm text-red-400 hidden' id='failedSend'>{t('contact.failed')}</div>
-            <div className='mr-8 text-sm text-green-400 hidden' id='successSend'>{t('contact.success')}</div>
+            <div className='mr-8 text-sm text-red-400 hidden' id='failedSend'>Failed to send, something wrong!!</div>
+            <div className='mr-8 text-sm text-green-400 hidden' id='successSend'>Email sent successfully!!</div>
             <button onClick={sendMail} className='bg-gray-600 px-4 py-2 rounded-lg hover:bg-gray-500 duration-200 transition-all flex flex-row items-center'>
               <div className='loader mr-2 hidden' id='loader'></div>
-              <div>{t('contact.button')}</div>
+              <div>Send Message</div>
               <i className="fa-solid fa-paper-plane pl-2"></i>
             </button>
           </div>

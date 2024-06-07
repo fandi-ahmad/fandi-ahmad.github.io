@@ -22,18 +22,21 @@ const Resume = () => {
 
       <div className='px-4 md:px-8 mt-8'>
         <BaseTimeline>
-          <HeadListTimeline title={t('resume.edu.head')} />
-          <ListTimeline title='STMIK Adhi Guna Palu' time={`2020 - ${t('resume.now')}`} text={t('resume.edu.stmik')} />
-          <ListTimeline title='SMKN 1 Banawa' time='2017 - 2020' text={t('resume.edu.smkn')} bottomLine={true} />
+          <HeadListTimeline title='Education' />
+          <ListTimeline title='STMIK Adhi Guna Palu' time='2020 - 2024' text='STMIK Adhi Guna Palu' />
+          <ListTimeline title='SMKN 1 Banawa' time='2017 - 2020' text='SMKN 1 Banawa' bottomLine={true} />
         </BaseTimeline>
 
         <BaseTimeline className='mt-4'>
-          <HeadListTimeline title={t('resume.exp.head')} icon='fa-solid fa-briefcase' />
-          <ListTimeline title='UI/UX Designer' subtitle='Paerte Code' time={`Sep 2023 - ${t('resume.now')}`} 
-            text={t('resume.exp.paerte_code')}
+          <HeadListTimeline title='Experience' icon='fa-solid fa-briefcase' />
+          <ListTimeline title='UI/UX Designer' subtitle='Paerte Code' time='Sep 2023 - Feb 2024' 
+            text='As a UI/UX Designer who focuses on creating application prototype designs for further development. By understanding user needs, I strive to create simple and effective designs. The tool I use is Figma.'
           />
-          <ListTimeline title='Internship - Full Stack Developer' subtitle={t('resume.exp.balaroa_head')} time='Jul - Sep 2023' 
-            text={<>{t('resume.exp.balaroa')}<br/>Skils: React • Tailwind • Express • Sequelize • MYSQL • JWT • RestFull API </>}
+          <ListTimeline title='Internship - Full Stack Developer' subtitle='Balaroa Sub-District' time='Jul - Sep 2023' 
+            text={<>
+              During my internship (KKLP) at the Balaroa District Office, I created a product, namely an application for creating automatic letters, so that employees only need to enter the required data and letters can be immediately created for community service purposes.
+              <br/>Skils: React • Tailwind • Express • Sequelize • MYSQL • JWT • RestFull API
+            </>}
           />
           <ListTimeline title='Frontend Developer' subtitle='WoVi' time='Sep 2022 - Jul 2023' 
             text='Skils: HTML • CSS • Javascript • Bootstrap • Vue • RestFull API'
@@ -46,7 +49,7 @@ const Resume = () => {
       </div>
 
       <div className="px-4 md:px-8 mt-8 ">
-        <h2 className="text-2xl font-bold mb-4">{t('resume.tools')}</h2>
+        <h2 className="text-2xl font-bold mb-4">My Tools & Skills</h2>
         <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-10 gap-4">
           <img src={htmlImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />
           <img src={cssImg} alt="" loading='lazy' className="w-12 h-12 object-contain" />

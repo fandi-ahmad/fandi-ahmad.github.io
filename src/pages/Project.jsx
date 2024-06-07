@@ -10,55 +10,53 @@ import todolist from '../assets/images/portofolio/todolist-app.webp'
 import sipsApp from '../assets/images/portofolio/SIPS-app.webp'
 import weatherApp from '../assets/images/portofolio/weather-app.webp'
 import personalWeb from '../assets/images/portofolio/personal-web.webp'
-import { useTranslation } from 'react-i18next'
 
 const Project = () => {
   const [portofolioPage, setPortofolioPage] = useGlobalState('portofolioPage')
   const [portfolioContent, setPortfolioContent] = useState('')
-  const [t, i18n] = useTranslation('global')
 
   const [portfolioList, setPortfolioList] = useState([
     {
       name: 'weatherApp',
       category: 'vue',
       imageSrc: weatherApp,
-      title: t('project.weather_app.title'),
-      detail: t('project.weather_app.detail'),
+      title: 'Weather App',
+      detail: 'Weather Forecast',
     },
     {
       name: 'sipsApp',
       category: 'react express',
       imageSrc: sipsApp,
-      title: t('project.sips_app.title'),
-      detail: t('project.sips_app.detail'),
+      title: 'SIPS App',
+      detail: 'Application Automatic Letters In Balaroa Sub-District',
     },
     {
       name: 'penaWeb',
       category: 'html css js',
       imageSrc: webPena,
-      title: t('project.pena.title'),
-      detail: t('project.pena.detail'),
+      title: 'PENA Website 2022-2023',
+      detail: 'Company Profile',
     },
     {
       name: 'honeyProduction',
       category: 'html css js',
       imageSrc: honeyProduction,
-      title: t('project.honey.title'),
-      detail: t('project.honey.detail'),
+      title: 'Honey Production Website',
+      detail: 'Landing Page',
     },
     {
       name: 'whackAMole',
       category: 'html css js',
       imageSrc: whackamole,
-      title: t('project.whackamole.title'),
-      detail: t('project.whackamole.detail'),
+      title: 'Whack a Mole',
+      detail: 'Mini Game',
     },
     {
       name: 'toDoList',
       category: 'html css js',
       imageSrc: todolist,
-      title: t('project.todolist.title'),
-      detail: t('project.todolist.detail'),
+      title: 'To Do List',
+      detail: 'Tools App',
     },
     {
       name: 'personalWeb',
@@ -71,7 +69,7 @@ const Project = () => {
 
   const Canvas = () => {
     return (
-      portofolioPage === 'all' || portofolioPage === 'semua'  ? 
+      portofolioPage === 'all' ? 
         portfolioList.map((project, index) => (
           <CardPorto key={index} src={project.imageSrc} title={project.title} detail={project.detail} onClick={() => openModal(project.name)} />
         ))
@@ -126,37 +124,39 @@ const Project = () => {
   }
 
   return (
-    <div className='px-4 md:px-8 mt-8'>
+    <div>
+      <div className='px-4 md:px-8 mt-8'>
 
-      {/* navbar portofolio */}
-      <ul className='hidden md:flex flex-row gap-8'>
-        <SubMenu text={t('project.all')}  onClick={() => setPortofolioPage(t('project.all'))} />
-        <SubMenu text='html css js' onClick={() => setPortofolioPage('html css js')} />
-        <SubMenu text='react express' onClick={() => setPortofolioPage('react express')} />
-        <SubMenu text='vue' onClick={() => setPortofolioPage('vue')} />
-      </ul>
+        {/* navbar portofolio */}
+        <ul className='hidden md:flex flex-row gap-8'>
+          <SubMenu text='all'  onClick={() => setPortofolioPage('all')} />
+          <SubMenu text='html css js' onClick={() => setPortofolioPage('html css js')} />
+          <SubMenu text='react express' onClick={() => setPortofolioPage('react express')} />
+          <SubMenu text='vue' onClick={() => setPortofolioPage('vue')} />
+        </ul>
 
-      {/* content portofolio */}
-      <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8'>
-        <Canvas/>
-      </div>
-
-      {/* modal */}
-      <dialog id="modalPortfolio" className="modal">
-        <div className='h-screen w-screen'>
-          <button onClick={closeModal} className='text-xl outline-none sm:text-3xl md:text-4xl fixed z-30 top-4 right-0.5 sm:right-2 md:right-4 lg:right-6 cursor-pointer hover:text-gray-300'>
-            <i className="fa-solid fa-circle-xmark"></i>
-          </button>
-          <div id='templateModal' className="modal-box rounded-none bg-black bg-opacity-70 min-h-full min-w-full">
-            <Content/>
-          </div>
-          <form method="dialog" className="modal-backdrop">
-            <button id='closeModal'></button>
-          </form>
-
+        {/* content portofolio */}
+        <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8'>
+          <Canvas/>
         </div>
-      </dialog>
-      
+
+        {/* modal */}
+        <dialog id="modalPortfolio" className="modal">
+          <div className='h-screen w-screen'>
+            <button onClick={closeModal} className='text-xl outline-none sm:text-3xl md:text-4xl fixed z-30 top-4 right-0.5 sm:right-2 md:right-4 lg:right-6 cursor-pointer hover:text-gray-300'>
+              <i className="fa-solid fa-circle-xmark"></i>
+            </button>
+            <div id='templateModal' className="modal-box rounded-none bg-black bg-opacity-70 min-h-full min-w-full">
+              <Content/>
+            </div>
+            <form method="dialog" className="modal-backdrop">
+              <button id='closeModal'></button>
+            </form>
+
+          </div>
+        </dialog>
+        
+      </div>
     </div>
   )
 }

@@ -5,7 +5,7 @@ const HeadListTimeline = (props) => {
     <li className=''>
       <div className="timeline-middle">
         <div style={{ width: '46px'}} className='min-h-fit px-2 pt-2 pb-1 text-center text-blue-300 rounded-md bg-gray-600 border-gray-500 border'>
-          <i class={`p-0 m-0 leading-none text-2xl ${props.icon || 'fa-solid fa-book-open'}`}></i>
+          <i className={`p-0 m-0 leading-none text-2xl ${props.icon || 'fa-solid fa-book-open'}`}></i>
         </div>
       </div>
       <div className="timeline-end pt-2 ml-4">

@@ -26,7 +26,7 @@ const PersonalWeb = () => {
           Website landing page containing portfolio content and personal profile
         </p>
       
-        <p className='text-lg mt-8 font-medium capitalize'>{t('project.tech')}:</p>
+        <p className='text-lg mt-8 font-medium capitalize'>Programming Language I Used::</p>
         <div className="grid grid-cols-3 md:grid-cols-4 w-fit mt-4">
           <ImageTool src={htmlImg} />
           <ImageTool src={cssImg} />

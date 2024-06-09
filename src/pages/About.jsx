@@ -5,17 +5,13 @@ const About = () => {
   return (
     <div>
       <div>
-        <div className="px-4 md:px-8 mt-8 font-light text-justify text-sm">
+        <div className="px-4 md:px-8 mt-8 font-light text-justify text-sm md:text-base">
           <p className='mb-4'>
-            Hello, I'm Fandi, a Full Stack Web Developer with a passion for creating web experiences that are not only functional, but also stunning. In the front-end world, I have expertise in implementing designs using HTML, CSS, and JavaScript, and I believe that the use of modern frameworks such as React and Vue brings a new dimension to interactivity and visual appeal.
+            Hello! I'm Fandi, a passionate and dedicated Full Stack Web Developer with a strong background in both front-end and back-end development. With a keen eye for design and a meticulous attention to detail, I strive to create dynamic, user-friendly, and responsive websites and applications that deliver seamless experiences.
           </p>
 
           <p className='mb-4'>
-            In back-end development, I rely on Express to ensure optimal performance and security. I don't just see web development as a job, but as an opportunity to embrace challenges and continue learning. I believe that innovation comes through the desire to continually grow, and I'm always open to digging deeper into the world of web development.
-          </p>
-
-          <p className='mb-4'>
-            With a combination of technical expertise and a spirit of exploration, I'm ready to take your web project to the next level. Let's create an unforgettable web experience together!
+            I believe that the best projects are built on strong collaborations. I enjoy working closely with clients and teams to bring their visions to life. My approach is client-centric, focusing on understanding their goals and providing tailored solutions that meet their unique needs.
           </p>
 
         </div>
@@ -33,8 +29,8 @@ const About = () => {
               </div>
               <div className='sm:pl-4 text-center sm:text-start'>
                 <h3 className='text-lg font-semibold pb-2'>Web Development</h3>
-                <div className='text-sm'>
-                  I offer stunning website design and development services, powered by modern technology.
+                <div className='text-sm md:text-base'>
+                  Website design and development services, powered by modern technology.
                 </div>
               </div>
             </div>
@@ -45,8 +41,8 @@ const About = () => {
               </div>
               <div className='sm:pl-4 text-center sm:text-start'>
                 <h3 className='text-lg font-semibold pb-2'>Web Based Application</h3>
-                <div className='text-sm'>
-                  offer website-based application design and development.
+                <div className='text-sm md:text-base'>
+                  Website-based application design and development.
                 </div>
               </div>
             </div>

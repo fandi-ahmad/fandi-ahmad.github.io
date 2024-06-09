@@ -65,14 +65,17 @@ const CardProfile = (props) => {
         </div>
 
         <div className='flex flex-row justify-center mb-4'>
+          <a href='https://instagram.com/fandi.jsx' target='_blank' className='text-2xl mr-4'>
+            <i className="fa-brands fa-instagram"></i>
+          </a>
           <a href='https://github.com/fandi-ahmad' target='_blank' className='text-2xl mr-4'>
             <i className="fa-brands fa-github"></i>
           </a>
           <a href='https://www.linkedin.com/in/fandijsx/' target='_blank' className='text-2xl mr-4'>
             <i className="fa-brands fa-linkedin"></i>
           </a>
-          <a href='https://instagram.com/fandi.jsx' target='_blank' className='text-2xl'>
-            <i className="fa-brands fa-instagram"></i>
+          <a href='mailto:fandi4160@gmail.com' className='text-2xl'>
+            <i className="fa-regular fa-envelope"></i>
           </a>
         </div>
 

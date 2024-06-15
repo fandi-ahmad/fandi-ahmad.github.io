@@ -8,7 +8,7 @@ const BottomNavbar = () => {
         <MenuNavbar title='About' to='/' className='mr-6 sm:mr-8' />
         <MenuNavbar title='Resume' to='/resume' className='mr-6 sm:mr-8' />
         <MenuNavbar title='Projects' to='/projects' className='mr-6 sm:mr-8' />
-        <MenuNavbar title='Contact' to='/contact' className='mr-6 sm:mr-8' />
+        <MenuNavbar title='Contact' to='/contact' />
       </ul>
     </div>
   )

@@ -1,5 +1,10 @@
 import React, {useState} from 'react'
 
+// images
+import mysqlImg from '../../assets/logo/mysql-icon.png'
+import nextjs from '../../assets/logo/nextjs.png'
+import express from '../../assets/logo/express-js.png'
+
 const CardPorto = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const classImage = `${isHovered ? 'scale-105' : ''} relative z-10 h-48 w-full object-cover object-top transition-transform duration-300 ease-in-out`;
@@ -35,16 +40,16 @@ const CardPorto = (props) => {
           <i className='fa-solid fa-calendar-days'></i>
           <span className='ml-1'>{props.time}</span>
         </div>
-        <div className='capitalize opacity-75 font-light text-sm flex flex-row mt-3'>
-          <span>{props.detail}</span>
-          <span className='mx-1.5'>•</span>
+        <div className='capitalize font-light text-sm flex flex-row mt-3'>
+          <span className='opacity-75'>{props.detail}</span>
+          <span className='mx-2'>•</span>
           <div className='flex flex-row'>
             {props.stackImage ? props.stackImage.map((stackItem, index) => (
               <img
                 key={index}
                 src={stackItem}
-                alt="stack"
-                className='w-6 h-6 object-contain mr-2'
+                alt={stackItem}
+                className={`${stackItem === express || stackItem === nextjs || stackItem === mysqlImg ? 'filter invert' : null} w-12 max-w-fit h-6 object-contain mr-3`}
               />
             )) : null}
           </div>

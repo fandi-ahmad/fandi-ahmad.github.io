@@ -10,6 +10,9 @@ import todolist from '../assets/images/portofolio/todolist-app.webp'
 import sipsApp from '../assets/images/portofolio/SIPS-app.webp'
 import weatherApp from '../assets/images/portofolio/weather-app.webp'
 import personalWeb from '../assets/images/portofolio/personal-web.webp'
+import nextWrite from '../assets/images/portofolio/next-write.png'
+import simado from '../assets/images/portofolio/simado.png'
+import paertecode from '../assets/images/portofolio/landing-page-paertecode.png'
 
 // images
 import jsImg from '../assets/logo/javascript.webp'
@@ -22,7 +25,6 @@ import nextjs from '../assets/logo/nextjs.png'
 import mu from '../assets/logo/mu.png'
 import supabase from '../assets/logo/supabase.png'
 import express from '../assets/logo/express-js.png'
-import prisma from '../assets/logo/prisma.png'
 import viteImg from '../assets/logo/vite.webp'
 import htmlImg from '../assets/logo/html.webp'
 import cssImg from '../assets/logo/css.webp'
@@ -32,6 +34,33 @@ const Project = () => {
   const [portfolioContent, setPortfolioContent] = useState('')
 
   const [portfolioList, setPortfolioList] = useState([
+    {
+      name: 'nextWrite',
+      category: 'next js',
+      imageSrc: nextWrite,
+      title: 'Next Write',
+      detail: 'Web App',
+      time: 'Jun 2024',
+      stackImage: [nextjs, tsImg, tailwindImg, mu, supabase]
+    },
+    {
+      name: 'simado',
+      category: 'react express',
+      imageSrc: simado,
+      title: 'SIMADO - E-Document Management System',
+      detail: 'Web App',
+      time: 'May 2024',
+      stackImage: [reactImg, viteImg, tailwindImg, express]
+    },
+    {
+      name: 'paertecode',
+      category: 'react',
+      imageSrc: paertecode,
+      title: 'Paerte Code Landing Page',
+      detail: 'Landing Page',
+      time: 'Feb 2024',
+      stackImage: [reactImg, viteImg, tailwindImg],
+    },
     {
       name: 'sipsApp',
       category: 'react express',

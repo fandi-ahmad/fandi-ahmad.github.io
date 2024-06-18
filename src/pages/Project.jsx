@@ -13,6 +13,7 @@ import personalWeb from '../assets/images/portofolio/personal-web.webp'
 import nextWrite from '../assets/images/portofolio/next-write.png'
 import simado from '../assets/images/portofolio/simado.png'
 import paertecode from '../assets/images/portofolio/landing-page-paertecode.png'
+import eTailor from '../assets/images/portofolio/e-tailor.png'
 
 // images
 import jsImg from '../assets/logo/javascript.webp'
@@ -60,6 +61,15 @@ const Project = () => {
       detail: 'Landing Page',
       time: 'Feb 2024',
       stackImage: [reactImg, viteImg, tailwindImg],
+    },
+    {
+      name: 'eTailor',
+      category: '',
+      imageSrc: eTailor,
+      title: 'E-Tailor',
+      detail: 'Web App',
+      time: 'Jan 2024',
+      stackImage: [tailwindImg]
     },
     {
       name: 'sipsApp',

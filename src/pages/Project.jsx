@@ -10,6 +10,25 @@ import todolist from '../assets/images/portofolio/todolist-app.webp'
 import sipsApp from '../assets/images/portofolio/SIPS-app.webp'
 import weatherApp from '../assets/images/portofolio/weather-app.webp'
 import personalWeb from '../assets/images/portofolio/personal-web.webp'
+import nextWrite from '../assets/images/portofolio/next-write.png'
+import simado from '../assets/images/portofolio/simado.png'
+import paertecode from '../assets/images/portofolio/landing-page-paertecode.png'
+import eTailor from '../assets/images/portofolio/e-tailor.png'
+
+// images
+import jsImg from '../assets/logo/javascript.webp'
+import tsImg from '../assets/logo/typescript.webp'
+import reactImg from '../assets/logo/reactjs.webp'
+import vueImg from '../assets/logo/vuejs.webp'
+import tailwindImg from '../assets/logo/tailwind.webp'
+import bootstrap from '../assets/logo/bootstrap.webp'
+import nextjs from '../assets/logo/nextjs.png'
+import mu from '../assets/logo/mu.png'
+import supabase from '../assets/logo/supabase.png'
+import express from '../assets/logo/express-js.png'
+import viteImg from '../assets/logo/vite.webp'
+import htmlImg from '../assets/logo/html.webp'
+import cssImg from '../assets/logo/css.webp'
 
 const Project = () => {
   const [portofolioPage, setPortofolioPage] = useGlobalState('portofolioPage')
@@ -17,32 +36,67 @@ const Project = () => {
 
   const [portfolioList, setPortfolioList] = useState([
     {
-      name: 'weatherApp',
-      category: 'vue',
-      imageSrc: weatherApp,
-      title: 'Weather App',
-      detail: 'Weather Forecast',
+      name: 'nextWrite',
+      category: 'next js',
+      imageSrc: nextWrite,
+      title: 'Next Write',
+      detail: 'Web App',
+      time: 'Jun 2024',
+      stackImage: [nextjs, tsImg, tailwindImg, mu, supabase]
+    },
+    {
+      name: 'simado',
+      category: 'react express',
+      imageSrc: simado,
+      title: 'SIMADO - E-Document Management System',
+      detail: 'Web App',
+      time: 'May 2024',
+      stackImage: [reactImg, viteImg, tailwindImg, express]
+    },
+    {
+      name: 'paertecode',
+      category: 'react',
+      imageSrc: paertecode,
+      title: 'Paerte Code Landing Page',
+      detail: 'Landing Page',
+      time: 'Feb 2024',
+      stackImage: [reactImg, viteImg, tailwindImg],
+    },
+    {
+      name: 'eTailor',
+      category: '',
+      imageSrc: eTailor,
+      title: 'E-Tailor',
+      detail: 'Web App',
+      time: 'Jan 2024',
+      stackImage: [tailwindImg]
     },
     {
       name: 'sipsApp',
       category: 'react express',
       imageSrc: sipsApp,
-      title: 'SIPS App',
-      detail: 'Application Automatic Letters In Balaroa Sub-District',
+      title: 'SIPS App - Application Automatic Letters',
+      detail: 'Web App',
+      time: 'Sep 2023',
+      stackImage: [reactImg, viteImg, tailwindImg, express],
     },
     {
-      name: 'penaWeb',
+      name: 'personalWeb',
       category: 'html css js',
-      imageSrc: webPena,
-      title: 'PENA Website 2022-2023',
-      detail: 'Company Profile',
-    },
-    {
-      name: 'honeyProduction',
-      category: 'html css js',
-      imageSrc: honeyProduction,
-      title: 'Honey Production Website',
+      imageSrc: personalWeb,
+      title: 'Personal Web',
       detail: 'Landing Page',
+      time: 'Aug 2023',
+      stackImage: [htmlImg, cssImg, jsImg, tailwindImg],
+    },
+    {
+      name: 'weatherApp',
+      category: 'vue',
+      imageSrc: weatherApp,
+      title: 'Weather App',
+      detail: 'Web App',
+      time: 'Jan 2023',
+      stackImage: [vueImg, viteImg, bootstrap],
     },
     {
       name: 'whackAMole',
@@ -50,43 +104,90 @@ const Project = () => {
       imageSrc: whackamole,
       title: 'Whack a Mole',
       detail: 'Mini Game',
+      time: 'Jan 2023',
+      stackImage: [htmlImg, cssImg, jsImg],
     },
     {
       name: 'toDoList',
       category: 'html css js',
       imageSrc: todolist,
       title: 'To Do List',
-      detail: 'Tools App',
+      detail: 'Web App',
+      time: 'Dec 2022',
+      stackImage: [htmlImg, cssImg, jsImg],
     },
     {
-      name: 'personalWeb',
+      name: 'penaWeb',
       category: 'html css js',
-      imageSrc: personalWeb,
-      title: 'Personal Web',
-      detail: 'Landing Page'
-    }
+      imageSrc: webPena,
+      title: 'PENA Website 2022-2023',
+      detail: 'Company Profile',
+      time: 'Sep 2022',
+      stackImage: [htmlImg, cssImg, jsImg, bootstrap],
+    },
+    {
+      name: 'honeyProduction',
+      category: 'html css js',
+      imageSrc: honeyProduction,
+      title: 'Honey Production Website',
+      detail: 'Landing Page',
+      time: 'Jul 2022',
+      stackImage: [htmlImg, cssImg, jsImg, bootstrap],
+    },
   ])
 
   const Canvas = () => {
     return (
       portofolioPage === 'all' ? 
         portfolioList.map((project, index) => (
-          <CardPorto key={index} src={project.imageSrc} title={project.title} detail={project.detail} onClick={() => openModal(project.name)} />
+          <CardPorto
+            key={index}
+            src={project.imageSrc}
+            title={project.title}
+            detail={project.detail}
+            time={project.time}
+            stackImage={project.stackImage}
+            onClick={() => openModal(project.name)}
+          />
         ))
       :
       portofolioPage === 'html css js' ? 
         portfolioList.filter(item => item.category === 'html css js').map((project, index) => (
-          <CardPorto key={index} src={project.imageSrc} title={project.title} detail={project.detail} onClick={() => openModal(project.name)} />
+          <CardPorto
+            key={index}
+            src={project.imageSrc}
+            title={project.title}
+            detail={project.detail}
+            time={project.time}
+            stackImage={project.stackImage}
+            onClick={() => openModal(project.name)}
+          />
         ))
       :
       portofolioPage === 'react express' ? 
       portfolioList.filter(item => item.category === 'react express').map((project, index) => (
-        <CardPorto key={index} src={project.imageSrc} title={project.title} detail={project.detail} onClick={() => openModal(project.name)} />
+        <CardPorto
+          key={index}
+          src={project.imageSrc}
+          title={project.title}
+          detail={project.detail}
+          time={project.time}
+          stackImage={project.stackImage}
+          onClick={() => openModal(project.name)}
+        />
       ))
       :
       portofolioPage === 'vue' ? 
         portfolioList.filter(item => item.category === 'vue').map((project, index) => (
-          <CardPorto key={index} src={project.imageSrc} title={project.title} detail={project.detail} onClick={() => openModal(project.name)} />
+          <CardPorto
+            key={index}
+            src={project.imageSrc}
+            title={project.title}
+            detail={project.detail}
+            time={project.time}
+            stackImage={project.stackImage}
+            onClick={() => openModal(project.name)}
+          />
         ))
       :
       null

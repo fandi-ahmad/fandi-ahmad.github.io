@@ -10,10 +10,11 @@ import todolist from '../assets/images/portofolio/todolist-app.webp'
 import sipsApp from '../assets/images/portofolio/SIPS-app.webp'
 import weatherApp from '../assets/images/portofolio/weather-app.webp'
 import personalWeb from '../assets/images/portofolio/personal-web.webp'
-import nextWrite from '../assets/images/portofolio/next-write.png'
 import simado from '../assets/images/portofolio/simado.png'
 import paertecode from '../assets/images/portofolio/landing-page-paertecode.png'
 import eTailor from '../assets/images/portofolio/e-tailor.png'
+import nextWrite from '../assets/images/portofolio/next-write.webp'
+import nodeChat from '../assets/images/portofolio/node-chat2.webp'
 
 // images
 import jsImg from '../assets/logo/javascript.webp'
@@ -29,12 +30,25 @@ import express from '../assets/logo/express-js.png'
 import viteImg from '../assets/logo/vite.webp'
 import htmlImg from '../assets/logo/html.webp'
 import cssImg from '../assets/logo/css.webp'
+import laravel from '../assets/logo/laravel.png'
+import jquery from '../assets/logo/jquery.webp'
+import socketio from '../assets/logo/socketio.png'
+import prisma from '../assets/logo/prisma.png'
 
 const Project = () => {
   const [portofolioPage, setPortofolioPage] = useGlobalState('portofolioPage')
   const [portfolioContent, setPortfolioContent] = useState('')
 
   const [portfolioList, setPortfolioList] = useState([
+    {
+      name: 'nodeCHat',
+      category: 'express',
+      imageSrc: nodeChat,
+      title: 'Node Chat',
+      detail: 'Web App',
+      time: 'Jul 2024',
+      stackImage: [express, socketio, prisma, tailwindImg]
+    },
     {
       name: 'nextWrite',
       category: 'next js',
@@ -69,7 +83,7 @@ const Project = () => {
       title: 'E-Tailor',
       detail: 'Web App',
       time: 'Jan 2024',
-      stackImage: [tailwindImg]
+      stackImage: [laravel, jquery, tailwindImg]
     },
     {
       name: 'sipsApp',

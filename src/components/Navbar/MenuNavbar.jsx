@@ -12,7 +12,7 @@ const MenuNavbar = (props) => {
 
   return (
     <Link to={props.to} onClick={() => setActiveMenu(props.to)}>
-      <li className={`cursor-pointer relative group pb-1 capitalize ${props.className}`} onClick={props.onClick} tabIndex={props.tabIndex}>
+      <li className={`cursor-pointer relative group pb-1.5 capitalize ${props.className}`} onClick={props.onClick} tabIndex={props.tabIndex}>
         {props.title}
         {props.children}
         <span className={path === props.to ? classMenuActive : classMenuNonActive}></span>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useGlobalState } from '../state/state'
 import { CardPorto } from '../components/Cards'
 import { PenaWeb, HoneyProduction, WhackaMole, Todolist, WeatherApp, SipsApp, PersonalWeb } from '../components/Projects'
@@ -35,15 +35,28 @@ import jquery from '../assets/logo/jquery.webp'
 import socketio from '../assets/logo/socketio.png'
 import prisma from '../assets/logo/prisma.png'
 
+import nodeChatFull from '../assets/images/portofolio/node-chat-full.webp'
+import nextWriteFull from '../assets/images/portofolio/next-write-full.webp'
+import webPenaFull from '../assets/images/portofolio/web-pena-full.webp'
+import honeyProductionFull from '../assets/images/portofolio/honey-production-full.webp'
+import PersonalWebFull from '../assets/images/portofolio/personal-web-full.webp'
+import sipsAppFull from '../assets/images/portofolio/sips-app-full.webp'
+import todolistFull from '../assets/images/portofolio/todolist-full.webp'
+import whackAMoleFull from '../assets/images/portofolio/whackamole-full.webp'
+import weatherAppFull from '../assets/images/portofolio/weather-app-full.webp'
+import paertecodeFull from '../assets/images/portofolio/paertecode-full.jpeg'
+import ProjectDetail from '../components/Projects/Template/ProjectDetail'
+
 const Project = () => {
   const [portofolioPage, setPortofolioPage] = useGlobalState('portofolioPage')
   const [portfolioContent, setPortfolioContent] = useState('')
 
   const [portfolioList, setPortfolioList] = useState([
     {
-      name: 'nodeCHat',
+      name: 'nodeChat',
       category: 'express',
       imageSrc: nodeChat,
+      imageSrcFull: nodeChatFull,
       title: 'Node Chat',
       detail: 'Web App',
       time: 'Jul 2024',
@@ -53,6 +66,7 @@ const Project = () => {
       name: 'nextWrite',
       category: 'next js',
       imageSrc: nextWrite,
+      imageSrcFull: nextWriteFull,
       title: 'Next Write',
       detail: 'Web App',
       time: 'Jun 2024',
@@ -71,6 +85,7 @@ const Project = () => {
       name: 'paertecode',
       category: 'react',
       imageSrc: paertecode,
+      imageSrcFull: paertecodeFull,
       title: 'Paerte Code Landing Page',
       detail: 'Landing Page',
       time: 'Feb 2024',
@@ -89,6 +104,7 @@ const Project = () => {
       name: 'sipsApp',
       category: 'react express',
       imageSrc: sipsApp,
+      imageSrcFull: sipsAppFull,
       title: 'SIPS App - Application Automatic Letters',
       detail: 'Web App',
       time: 'Sep 2023',
@@ -98,6 +114,7 @@ const Project = () => {
       name: 'personalWeb',
       category: 'html css js',
       imageSrc: personalWeb,
+      imageSrcFull: PersonalWebFull,
       title: 'Personal Web',
       detail: 'Landing Page',
       time: 'Aug 2023',
@@ -107,6 +124,7 @@ const Project = () => {
       name: 'weatherApp',
       category: 'vue',
       imageSrc: weatherApp,
+      imageSrcFull: weatherAppFull,
       title: 'Weather App',
       detail: 'Web App',
       time: 'Jan 2023',
@@ -116,6 +134,7 @@ const Project = () => {
       name: 'whackAMole',
       category: 'html css js',
       imageSrc: whackamole,
+      imageSrcFull: whackAMoleFull,
       title: 'Whack a Mole',
       detail: 'Mini Game',
       time: 'Jan 2023',
@@ -125,6 +144,7 @@ const Project = () => {
       name: 'toDoList',
       category: 'html css js',
       imageSrc: todolist,
+      imageSrcFull: todolistFull,
       title: 'To Do List',
       detail: 'Web App',
       time: 'Dec 2022',
@@ -134,6 +154,7 @@ const Project = () => {
       name: 'penaWeb',
       category: 'html css js',
       imageSrc: webPena,
+      imageSrcFull: webPenaFull,
       title: 'PENA Website 2022-2023',
       detail: 'Company Profile',
       time: 'Sep 2022',
@@ -143,6 +164,7 @@ const Project = () => {
       name: 'honeyProduction',
       category: 'html css js',
       imageSrc: honeyProduction,
+      imageSrcFull: honeyProductionFull,
       title: 'Honey Production Website',
       detail: 'Landing Page',
       time: 'Jul 2022',
@@ -161,7 +183,8 @@ const Project = () => {
             detail={project.detail}
             time={project.time}
             stackImage={project.stackImage}
-            onClick={() => openModal(project.name)}
+            // onClick={() => openModal(project.name)}
+            onClick={() => openModal(project.title, project.detail, project.imageSrcFull)}
           />
         ))
       :
@@ -208,9 +231,17 @@ const Project = () => {
     );
   }
 
-  const openModal = (params) => {
-    setPortfolioContent(params)
+  const [projectTitle, setProjectTitle] = useState('')
+  const [projectDetail, setProjectDetail] = useState('')
+  const [projectSrc, setProjectSrc] = useState('')
+
+  const openModal = (title, detail, src) => {
     document.getElementById('modalPortfolio').showModal()
+    // setPortfolioContent(params)
+    setProjectTitle(title)
+    setProjectDetail(detail)
+    setProjectSrc(src)
+
   }
 
   const classNav = 'cursor-pointer hover:text-blue-400 duration-200 capitalize'
@@ -222,14 +253,16 @@ const Project = () => {
 
   const Content = () => {
     return (
-      portfolioContent === 'penaWeb' ? <PenaWeb/> :
-      portfolioContent === 'honeyProduction' ? <HoneyProduction/> :
-      portfolioContent === 'whackAMole' ? <WhackaMole/> : 
-      portfolioContent === 'toDoList' ? <Todolist/> :
-      portfolioContent === 'weatherApp' ? <WeatherApp/> :
-      portfolioContent === 'sipsApp' ? <SipsApp/> :
-      portfolioContent === 'personalWeb' ? <PersonalWeb/> :
-      null
+      <ProjectDetail title={projectTitle} detail={projectDetail} src={projectSrc} />
+      // portfolioContent === 'penaWeb' ? <PenaWeb/> :
+      // portfolioContent === 'honeyProduction' ? <HoneyProduction/> :
+      // portfolioContent === 'whackAMole' ? <WhackaMole/> : 
+      // portfolioContent === 'toDoList' ? <Todolist/> :
+      // portfolioContent === 'weatherApp' ? <WeatherApp/> :
+      // portfolioContent === 'sipsApp' ? <SipsApp/> :
+      // portfolioContent === 'personalWeb' ? <PersonalWeb/> :
+      // portfolioContent === 'nodeChat' ? <div className='px-0 sm:px-6 md:px-12 lg:px-16 flex justify-center'><img src={nodeChatFull} /></div> :
+      // null
     )
   }
 
@@ -258,10 +291,15 @@ const Project = () => {
         {/* modal */}
         <dialog id="modalPortfolio" className="modal">
           <div className='h-screen w-screen'>
-            <button onClick={closeModal} className='text-xl outline-none sm:text-3xl md:text-4xl fixed z-30 top-4 right-0.5 sm:right-2 md:right-4 lg:right-6 cursor-pointer hover:text-gray-300'>
+            <button onClick={closeModal} className='outline-none text-4xl fixed z-30 top-4 right-0.5 sm:right-2 md:right-4 lg:right-6 cursor-pointer hover:text-gray-300 hidden md:block'>
               <i className="fa-solid fa-circle-xmark"></i>
             </button>
-            <div id='templateModal' className="modal-box rounded-none bg-black bg-opacity-70 min-h-full min-w-full">
+            <div className='fixed w-full z-20 bg-gray-600 bg-opacity-95 border-gray-500 border-b py-3 px-4 md:px-12 lg:px-16 block md:hidden'>
+              <div onClick={closeModal} className='text-xl'>
+                <i className="fa-solid fa-arrow-left"></i>
+              </div>
+            </div>
+            <div id='templateModal' className="modal-box px-0 rounded-none bg-black bg-opacity-70 min-h-full min-w-full pt-12 md:pt-12 pb-0 md:pb-6">
               <Content/>
             </div>
             <form method="dialog" className="modal-backdrop">

@@ -1,20 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { useGlobalState } from '../state/state'
 import { CardPorto } from '../components/Cards'
-import { PenaWeb, HoneyProduction, WhackaMole, Todolist, WeatherApp, SipsApp, PersonalWeb } from '../components/Projects'
-
-import webPena from '../assets/images/portofolio/web-pena.webp'
-import honeyProduction from '../assets/images/portofolio/honey-production.webp'
-import whackamole from '../assets/images/portofolio/whackamole.webp'
-import todolist from '../assets/images/portofolio/todolist-app.webp'
-import sipsApp from '../assets/images/portofolio/SIPS-app.webp'
-import weatherApp from '../assets/images/portofolio/weather-app.webp'
-import personalWeb from '../assets/images/portofolio/personal-web.webp'
-import simado from '../assets/images/portofolio/simado.png'
-import paertecode from '../assets/images/portofolio/landing-page-paertecode.png'
-import eTailor from '../assets/images/portofolio/e-tailor.png'
-import nextWrite from '../assets/images/portofolio/next-write.webp'
-import nodeChat from '../assets/images/portofolio/node-chat2.webp'
 
 // images
 import jsImg from '../assets/logo/javascript.webp'
@@ -45,17 +31,17 @@ import todolistFull from '../assets/images/portofolio/todolist-full.webp'
 import whackAMoleFull from '../assets/images/portofolio/whackamole-full.webp'
 import weatherAppFull from '../assets/images/portofolio/weather-app-full.webp'
 import paertecodeFull from '../assets/images/portofolio/paertecode-full.jpeg'
-import ProjectDetail from '../components/Projects/Template/ProjectDetail'
+import simadoFull from '../assets/images/portofolio/simado-full.png'
+import etailorFull from '../assets/images/portofolio/etailor-full.png'
+import ProjectDetail from '../components/ProjectDetail/ProjectDetail'
 
 const Project = () => {
   const [portofolioPage, setPortofolioPage] = useGlobalState('portofolioPage')
-  const [portfolioContent, setPortfolioContent] = useState('')
 
   const [portfolioList, setPortfolioList] = useState([
     {
       name: 'nodeChat',
-      category: 'express',
-      imageSrc: nodeChat,
+      category: 'express js',
       imageSrcFull: nodeChatFull,
       title: 'Node Chat',
       detail: 'Web App',
@@ -65,7 +51,6 @@ const Project = () => {
     {
       name: 'nextWrite',
       category: 'next js',
-      imageSrc: nextWrite,
       imageSrcFull: nextWriteFull,
       title: 'Next Write',
       detail: 'Web App',
@@ -75,7 +60,7 @@ const Project = () => {
     {
       name: 'simado',
       category: 'react express',
-      imageSrc: simado,
+      imageSrcFull: simadoFull,
       title: 'SIMADO - E-Document Management System',
       detail: 'Web App',
       time: 'May 2024',
@@ -84,7 +69,6 @@ const Project = () => {
     {
       name: 'paertecode',
       category: 'react',
-      imageSrc: paertecode,
       imageSrcFull: paertecodeFull,
       title: 'Paerte Code Landing Page',
       detail: 'Landing Page',
@@ -94,7 +78,7 @@ const Project = () => {
     {
       name: 'eTailor',
       category: '',
-      imageSrc: eTailor,
+      imageSrcFull: etailorFull,
       title: 'E-Tailor',
       detail: 'Web App',
       time: 'Jan 2024',
@@ -103,7 +87,6 @@ const Project = () => {
     {
       name: 'sipsApp',
       category: 'react express',
-      imageSrc: sipsApp,
       imageSrcFull: sipsAppFull,
       title: 'SIPS App - Application Automatic Letters',
       detail: 'Web App',
@@ -113,7 +96,6 @@ const Project = () => {
     {
       name: 'personalWeb',
       category: 'html css js',
-      imageSrc: personalWeb,
       imageSrcFull: PersonalWebFull,
       title: 'Personal Web',
       detail: 'Landing Page',
@@ -123,7 +105,6 @@ const Project = () => {
     {
       name: 'weatherApp',
       category: 'vue',
-      imageSrc: weatherApp,
       imageSrcFull: weatherAppFull,
       title: 'Weather App',
       detail: 'Web App',
@@ -133,7 +114,6 @@ const Project = () => {
     {
       name: 'whackAMole',
       category: 'html css js',
-      imageSrc: whackamole,
       imageSrcFull: whackAMoleFull,
       title: 'Whack a Mole',
       detail: 'Mini Game',
@@ -143,7 +123,6 @@ const Project = () => {
     {
       name: 'toDoList',
       category: 'html css js',
-      imageSrc: todolist,
       imageSrcFull: todolistFull,
       title: 'To Do List',
       detail: 'Web App',
@@ -153,7 +132,6 @@ const Project = () => {
     {
       name: 'penaWeb',
       category: 'html css js',
-      imageSrc: webPena,
       imageSrcFull: webPenaFull,
       title: 'PENA Website 2022-2023',
       detail: 'Company Profile',
@@ -163,7 +141,6 @@ const Project = () => {
     {
       name: 'honeyProduction',
       category: 'html css js',
-      imageSrc: honeyProduction,
       imageSrcFull: honeyProductionFull,
       title: 'Honey Production Website',
       detail: 'Landing Page',
@@ -173,63 +150,35 @@ const Project = () => {
   ])
 
   const Canvas = () => {
-    return (
-      portofolioPage === 'all' ? 
-        portfolioList.map((project, index) => (
+    const renderProjects = (categories) => {
+      return portfolioList
+        .filter(item => categories.includes(item.category))
+        .map((project, index) => (
           <CardPorto
             key={index}
-            src={project.imageSrc}
+            src={project.imageSrcFull}
             title={project.title}
             detail={project.detail}
             time={project.time}
             stackImage={project.stackImage}
-            // onClick={() => openModal(project.name)}
             onClick={() => openModal(project.title, project.detail, project.imageSrcFull)}
           />
-        ))
-      :
-      portofolioPage === 'html css js' ? 
-        portfolioList.filter(item => item.category === 'html css js').map((project, index) => (
-          <CardPorto
-            key={index}
-            src={project.imageSrc}
-            title={project.title}
-            detail={project.detail}
-            time={project.time}
-            stackImage={project.stackImage}
-            onClick={() => openModal(project.name)}
-          />
-        ))
-      :
-      portofolioPage === 'react express' ? 
-      portfolioList.filter(item => item.category === 'react express').map((project, index) => (
-        <CardPorto
-          key={index}
-          src={project.imageSrc}
-          title={project.title}
-          detail={project.detail}
-          time={project.time}
-          stackImage={project.stackImage}
-          onClick={() => openModal(project.name)}
-        />
-      ))
-      :
-      portofolioPage === 'vue' ? 
-        portfolioList.filter(item => item.category === 'vue').map((project, index) => (
-          <CardPorto
-            key={index}
-            src={project.imageSrc}
-            title={project.title}
-            detail={project.detail}
-            time={project.time}
-            stackImage={project.stackImage}
-            onClick={() => openModal(project.name)}
-          />
-        ))
-      :
-      null
-    );
-  }
+        ));
+    };
+  
+    const categoryMap = {
+      'all': portfolioList.map(item => item.category), // all category
+      'html css js': ['html css js'],
+      'react': ['react', 'react express'],
+      'vue': ['vue'],
+      'next js': ['next js'],
+      'express js': ['express js', 'react express']
+    };
+
+    const categories = categoryMap[portofolioPage] || [];
+    return renderProjects(categories)
+  };
+  
 
   const [projectTitle, setProjectTitle] = useState('')
   const [projectDetail, setProjectDetail] = useState('')
@@ -237,11 +186,9 @@ const Project = () => {
 
   const openModal = (title, detail, src) => {
     document.getElementById('modalPortfolio').showModal()
-    // setPortfolioContent(params)
     setProjectTitle(title)
     setProjectDetail(detail)
     setProjectSrc(src)
-
   }
 
   const classNav = 'cursor-pointer hover:text-blue-400 duration-200 capitalize'
@@ -254,15 +201,6 @@ const Project = () => {
   const Content = () => {
     return (
       <ProjectDetail title={projectTitle} detail={projectDetail} src={projectSrc} />
-      // portfolioContent === 'penaWeb' ? <PenaWeb/> :
-      // portfolioContent === 'honeyProduction' ? <HoneyProduction/> :
-      // portfolioContent === 'whackAMole' ? <WhackaMole/> : 
-      // portfolioContent === 'toDoList' ? <Todolist/> :
-      // portfolioContent === 'weatherApp' ? <WeatherApp/> :
-      // portfolioContent === 'sipsApp' ? <SipsApp/> :
-      // portfolioContent === 'personalWeb' ? <PersonalWeb/> :
-      // portfolioContent === 'nodeChat' ? <div className='px-0 sm:px-6 md:px-12 lg:px-16 flex justify-center'><img src={nodeChatFull} /></div> :
-      // null
     )
   }
 
@@ -279,8 +217,10 @@ const Project = () => {
         <ul className='hidden md:flex flex-row gap-8'>
           <SubMenu text='all'  onClick={() => setPortofolioPage('all')} />
           <SubMenu text='html css js' onClick={() => setPortofolioPage('html css js')} />
-          <SubMenu text='react express' onClick={() => setPortofolioPage('react express')} />
+          <SubMenu text='react' onClick={() => setPortofolioPage('react')} />
           <SubMenu text='vue' onClick={() => setPortofolioPage('vue')} />
+          <SubMenu text='next js' onClick={() => setPortofolioPage('next js')} />
+          <SubMenu text='express js' onClick={() => setPortofolioPage('express js')} />
         </ul>
 
         {/* content portofolio */}

@@ -60,7 +60,7 @@ const CardProfile = (props) => {
           <BioDetail icon='fa-solid fa-calendar-days' title='birthday' detail='December, 2002' />
         </div>
 
-        <div className='px-4 md:px-8 pb-8 pt-4 opacity-25'>
+        <div className='px-4 md:px-8 pb-6 pt-4 opacity-25'>
           <hr />
         </div>
 

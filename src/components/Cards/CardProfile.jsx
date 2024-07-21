@@ -60,7 +60,7 @@ const CardProfile = (props) => {
           <BioDetail icon='fa-solid fa-calendar-days' title='birthday' detail='December, 2002' />
         </div>
 
-        <div className='px-4 md:px-8 pb-8 pt-4 opacity-25'>
+        <div className='px-4 md:px-8 pb-6 pt-4 opacity-25'>
           <hr />
         </div>
 
@@ -73,6 +73,9 @@ const CardProfile = (props) => {
           </a>
           <a href='https://www.linkedin.com/in/fandijsx/' target='_blank' className='text-2xl mr-4'>
             <i className="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://medium.com/@fandi-ahmad" target='_blank' className='text-2xl mr-4'>
+            <i className="fa-brands fa-medium"></i>
           </a>
           <a href='mailto:fandi4160@gmail.com' className='text-2xl'>
             <i className="fa-regular fa-envelope"></i>

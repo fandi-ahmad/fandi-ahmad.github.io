@@ -34,7 +34,7 @@ const Resume = () => {
         <BaseTimeline>
           <HeadListTimeline title='Experience' icon='fa-solid fa-briefcase' />
 
-          <ListTimeline title='UI/UX Designer' subtitle='Paerte Code' time='Sep 2023 - Feb 2024' 
+          <ListTimeline title='UI/UX Designer' subtitle='Freelance - Paerte Code' time='Sep 2023 - Feb 2024' 
             text={<>
               <p className='pb-3'>As a UI/UX Designer who focuses on creating application prototype designs for further development. By understanding user needs, I strive to create simple and effective designs. The tool I use is Figma.</p>
               <ListPoint>Design an app prototype design for further development by understanding the user's needs.</ListPoint>
@@ -58,11 +58,7 @@ const Resume = () => {
               <ListPoint className='pb-3'>Implement APIs and integration of certain features.</ListPoint>
               <p>Skils: HTML • CSS • Javascript • Bootstrap • Vue • RestFull API</p>
             </>}
-          />
-
-          <ListTimeline title='Frontend Developer' subtitle='PENA (Programming Engineering & Networking Adhi Guna)' time='Sep 2022' 
-            text='Skils: HTML • CSS • Javascript • Bootstrap'
-            bottomLine 
+            bottomLine
           />
 
         </BaseTimeline>
@@ -99,6 +95,18 @@ const Resume = () => {
               <ListPoint>Assist in the development and preparation of effective and relevant learning programs for members of the organization.</ListPoint>
               <ListPoint>Support in setting schedules and coordinating the implementation of learning activities.</ListPoint>
               <ListPoint>Arrange and prepare learning materials according to the chairman's direction.</ListPoint>
+              <ListPoint>involved in the PENA Website project as a frontend developer</ListPoint>
+            </>}
+          />
+
+          <ListTimeline
+            title='General Secretary'
+            subtitle='LDK Al-Jazari'
+            time='Feb 2021 - Feb 2022'
+            text={<>
+              <ListPoint>Manage correspondence and organizational document archives.</ListPoint>
+              <ListPoint>Convey important information and activity schedules to members.</ListPoint>
+              <ListPoint>Assist in planning and evaluating work programs.</ListPoint>
             </>}
             bottomLine
           />

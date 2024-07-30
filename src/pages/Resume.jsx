@@ -52,8 +52,9 @@ const Resume = () => {
             </>}
           />
 
-          <ListTimeline title='Frontend Developer' subtitle='WoVi' time='Sep 2022 - Jul 2023' 
+          <ListTimeline title='Web Developer' subtitle='Tekno Mandiri Anak Negeri' time='Sep 2022 - Jul 2023' 
             text={<>
+              <ListPoint>Part of the team in the <b><i>Queue Gate System</i></b> project at the Gelora Bung Karno Stadium, Jakarta</ListPoint>
               <ListPoint>Responsible for developing user interfaces using the Vue Js framework.</ListPoint>
               <ListPoint className='pb-3'>Implement APIs and integration of certain features.</ListPoint>
               <p>Skils: HTML • CSS • Javascript • Bootstrap • Vue • RestFull API</p>

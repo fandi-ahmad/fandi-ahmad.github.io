@@ -52,7 +52,7 @@ const Resume = () => {
             </>}
           />
 
-          <ListTimeline title='Web Developer' subtitle='Tekno Mandiri Anak Negeri' time='Sep 2022 - Jul 2023' 
+          <ListTimeline title='Web Developer' subtitle='Tekno Mandiri Anak Negeri' time='Sep 2022 - Jun 2023' 
             text={<>
               <ListPoint>Part of the team in the <b><i>Queue Gate System</i></b> project at the Gelora Bung Karno Stadium, Jakarta</ListPoint>
               <ListPoint>Responsible for developing user interfaces using the Vue Js framework.</ListPoint>

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 import imageProfile from '../../assets/images/img-profile.webp'
+import { Link } from 'react-router-dom'
 
 const BioDetail = (props) => {
   return (
@@ -62,6 +63,14 @@ const CardProfile = (props) => {
 
         <div className='px-4 md:px-8 pb-6 pt-4 opacity-25'>
           <hr />
+        </div>
+
+        <div className='text-center mb-4'>
+          <Link target='_blank' to='https://www.cakeresume.com/s--odv4jKo6Lml7sFJvzFwVtw--/fandi-ahmad-097c93'>
+            <button className='text-sm'>
+              <span className='bg-gray-600 hover:bg-gray-500 duration-300 px-4 py-1 rounded-md'>Download My Resume</span>
+            </button>
+          </Link>
         </div>
 
         <div className='flex flex-row justify-center mb-4'>

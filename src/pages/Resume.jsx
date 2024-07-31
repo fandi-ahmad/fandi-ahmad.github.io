@@ -34,17 +34,17 @@ const Resume = () => {
         <BaseTimeline>
           <HeadListTimeline title='Experience' icon='fa-solid fa-briefcase' />
 
-          <ListTimeline title='UI/UX Designer' subtitle='Freelance - Paerte Code' time='Sep 2023 - Feb 2024' 
+          <ListTimeline title='UI/UX Designer' subtitle='Paerte Code' time='Sep 2023 - Feb 2024' 
             text={<>
-              <p className='pb-3'>As a UI/UX Designer who focuses on creating application prototype designs for further development. By understanding user needs, I strive to create simple and effective designs. The tool I use is Figma.</p>
-              <ListPoint>Design an app prototype design for further development by understanding the user's needs.</ListPoint>
-              <ListPoint>Design an app prototype design using Figma.</ListPoint>
+              <ListPoint>Part of the team in the <b><i>Printing and Cashier Service System project.</i></b></ListPoint>
+              <ListPoint>Designing application prototype designs for further development.</ListPoint>
+              <ListPoint>Design an application prototype using Figma.</ListPoint>
             </>}
           />
 
           <ListTimeline title='Internship - Full Stack Developer' subtitle='Balaroa Sub-District' time='Jul - Sep 2023' 
             text={<>
-              <p className='pb-3'>During my internship (KKLP) at the Balaroa District Office, I created a product, namely an application for creating automatic letters, so that employees only need to enter the required data and letters can be immediately created for community service purposes.</p>
+              <p className='pb-3'>During my internship (KKLP) at the Balaroa District Office, I created a product, namely an <b><i>Application for Creating Automatic Letters</i></b>, so that employees only need to enter the required data and letters can be immediately created for community service purposes.</p>
               <ListPoint>Create a web-based app to make it easy to automate mail generation.</ListPoint>
               <ListPoint>Designing front-end code using React Js and Tailwind CSS, and implementing APIs.</ListPoint>
               <ListPoint className='pb-3'>Designing back-end code using Express Js, Sequelize, and MySQL as databases.</ListPoint>

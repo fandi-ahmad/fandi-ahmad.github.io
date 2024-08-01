@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import ButtonLink from '../Button/ButtonLink';
 
 // images
 import mysqlImg from '../../assets/logo/mysql-icon.png'
@@ -12,13 +13,13 @@ const CardPorto = (props) => {
   const overlayClass = `${isHovered ? 'opacity-0' : 'opacity-0'} absolute top-0 left-0 z-20 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50 transition-opacity duration-300`;
 
   return (
-    <div className='bg-gray-600 border border-gray-500 rounded-lg cursor-pointer' 
-      onClick={props.onClick}
-      onMouseOver={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
+    <div className='bg-gray-600 border border-gray-500 rounded-lg'>
       <div className='overflow-hidden rounded-tl-lg rounded-tr-lg relative'>
-        <div className='bg-gray-800 relative'>
+        <div className='bg-gray-800 relative cursor-pointer'
+          onClick={props.onClick}
+          onMouseOver={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
 
           {/* image */}
           <img src={props.src} alt="" loading='lazy' className={classImage} />
@@ -44,6 +45,8 @@ const CardPorto = (props) => {
           <span className='opacity-75'>{props.detail}</span>
           <span className='mx-2'>•</span>
           <div className='flex flex-row'>
+
+            {/* stack */}
             {props.stackImage ? props.stackImage.map((stackItem, index) => (
               <img
                 key={index}
@@ -53,6 +56,23 @@ const CardPorto = (props) => {
               />
             )) : null}
           </div>
+        </div>
+
+        <div>
+          { props.demo ?
+            <ButtonLink to={props.demo} className='mt-6 mr-2'>
+              <i className="fa-solid fa-play"></i>
+              <span className='text-xs sm:text-sm ml-2'>Demo</span>
+            </ButtonLink>
+          : null }
+
+          { props.source ?
+            <ButtonLink to={props.source} className='mt-6'>
+              <i className="fa-brands fa-github"></i>
+              <span className='text-xs sm:text-sm ml-2'>Source Code</span>
+            </ButtonLink>
+          : null}
+
         </div>
       </div>
     </div>

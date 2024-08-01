@@ -46,7 +46,8 @@ const Project = () => {
       title: 'Node Chat',
       detail: 'Web App',
       time: 'Jul 2024',
-      stackImage: [express, socketio, prisma, tailwindImg]
+      stackImage: [express, socketio, prisma, tailwindImg],
+      source: 'https://github.com/fandi-ahmad/node-chat'
     },
     {
       name: 'nextWrite',
@@ -55,7 +56,8 @@ const Project = () => {
       title: 'Next Write',
       detail: 'Web App',
       time: 'Jun 2024',
-      stackImage: [nextjs, tsImg, tailwindImg, mu, supabase]
+      stackImage: [nextjs, tsImg, tailwindImg, mu, supabase],
+      source: 'https://github.com/fandi-ahmad/next-write'
     },
     {
       name: 'simado',
@@ -64,7 +66,8 @@ const Project = () => {
       title: 'SIMADO - E-Document Management System',
       detail: 'Web App',
       time: 'May 2024',
-      stackImage: [reactImg, viteImg, tailwindImg, express]
+      stackImage: [reactImg, viteImg, tailwindImg, express],
+      source: 'https://github.com/fandi-ahmad/simado-web'
     },
     {
       name: 'paertecode',
@@ -74,6 +77,7 @@ const Project = () => {
       detail: 'Landing Page',
       time: 'Feb 2024',
       stackImage: [reactImg, viteImg, tailwindImg],
+      demo: 'https://paertecode.vercel.app/'
     },
     {
       name: 'eTailor',
@@ -92,6 +96,7 @@ const Project = () => {
       detail: 'Web App',
       time: 'Sep 2023',
       stackImage: [reactImg, viteImg, tailwindImg, express],
+      source: 'https://github.com/fandi-ahmad/sips-app-admin'
     },
     {
       name: 'personalWeb',
@@ -101,6 +106,8 @@ const Project = () => {
       detail: 'Landing Page',
       time: 'Aug 2023',
       stackImage: [htmlImg, cssImg, jsImg, tailwindImg],
+      demo: 'https://static-personal-web-two.vercel.app/',
+      source: 'https://github.com/fandi-ahmad/static-personal-web'
     },
     {
       name: 'weatherApp',
@@ -110,6 +117,8 @@ const Project = () => {
       detail: 'Web App',
       time: 'Jan 2023',
       stackImage: [vueImg, viteImg, bootstrap],
+      demo: 'https://fandi-ahmad.github.io/weather-app/',
+      source: 'https://github.com/fandi-ahmad/weather-app'
     },
     {
       name: 'whackAMole',
@@ -119,6 +128,8 @@ const Project = () => {
       detail: 'Mini Game',
       time: 'Jan 2023',
       stackImage: [htmlImg, cssImg, jsImg],
+      demo: 'https://whack-a-mole-bice-two.vercel.app/',
+      source: 'https://github.com/fandi-ahmad/whack-a-mole'
     },
     {
       name: 'toDoList',
@@ -128,6 +139,8 @@ const Project = () => {
       detail: 'Web App',
       time: 'Dec 2022',
       stackImage: [htmlImg, cssImg, jsImg],
+      demo: 'https://to-do-list-theta-indol.vercel.app/',
+      source: 'https://github.com/fandi-ahmad/to-do-list'
     },
     {
       name: 'penaWeb',
@@ -137,6 +150,8 @@ const Project = () => {
       detail: 'Company Profile',
       time: 'Sep 2022',
       stackImage: [htmlImg, cssImg, jsImg, bootstrap],
+      demo: 'https://pena-web-2022.vercel.app/',
+      source: 'https://github.com/fandi-ahmad/pena-web-2022'
     },
     {
       name: 'honeyProduction',
@@ -146,6 +161,7 @@ const Project = () => {
       detail: 'Landing Page',
       time: 'Jul 2022',
       stackImage: [htmlImg, cssImg, jsImg, bootstrap],
+      source: 'https://github.com/fandi-ahmad/honey-production-website'
     },
   ])
 
@@ -162,6 +178,8 @@ const Project = () => {
             time={project.time}
             stackImage={project.stackImage}
             onClick={() => openModal(project.title, project.detail, project.imageSrcFull)}
+            demo={project.demo}
+            source={project.source}
           />
         ));
     };

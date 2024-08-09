@@ -7,11 +7,15 @@ const About = () => {
       <div>
         <div className="px-4 md:px-8 mt-8 font-light text-justify text-sm md:text-base">
           <p className='mb-4'>
-            Hello! I'm Fandi, a passionate and dedicated Full Stack Web Developer with a strong background in both front-end and back-end development. With a keen eye for design and a meticulous attention to detail, I strive to create dynamic, user-friendly, and responsive websites and applications that deliver seamless experiences.
+            Hi there! I'm Fandi Ahmad, a passionate and dedicated Full Stack Web Developer with a strong background in front-end and back-end development. Some of the projects I create, are created with JavaScript.
           </p>
 
           <p className='mb-4'>
-            I believe that the best projects are built on strong collaborations. I enjoy working closely with clients and teams to bring their visions to life. My approach is client-centric, focusing on understanding their goals and providing tailored solutions that meet their unique needs.
+            I believe that the best projects are built through strong collaboration. I enjoy working with clients and teams to bring their vision to life.
+          </p>
+
+          <p className='mb-4'>
+            Feel free to contact me for further collaboration and discussion.
           </p>
 
         </div>

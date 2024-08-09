@@ -146,21 +146,21 @@ const Resume = () => {
         <h2 className="text-2xl font-bold mb-2">My Tools & Skills</h2>
         <p className='mb-4'>As a Full Stack Web Developer, I have skills that cover various aspects of web development. Here are my main skills.</p>
         <div className="grid grid-cols-4 sm:grid-cols-7 md:grid-cols-9 lg:grid-cols-8 xl:grid-cols-10 gap-4">
-          <CardStack src={jsImg} />
-          <CardStack src={tsImg} />
-          <CardStack src={nextjs} className='' />
-          <CardStack src={reactImg} />
-          <CardStack src={vueImg} />
-          <CardStack src={nodeImg} />
-          <CardStack src={express} className='' />
-          <CardStack src={bootstrap} />
-          <CardStack src={tailwindImg} />
-          <CardStack src={mu} />
-          <CardStack src={gitImg} />
-          <CardStack src={prisma} />
-          <CardStack src={supabase} />
-          <CardStack src={mysqlImg} className='filter invert' />
-          <CardStack src={figmaImg} />
+          <CardStack src={jsImg} name='Javascript' />
+          <CardStack src={tsImg} name='Typescript' />
+          <CardStack src={nextjs} name='Next Js' />
+          <CardStack src={reactImg} name='React Js' />
+          <CardStack src={vueImg} name='Vue Js' />
+          <CardStack src={nodeImg} name='Node Js' />
+          <CardStack src={express} name='Express Js' />
+          <CardStack src={bootstrap} name='Bootstrap' />
+          <CardStack src={tailwindImg} name='Tailwind CSS' />
+          <CardStack src={mu} name='Material UI' />
+          <CardStack src={gitImg} name='Git' />
+          <CardStack src={prisma} name='Prisma' />
+          <CardStack src={supabase} name='Supabase' />
+          <CardStack src={mysqlImg} className='filter invert' name='MySQL' />
+          <CardStack src={figmaImg} name='Figma' />
         </div>
          
       </div>

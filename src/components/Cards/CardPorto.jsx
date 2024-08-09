@@ -3,8 +3,6 @@ import ButtonLink from '../Button/ButtonLink';
 
 // images
 import mysqlImg from '../../assets/logo/mysql-icon.png'
-import nextjs from '../../assets/logo/nextjs.png'
-import express from '../../assets/logo/express-js.png'
 
 const CardPorto = (props) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -52,7 +50,7 @@ const CardPorto = (props) => {
                 key={index}
                 src={stackItem}
                 alt={stackItem}
-                className={`${stackItem === express || stackItem === nextjs || stackItem === mysqlImg ? 'filter invert' : null} w-12 max-w-fit h-6 object-contain mr-3`}
+                className={`${stackItem === mysqlImg ? 'filter invert' : null} w-12 max-w-fit h-6 object-contain mr-3`}
               />
             )) : null}
           </div>

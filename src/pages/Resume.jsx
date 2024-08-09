@@ -10,14 +10,14 @@ import reactImg from '../assets/logo/reactjs.webp'
 import vueImg from '../assets/logo/vuejs.webp'
 import tailwindImg from '../assets/logo/tailwind.webp'
 import bootstrap from '../assets/logo/bootstrap.webp'
-import nodeImg from '../assets/logo/nodejs.png'
-import nextjs from '../assets/logo/nextjs.png'
-import mu from '../assets/logo/mu.png'
+import nodeImg from '../assets/logo/nodejs.webp'
+import nextjs from '../assets/logo/nextjs.webp'
+import mu from '../assets/logo/mu.webp'
 import supabase from '../assets/logo/supabase.png'
-import express from '../assets/logo/express-js.png'
-import prisma from '../assets/logo/prisma.png'
+import express from '../assets/logo/express.webp'
+import prisma from '../assets/logo/prisma.webp'
 import mysqlImg from '../assets/logo/mysql-icon.png'
-import gitImg from '../assets/logo/git-icon.png'
+import gitImg from '../assets/logo/git.webp'
 
 // certificate
 import jwd from '../assets/images/certificate/jwd.webp'
@@ -148,11 +148,11 @@ const Resume = () => {
         <div className="grid grid-cols-4 sm:grid-cols-7 md:grid-cols-9 lg:grid-cols-8 xl:grid-cols-10 gap-4">
           <CardStack src={jsImg} />
           <CardStack src={tsImg} />
-          <CardStack src={nextjs} className='filter invert' />
+          <CardStack src={nextjs} className='' />
           <CardStack src={reactImg} />
           <CardStack src={vueImg} />
           <CardStack src={nodeImg} />
-          <CardStack src={express} className='filter invert' />
+          <CardStack src={express} className='' />
           <CardStack src={bootstrap} />
           <CardStack src={tailwindImg} />
           <CardStack src={mu} />

@@ -54,7 +54,7 @@ const Resume = () => {
 
           <ListTimeline title='Web Developer' subtitle='Tekno Mandiri Anak Negeri' time='Sep 2022 - Jun 2023' 
             text={<>
-              <ListPoint>Part of the team in the <b><i>Queue Gate System</i></b> project at the Gelora Bung Karno Stadium, Jakarta</ListPoint>
+              <ListPoint>Part of the team in the <b><i>Queue Gate System</i></b> project at the Gelora Bung Karno Stadium, Jakarta.</ListPoint>
               <ListPoint>Responsible for developing user interfaces using the Vue Js framework.</ListPoint>
               <ListPoint className='pb-3'>Implement APIs and integration of certain features.</ListPoint>
               <p>Skils: HTML • CSS • Javascript • Bootstrap • Vue • RestFull API</p>
@@ -84,7 +84,7 @@ const Resume = () => {
             text={<>
               <ListPoint>Lead the team in the development and implementation of learning programs that focus on developing the skills and knowledge of organizational members.</ListPoint>
               <ListPoint>Manage the teaching and learning process, including setting schedules and evaluating learning outcomes.</ListPoint>
-              <ListPoint>Prepare reports on developments and achievements in the learning program</ListPoint>
+              <ListPoint>Prepare reports on developments and achievements in the learning program.</ListPoint>
             </>}
           />
 
@@ -96,7 +96,7 @@ const Resume = () => {
               <ListPoint>Assist in the development and preparation of effective and relevant learning programs for members of the organization.</ListPoint>
               <ListPoint>Support in setting schedules and coordinating the implementation of learning activities.</ListPoint>
               <ListPoint>Arrange and prepare learning materials according to the chairman's direction.</ListPoint>
-              <ListPoint>involved in the PENA Website project as a frontend developer</ListPoint>
+              <ListPoint>Involved in the PENA Website project as a frontend developer.</ListPoint>
             </>}
           />
 

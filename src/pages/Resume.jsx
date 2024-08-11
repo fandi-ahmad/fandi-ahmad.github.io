@@ -54,7 +54,7 @@ const Resume = () => {
 
           <ListTimeline title='Web Developer' subtitle='Tekno Mandiri Anak Negeri' time='Sep 2022 - Jun 2023' 
             text={<>
-              <ListPoint>Part of the team in the <b><i>Queue Gate System</i></b> project at the Gelora Bung Karno Stadium, Jakarta</ListPoint>
+              <ListPoint>Part of the team in the <b><i>Queue Gate System</i></b> project at the Gelora Bung Karno Stadium, Jakarta.</ListPoint>
               <ListPoint>Responsible for developing user interfaces using the Vue Js framework.</ListPoint>
               <ListPoint className='pb-3'>Implement APIs and integration of certain features.</ListPoint>
               <p>Skils: HTML • CSS • Javascript • Bootstrap • Vue • RestFull API</p>
@@ -84,7 +84,7 @@ const Resume = () => {
             text={<>
               <ListPoint>Lead the team in the development and implementation of learning programs that focus on developing the skills and knowledge of organizational members.</ListPoint>
               <ListPoint>Manage the teaching and learning process, including setting schedules and evaluating learning outcomes.</ListPoint>
-              <ListPoint>Prepare reports on developments and achievements in the learning program</ListPoint>
+              <ListPoint>Prepare reports on developments and achievements in the learning program.</ListPoint>
             </>}
           />
 
@@ -96,7 +96,7 @@ const Resume = () => {
               <ListPoint>Assist in the development and preparation of effective and relevant learning programs for members of the organization.</ListPoint>
               <ListPoint>Support in setting schedules and coordinating the implementation of learning activities.</ListPoint>
               <ListPoint>Arrange and prepare learning materials according to the chairman's direction.</ListPoint>
-              <ListPoint>involved in the PENA Website project as a frontend developer</ListPoint>
+              <ListPoint>Involved in the PENA Website project as a frontend developer.</ListPoint>
             </>}
           />
 
@@ -146,21 +146,21 @@ const Resume = () => {
         <h2 className="text-2xl font-bold mb-2">My Tools & Skills</h2>
         <p className='mb-4'>As a Full Stack Web Developer, I have skills that cover various aspects of web development. Here are my main skills.</p>
         <div className="grid grid-cols-4 sm:grid-cols-7 md:grid-cols-9 lg:grid-cols-8 xl:grid-cols-10 gap-4">
-          <CardStack src={jsImg} />
-          <CardStack src={tsImg} />
-          <CardStack src={nextjs} className='' />
-          <CardStack src={reactImg} />
-          <CardStack src={vueImg} />
-          <CardStack src={nodeImg} />
-          <CardStack src={express} className='' />
-          <CardStack src={bootstrap} />
-          <CardStack src={tailwindImg} />
-          <CardStack src={mu} />
-          <CardStack src={gitImg} />
-          <CardStack src={prisma} />
-          <CardStack src={supabase} />
-          <CardStack src={mysqlImg} className='filter invert' />
-          <CardStack src={figmaImg} />
+          <CardStack src={jsImg} name='Javascript' />
+          <CardStack src={tsImg} name='Typescript' />
+          <CardStack src={nextjs} name='Next Js' />
+          <CardStack src={reactImg} name='React Js' />
+          <CardStack src={vueImg} name='Vue Js' />
+          <CardStack src={nodeImg} name='Node Js' />
+          <CardStack src={express} name='Express Js' />
+          <CardStack src={bootstrap} name='Bootstrap' />
+          <CardStack src={tailwindImg} name='Tailwind CSS' />
+          <CardStack src={mu} name='Material UI' />
+          <CardStack src={gitImg} name='Git' />
+          <CardStack src={prisma} name='Prisma' />
+          <CardStack src={supabase} name='Supabase' />
+          <CardStack src={mysqlImg} className='filter invert' name='MySQL' />
+          <CardStack src={figmaImg} name='Figma' />
         </div>
          
       </div>

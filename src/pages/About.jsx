@@ -1,4 +1,5 @@
 import React from 'react'
+import gmailImg from './../assets/logo/gmail.png'
 
 const About = () => {
 
@@ -7,19 +8,17 @@ const About = () => {
       <div>
         <div className="px-4 md:px-8 mt-8 font-light text-justify text-sm md:text-base">
           <p className='mb-4'>
-            Hello! I'm Fandi, a passionate and dedicated Full Stack Web Developer with a strong background in both front-end and back-end development. With a keen eye for design and a meticulous attention to detail, I strive to create dynamic, user-friendly, and responsive websites and applications that deliver seamless experiences.
+            Hi there! I'm Fandi Ahmad, a passionate and dedicated Full Stack Web Developer with a strong background in front-end and back-end development. Some of the projects I create, are created with JavaScript.
           </p>
 
           <p className='mb-4'>
-            I believe that the best projects are built on strong collaborations. I enjoy working closely with clients and teams to bring their visions to life. My approach is client-centric, focusing on understanding their goals and providing tailored solutions that meet their unique needs.
+            I believe that the best projects are built through strong collaboration. I enjoy working with clients and teams to bring their vision to life.
           </p>
 
         </div>
 
         <div className='px-4 md:px-8 mt-8'>
-          <h2 className="text-2xl font-bold mb-4">
-            What I'm Doing
-          </h2>
+          <h2 className="text-2xl font-bold mb-4">What I Can Do For You</h2>
 
           {/* card */}
           <div className='flex flex-col md:flex-row'>
@@ -30,7 +29,7 @@ const About = () => {
               <div className='sm:pl-4 text-center sm:text-start'>
                 <h3 className='text-lg font-semibold pb-2'>Web Development</h3>
                 <div className='text-sm md:text-base'>
-                  Website design and development services, powered by modern technology.
+                  website development, suitable for company or individual profiles supported by modern technology.
                 </div>
               </div>
             </div>
@@ -42,15 +41,23 @@ const About = () => {
               <div className='sm:pl-4 text-center sm:text-start'>
                 <h3 className='text-lg font-semibold pb-2'>Web Based Application</h3>
                 <div className='text-sm md:text-base'>
-                  Website-based application design and development.
+                  Design and development of website-based applications, such as archive systems, data management, cashiers, sales, and many more.
                 </div>
               </div>
             </div>
           </div>
-        
-
         </div>
 
+        <div className="px-4 md:px-8 mt-8 font-light text-justify text-sm md:text-base">
+          <h2 className="text-2xl font-bold mb-2">Get in Touch</h2>
+          <p className='mb-4'>Feel free to contact me for collaboration, paste your message and let's discuss further.</p>
+          <a href="mailto:fandi4160@gmail.com" className='flex w-fit'>
+            <button className='bg-gray-600 hover:bg-gray-500 duration-300 px-4 py-3 rounded-md flex flex-row items-center'>
+              <img src={gmailImg} alt="gmail" className='w-6 h-6 object-contain' />
+              <span className='ps-2'>Send Message on Gmail</span>
+            </button>
+          </a>
+        </div>
       </div>
     </div>
   )

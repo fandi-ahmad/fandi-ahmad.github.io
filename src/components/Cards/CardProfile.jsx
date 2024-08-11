@@ -41,7 +41,7 @@ const CardProfile = (props) => {
           <div className='w-full pl-2 2xs:pl-4 lg:pl-0 pt-4 lg:text-center my-auto'>
             <div className='text-xl 2xs:text-2xl font-semibold'>Fandi Ahmad</div>
             <div className='text-2xs 2xs:text-xs mt-2'>
-              <span className='bg-gray-600 px-4 py-1 rounded-md'>Full Stack Developer</span>
+              <span className='bg-gray-600 px-4 py-1 rounded-md'>Full Stack Web Developer</span>
             </div>
           </div>
 

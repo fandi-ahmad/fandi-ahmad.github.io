@@ -7,7 +7,6 @@ import mysqlImg from '../../assets/logo/mysql-icon.png'
 const CardPorto = (props) => {
   const [isHovered, setIsHovered] = useState(false);
   const classImage = `${isHovered ? 'scale-105' : ''} relative z-10 h-48 w-full object-cover object-top transition-transform duration-300 ease-in-out`;
-  // const overlayClass = `${isHovered ? 'opacity-50' : 'opacity-0'} absolute top-0 left-0 z-20 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50 transition-opacity duration-300`;
   const overlayClass = `${isHovered ? 'opacity-0' : 'opacity-0'} absolute top-0 left-0 z-20 w-full h-full flex justify-center items-center bg-gray-800 bg-opacity-50 transition-opacity duration-300`;
 
   return (
@@ -45,14 +44,21 @@ const CardPorto = (props) => {
           <div className='flex flex-row'>
 
             {/* stack */}
-            {props.stackImage ? props.stackImage.map((stackItem, index) => (
-              <img
-                key={index}
-                src={stackItem}
-                alt={stackItem}
-                className={`${stackItem === mysqlImg ? 'filter invert' : null} w-12 max-w-fit h-6 object-contain mr-3`}
-              />
-            )) : null}
+            {props.stackImage ? props.stackImage.map((stackItem, index) => {
+              let fileName = stackItem.split('/').pop();                  // "express_js.webp"
+              let baseName = fileName.split('.').slice(0, -1).join('.');  // "express_js"
+              let formattedName = baseName.replace(/_/g, " ");            // "express js"
+              return (
+                <div className='tooltip tooltip-top p-0' data-tip={formattedName}>
+                  <img
+                    key={index}
+                    src={stackItem}
+                    alt={stackItem}
+                    className={`${stackItem === mysqlImg ? 'filter invert' : null} h-6 object-contain mr-3`}
+                  />
+                </div>
+              )
+            }) : null}
           </div>
         </div>
 

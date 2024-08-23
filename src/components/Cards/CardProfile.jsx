@@ -3,6 +3,12 @@ import React, {useState, useEffect} from 'react'
 import imageProfile from '../../assets/images/img-profile.webp'
 import { Link } from 'react-router-dom'
 
+import logoInstagram from '../../assets/logo/instagram.webp'
+import logoLinkedin from '../../assets/logo/linkedin.png'
+import logoGithub from '../../assets/logo/github.png'
+import logoMedium from '../../assets/logo/medium.svg'
+import logoGmail from '../../assets/logo/gmail.png'
+
 const BioDetail = (props) => {
   return (
     <div className='flex flex-row items-center mb-4'>
@@ -68,26 +74,26 @@ const CardProfile = (props) => {
         <div className='text-center mb-4'>
           <Link target='_blank' to='https://www.cakeresume.com/s--odv4jKo6Lml7sFJvzFwVtw--/fandi-ahmad-097c93'>
             <button className='text-sm'>
-              <span className='bg-gray-600 hover:bg-gray-500 duration-300 px-4 py-1 rounded-md'>Download My Resume</span>
+              <span className='bg-gray-600 hover:bg-gray-500 duration-300 px-4 py-1 rounded-md'>View My Resume</span>
             </button>
           </Link>
         </div>
 
         <div className='flex flex-row justify-center mb-4'>
-          <a href='https://instagram.com/fandi.jsx' target='_blank' className='text-2xl mr-4'>
-            <i className="fa-brands fa-instagram"></i>
+          <a href='https://instagram.com/fandi.jsx' target='_blank' className='bg-slate-200 p-0.5 rounded-md me-2'>
+            <img src={logoInstagram} alt="" className='w-6 h-6 object-contain' />
           </a>
-          <a href='https://github.com/fandi-ahmad' target='_blank' className='text-2xl mr-4'>
-            <i className="fa-brands fa-github"></i>
+          <a href='https://github.com/fandi-ahmad' target='_blank' className='bg-slate-200 p-0.5 rounded-md me-2'>
+            <img src={logoGithub} alt="" className='w-6 h-6 object-contain' />
           </a>
-          <a href='https://www.linkedin.com/in/fandijsx/' target='_blank' className='text-2xl mr-4'>
-            <i className="fa-brands fa-linkedin"></i>
+          <a href='https://www.linkedin.com/in/fandijsx/' target='_blank' className='bg-slate-200 p-0.5 rounded-md me-2'>
+            <img src={logoLinkedin} alt="" className='w-6 h-6 object-contain' />
           </a>
-          <a href="https://medium.com/@fandi-ahmad" target='_blank' className='text-2xl mr-4'>
-            <i className="fa-brands fa-medium"></i>
+          <a href="https://medium.com/@fandi-ahmad" target='_blank' className='bg-slate-200 p-0.5 rounded-md me-2'>
+            <img src={logoMedium} alt="" className='w-6 h-6 object-contain' />
           </a>
-          <a href='mailto:fandi4160@gmail.com' className='text-2xl'>
-            <i className="fa-regular fa-envelope"></i>
+          <a href='mailto:fandi4160@gmail.com' className='bg-slate-200 p-0.5 rounded-md'>
+            <img src={logoGmail} alt="" className='w-6 h-6 object-contain' />
           </a>
         </div>
 

@@ -49,9 +49,8 @@ const CardPorto = (props) => {
               let baseName = fileName.split('.').slice(0, -1).join('.');  // "express_js"
               let formattedName = baseName.replace(/_/g, " ");            // "express js"
               return (
-                <div className='tooltip tooltip-top me-3' data-tip={formattedName}>
+                <div key={index} className='tooltip tooltip-top me-3' data-tip={formattedName}>
                   <img
-                    key={index}
                     src={stackItem}
                     alt={stackItem}
                     className={`${stackItem === mysqlImg ? 'filter invert' : null} h-6 object-contain`}
